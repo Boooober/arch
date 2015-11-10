@@ -1,0 +1,64 @@
+@font-face {
+	font-family: "Intro";
+	src: url("../fonts/Intro-Bold/Intro-Bold.eot");
+	src: url("../fonts/Intro-Bold/Intro-Bold.eot?#iefix")format("embedded-opentype"),
+	     url("../fonts/Intro-Bold/Intro-Bold.woff") format("woff"),
+         url("../../fonts/Intro-Bold/Intro-Bold.ttf") format("truetype"),
+         url("../../fonts/Intro-Bold/Intro-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Intro";
+	src: url(".../fonts/Intro-Book/Intro-Book.eot");
+	src: url(".../fonts/Intro-Book/Intro-Book.eot?#iefix")format("embedded-opentype"),
+	     url(".../fonts/Intro-Book/Intro-Book.woff") format("woff"),
+         url(".../fonts/Intro-Book/Intro-Book.ttf") format("truetype"),
+         url(".../fonts/Intro-Book/Intro-Book.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro";
+  src: url("../fonts/Intro-Light/Intro-Light.eot");
+  src: url("../fonts/Intro-Light/Intro-Light.eot?#iefix")format("embedded-opentype"),
+       url("../fonts/Intro-Light/Intro-Light.woff") format("woff"),
+       url("../fonts/Intro-Light/Intro-Light.ttf") format("truetype"),
+       url("../fonts/Intro-Light/Intro-Light.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro";
+  src: url("../fonts/Intro-Thin/Intro-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+//@font-face {
+//  font-family: "Intro Caps";
+//  src: url("../fonts/Intro-Thin/Intro-Thin-Caps.otf") format("opentype");
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "Intro-Alt";
+//  src: url("../fonts/Intro-Thin/Intro-Thin-Alt.otf") format("opentype");
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+
+@font-face {
+  font-family: 'Intro';
+  src: url("../fonts/Intro-Black/Intro-Black.eot");
+  src: url("../fonts/Intro-Black/Intro-Black.eot?#iefix")format("embedded-opentype"),
+       url("../fonts/Intro-Black/Intro-Black.woff") format("woff"),
+       url("../fonts/Intro-Black/Intro-Black.ttf") format("truetype"),
+       url("../fonts/Intro-Black/Intro-Black.svg") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}

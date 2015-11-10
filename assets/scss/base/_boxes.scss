@@ -1,0 +1,252 @@
+.content{
+  h1{
+    font-weight: 400;
+    font-size: 32px;
+  }
+}
+
+
+.box-1{
+  background-image: url('../images/bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+
+
+
+
+
+  .title-wrapper{
+    border: 5px solid rgba(255,255,255,0.3);
+    padding: 50px;
+    width: 580px;
+    .title{
+      padding-bottom: 50px;
+      position: relative;
+      h1{
+        font-size: 42px;
+        line-height: 55px;
+        font-family: "Intro";
+        font-weight: 100;
+      }
+
+      &:after{
+        position:absolute;
+        right: 0;
+        bottom:0;
+        content: '';
+        display:block;
+        width: 50px;
+        height: 50px;
+        border-right: 5px solid rgba(255,255,255,0.3);
+        border-bottom: 5px solid rgba(255,255,255,0.3);
+
+      }
+    }
+  }
+
+  ul{
+    li{
+      display: inline-block;
+      padding: 0 0 0 20px;
+      width: 110px;
+      color: rgba(255,255,255,0.4);
+      &:hover{
+        color: white;
+        a:after{
+          background: white;
+        }
+      }
+    }
+    a{
+      position:relative;
+      display: block;
+      color: inherit;
+      border-bottom: 3px solid rgba(255,255,255,0.4);
+      padding: 20px 0;
+      &:after{
+        position:absolute;
+        bottom:-3px;
+        content: '';
+        display:block;
+        width:75%;
+        height:3px;
+      }
+    }
+    span{
+      float: left;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    p{
+      margin-left: 20px;
+      line-height: 18px;
+
+    }
+  }
+}
+.box-2{
+  background-image: url('../images/bg-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .row{
+    margin: -15px;
+    .col{
+      float:left;
+      padding:15px;
+    }
+  }
+  .left{
+    width: 60%;
+    .col{
+      width:33%;
+    }
+  }
+  .right{
+    width: 40%;
+  }
+
+  .content-tile{
+    padding: 20px;
+    position: relative;
+    border: 5px solid rgba(0,0,0,0.1);
+    &:after{
+      content: '+';
+      color: #ef7f1a;
+      font-size: 40px;
+      height: 15px;
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+    span{
+      display:block;
+      color: #ef7f1a;
+      margin-bottom: 7px;
+    }
+    p{
+      height: 45px;
+      line-height: 16px;
+    }
+  }
+  .content-right{
+    padding: 50px 0 0 30px;
+    h1{
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .content-switch{
+      position:relative;
+      .entry-content{
+        position: absolute;
+        top: 0;
+        display:none;
+        h2{
+          font-size: 24px;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+.box-3{
+  background-image: url('../images/bg-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+
+}
+.box-4{
+  background-image: url('../images/bg-4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color:white;
+
+  h1{
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  .row{
+    margin: -15px;
+    .col{
+      float:left;
+      padding:15px;
+    }
+  }
+  .left{
+    width: 60%;
+    .col{
+      width:30%;
+      &:nth-child(3){
+        margin-right: 10%;
+      }
+      &:nth-child(4){
+        margin-left: 10%;
+      }
+    }
+  }
+  .right{
+    width: 40%;
+  }
+
+  .content-tile{
+    padding: 20px;
+    position: relative;
+    border: 5px solid rgba(255,255,255,0.2);
+    &:after{
+      content: '+';
+      color: #ef7f1a;
+      font-size: 40px;
+      height: 15px;
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+    &:hover{
+      border-color: #ef7f1a;
+    }
+    span{
+      display:block;
+      color: #ef7f1a;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p{
+      height: 45px;
+      line-height: 16px;
+    }
+  }
+  .content-right{
+    padding-left: 20px;
+    .content-switch{
+      position:relative;
+      .entry-content{
+        position: absolute;
+        top: 0;
+        display:none;
+        h2{
+          font-size: 24px;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+
+}
+.box-5{
+  background-image: url('../images/bg-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
