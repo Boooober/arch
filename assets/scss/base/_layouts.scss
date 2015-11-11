@@ -4,8 +4,11 @@
 .content{
   padding: 100px;
 }
+.section{
+  position:relative;
+}
 
-.fp-tableCell{
+.cell{
   display: table-cell;
   vertical-align: middle;
 }

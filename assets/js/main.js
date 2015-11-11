@@ -3,11 +3,19 @@ jQuery( document ).ready(function( $ ) {
     $('#fullpage').fullpage({
         anchors:['home', 'service', 'cases', 'workflow', 'offers', 'contacts'],
         scrollOverflow: true,
-        fixedElements: '#flying-panel'
+        fixedElements: '#flying-panel',
+        slidesNavigation: true,
+        navigation: true
     });
     $('#next').click(function(){
         $.fn.fullpage.moveSectionDown();
     });
+//    $('#next-slide').click(function(){
+//        $.fn.fullpage.moveSlideRight();
+//    });
+//    $('#prev-slide').click(function(){
+//        $.fn.fullpage.moveSlideRight();
+//    });
 
 
     (function(){

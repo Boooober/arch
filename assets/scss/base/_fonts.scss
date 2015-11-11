@@ -8,15 +8,17 @@
 	font-weight: 700;
 	font-style: normal;
 }
+
+
 @font-face {
-	font-family: "Intro";
-	src: url(".../fonts/Intro-Book/Intro-Book.eot");
-	src: url(".../fonts/Intro-Book/Intro-Book.eot?#iefix")format("embedded-opentype"),
-	     url(".../fonts/Intro-Book/Intro-Book.woff") format("woff"),
-         url(".../fonts/Intro-Book/Intro-Book.ttf") format("truetype"),
-         url(".../fonts/Intro-Book/Intro-Book.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Intro";
+  src: url(".../fonts/Intro-Reglar/Intro-Reglar.eot");
+  src: url(".../fonts/Intro-Reglar/Intro-Reglar.eot?#iefix")format("embedded-opentype"),
+       url(".../fonts/Intro-Reglar/Intro-Reglar.woff") format("woff"),
+       url(".../fonts/Intro-Reglar/Intro-Reglar.ttf") format("truetype"),
+       url(".../fonts/Intro-Reglar/Intro-Reglar.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -37,6 +39,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Intro";
+  src: url("../fonts/Intro-Book/Intro-Book.eot");
+  src: url("../fonts/Intro-Book/Intro-Book.eot?#iefix")format("embedded-opentype"),
+       url("../fonts/Intro-Book/Intro-Book.woff") format("woff"),
+       url("../fonts/Intro-Book/Intro-Book.ttf") format("truetype"),
+       url("../fonts/Intro-Book/Intro-Book.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
 //@font-face {
 //  font-family: "Intro Caps";
 //  src: url("../fonts/Intro-Thin/Intro-Thin-Caps.otf") format("opentype");

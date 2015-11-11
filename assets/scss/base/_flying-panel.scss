@@ -5,7 +5,7 @@
 //  z-index: 1000;
 //  top: 0;
 //  left: 0;
-  transition: color: .3s;
+  transition: color .3s;
   &.white{
     color:white;
   }
@@ -44,12 +44,6 @@
   font-weight: 700;
   padding: 10px 0 10px 20px;
   cursor: pointer;
-}
-
-.aside-nav{
-  position: absolute;
-  right: 0;
-  bottom: 20px;
 }
 
 .next{
