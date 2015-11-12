@@ -1,7 +1,10 @@
 jQuery( document ).ready(function( $ ) {
 
+    var anchors = ['home', 'service', 'projects', 'workflow', 'offers', 'contacts'];
+
+
     $('#fullpage').fullpage({
-        anchors:['home', 'service', 'cases', 'workflow', 'offers', 'contacts'],
+        anchors:anchors,
         scrollOverflow: true,
         fixedElements: '#flying-panel',
         slidesNavigation: true,
@@ -10,12 +13,11 @@ jQuery( document ).ready(function( $ ) {
     $('#next').click(function(){
         $.fn.fullpage.moveSectionDown();
     });
-//    $('#next-slide').click(function(){
-//        $.fn.fullpage.moveSlideRight();
-//    });
-//    $('#prev-slide').click(function(){
-//        $.fn.fullpage.moveSlideRight();
-//    });
+
+    var asidePosition = $('<div id="aside-position" class="aside-position"></div>');
+    $('#fp-nav').prepend(asidePosition);
+
+
 
 
     (function(){
@@ -33,15 +35,29 @@ jQuery( document ).ready(function( $ ) {
 
         $(window).on('hashchange', function(){
             addAndRemoveBlack();
+            slideName();
         });
     })();
 
     function addAndRemoveBlack (){
-        if(window.location.hash == '#home'){
+        if(window.location.hash == '#home' || window.location.hash == '#workflow'){
             $('#flying-panel').addClass('white');
+            $('.aside-position').addClass('white');
         } else{
             $('#flying-panel').removeClass('white');
+            $('.aside-position').removeClass('white');
         }
     }
+
+
+    function slideName (){
+        var currentSlide = window.location.hash.substr(1),
+            namePosition = anchors.indexOf(currentSlide),
+            slides = $('.section');
+
+        asidePosition.html( slides[namePosition].getAttribute("data-section-name") );
+    }
+
     addAndRemoveBlack ();
+    slideName();
 });

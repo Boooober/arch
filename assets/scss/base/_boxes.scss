@@ -14,7 +14,7 @@
   height: 100%;
   overflow:hidden;
   &.animate:before{
-    animation:growimage 30s 0s linear infinite alternate;
+    animation:growimage 20s 0s linear infinite alternate;
   }
   &:before{
     position:absolute;
@@ -210,6 +210,7 @@
       display: inline-block;
       border: 2px solid #ef7f1a;
       padding:4px 15px;
+      transition: .2s;
       &:hover{
         background: #ef7f1a;
         color:white;
