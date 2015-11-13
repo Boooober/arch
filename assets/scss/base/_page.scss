@@ -1,37 +1,37 @@
-.page{
-
+.single{
+  background-color: white;
 
 
   .page-wrapper{
-    width: 1280px;
-    margin: 0 auto;
+//    width: 1280px;
+    padding: 40px;
+//    margin: 0 auto;
   }
-
-  .header-wrapper{
-    padding: 0 20px;
-  }
-
   .page-header{
     &.feature-image{
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
-    padding: 20px 0;
     margin-bottom: 40px;
     text-align: center;
-    .logo {
-      float:left;
-    }
-    .menu{
-      margin:0;
+    .menu-wrap{
+//      margin:0;
       float:right;
       .close, .menu-button{
         display:inline-block;
         vertical-align: middle;
       }
-      .close{
+      .overlay-close{
+        display:inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
         font-size: 18px;
+        cursor: pointer;
+        transition: color .2s;
+        &:hover{
+          color: #ef7f1a;
+        }
       }
     }
     .title{
@@ -96,11 +96,17 @@
     padding: 50px 0;
     .soc-icons{
       text-align:center;
-      margin: 15px auto 0;
+      margin: 15px 250px 0;
       ul{
         li{
           display:inline-block;
           margin: 0 7px;
+        }
+      }
+      a{
+        transition: color .2s;
+        &:hover{
+          color: #ef7f1a;
         }
       }
     }

@@ -3,6 +3,7 @@ jQuery( document ).ready(function( $ ) {
     var anchors = ['home', 'service', 'projects', 'workflow', 'offers', 'contacts'];
 
 
+
     $('#fullpage').fullpage({
         anchors:anchors,
         scrollOverflow: true,
@@ -10,8 +11,16 @@ jQuery( document ).ready(function( $ ) {
         slidesNavigation: true,
         navigation: true
     });
+
+
+
     $('#next').click(function(){
         $.fn.fullpage.moveSectionDown();
+    });
+    // go up
+    $('#logo').click(function(){
+        $.fn.fullpage.moveTo(1);
+        return false;
     });
 
     var asidePosition = $('<div id="aside-position" class="aside-position"></div>');
@@ -40,7 +49,7 @@ jQuery( document ).ready(function( $ ) {
     })();
 
     function addAndRemoveBlack (){
-        if(window.location.hash == '#home' || window.location.hash == '#workflow'){
+        if(window.location.hash == '#home' || window.location.hash == '#workflow' || window.location.hash == ''){
             $('#flying-panel').addClass('white');
             $('.aside-position').addClass('white');
         } else{
@@ -55,9 +64,93 @@ jQuery( document ).ready(function( $ ) {
             namePosition = anchors.indexOf(currentSlide),
             slides = $('.section');
 
-        asidePosition.html( slides[namePosition].getAttribute("data-section-name") );
+        if(slides[namePosition]){
+            asidePosition.html( slides[namePosition].getAttribute("data-section-name") );
+        }
     }
 
     addAndRemoveBlack ();
     slideName();
+
+
+    //stretch contacts box to the window bottom
+    (function(){
+        var cell = $('.box-6 .js-cell'),
+            mapHeight = 350,
+            tableHeight = $(window).innerHeight() - mapHeight;
+
+        cell.each(function(){
+            $(this).wrap('<div class="js-table" style="height:'+tableHeight+'px"></div>');
+        });
+
+    })();
+
+
+
+    //push-page from http://tympanus.net/Development/FullscreenOverlayStyles/
+    (function() {
+        var container = document.querySelector( 'div.container' ),
+            triggerBttn = document.getElementsByClassName( 'trigger-overlay' ),
+            overlay = document.querySelector( 'div.overlay' ),
+            closeBttn = overlay.querySelector( 'p.overlay-close' );
+
+
+
+        transEndEventNames = {
+            'WebkitTransition': 'webkitTransitionEnd',
+            'MozTransition': 'transitionend',
+            'OTransition': 'oTransitionEnd',
+            'msTransition': 'MSTransitionEnd',
+            'transition': 'transitionend'
+        },
+            transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+            support = { transitions : Modernizr.csstransitions };
+
+        function toggleOverlay(e) {
+            //close overlay
+
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            }
+
+            if( classie.has( overlay, 'open' ) ) {
+                classie.remove( overlay, 'open' );
+                classie.remove( container, 'overlay-open' );
+                classie.add( overlay, 'close' );
+
+                $.fn.fullpage.setAllowScrolling(true);
+
+                var onEndTransitionFn = function( ev ) {
+                    if( support.transitions ) {
+                        if( ev.propertyName !== 'visibility' ) return;
+                        this.removeEventListener( transEndEventName, onEndTransitionFn );
+                    }
+                    classie.remove( overlay, 'close' );
+
+                };
+                if( support.transitions ) {
+                    overlay.addEventListener( transEndEventName, onEndTransitionFn );
+                }
+                else {
+                    onEndTransitionFn();
+                }
+
+
+
+            }
+            else if( !classie.has( overlay, 'close' ) ) {
+                classie.add( overlay, 'open' );
+                classie.add( container, 'overlay-open' );
+
+                $.fn.fullpage.setAllowScrolling(false);
+            }
+        }
+
+        for(var i = 0, l = triggerBttn.length; i < l; i++){
+            triggerBttn[i].addEventListener( 'click', toggleOverlay );
+        }
+        closeBttn.addEventListener( 'click', toggleOverlay );
+    })();
 });
