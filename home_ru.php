@@ -35,6 +35,7 @@
     <section class="content">
         <div class="row">
             <div class="col left">
+                <h2 class="mob-title">Наши услуги</h2>
                 <div class="row">
                     <div class="col">
                         <div data-switch="design" class="content-tile switch-trigger">
@@ -147,34 +148,27 @@
             'posts_per_page' => 5
         );
 
+
+
         $query = new WP_Query($args);
 
         if($query->have_posts()){
             while($query->have_posts()){
                 $query->the_post();
+                $post_id = get_the_ID();
+                ?>
 
-//                echo the_title();
+                    <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php echo get_field('slide_image'); ?>')">
+                        <div class="slide-content">
+                            <h2><?php the_title(); ?></h2>
+                            <a href="<?php echo get_permalink(); ?>" class="trigger-overlay js-single-ajax" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
+                        </div>
+                    </div>
+
+                <?php
             }
         }
     ?>
-    <div id="slide1" class="slide" style="background-image: url('<?php echo $templateurl; ?>/assets/images/bg-3.jpg')">
-        <div class="slide-content">
-            <h2>SOFIA BULGARIA</h2>
-            <a href="http://archdesign.dev.witty-digital.com/page.html" class="trigger-overlay">посмотреть проект</a>
-        </div>
-    </div>
-    <div id="slide2" class="slide" style="background-image: url('<?php echo $templateurl; ?>/assets/images/bg-4.jpg')">
-        <div class="slide-content">
-            <h2>SOFIA BULGARIA</h2>
-            <a href="http://archdesign.dev.witty-digital.com/page.html" class="trigger-overlay">посмотреть проект</a>
-        </div>
-    </div>
-    <div id="slide3" class="slide" style="background-image: url('<?php echo $templateurl; ?>/assets/images/bg-1.jpg')">
-        <div class="slide-content">
-            <h2>SOFIA BULGARIA</h2>
-            <a href="http://archdesign.dev.witty-digital.com/page.html" class="trigger-overlay">посмотреть проект</a>
-        </div>
-    </div>
 </section>
 <div class="section box-4 switcher" data-section-name="Этапы работы">
     <div class="box-bg animate"></div>
@@ -260,7 +254,7 @@
         <h1>Что мы вам предлагаем</h1>
         <div class="row">
             <div class="row">
-                <div class="col cell">
+                <div class="col">
                     <a href="#">
                         <div class="entry-content">
                             <h2>Архитектурное проектирование</h2>
@@ -268,7 +262,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col cell">
+                <div class="col">
                     <a href="#">
                         <div class="entry-content">
                             <h2>Архитектурное проектирование</h2>
@@ -276,7 +270,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col cell">
+                <div class="col">
                     <a href="#">
                         <div class="entry-content">
                             <h2>Архитектурное проектирование</h2>
@@ -291,6 +285,7 @@
 <section class="section box-6" data-section-name="Контакты">
     <div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81295.50604234143!2d30.567537809521486!3d50.450700782061084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1447250718941" width="100%" height="350" frameborder="0" style="border:0; display: block;" allowfullscreen></iframe>
+<!--        --><?php //get_template_part('parts/gmap'); ?>
     </div>
     <div class="row">
         <div>
@@ -339,84 +334,8 @@
 </div>
 
 
-<div class="overlay overlay-contentpush single">
-    <div class="page-header feature-image" style="background-image: url('<?php echo $templateurl; ?>/assets/images/page-feature.jpg')">
-        <div class="page-wrapper header-wrapper">
-            <div class="topline clearfix">
-                <div class="logo">
-                    <?php get_template_part('assets/svg/logo.svg') ?>
-                </div>
-                <div class="menu-wrap">
-                    <p class="overlay-close icon-cancel"></p>
-                    <div class="menu-button">MENU</div>
-                </div>
-            </div>
-
-            <h1 class="title">SOFIA BULGARIA</h1>
-
-            <p class="undertitle">Частный интерьер. Монако</p>
-            <div class="project-nav clearfix">
-                <a href="#" class="prev-project">
-                    Предыдущий проект
-                    <div class="project-nav-icon prev-icon"></div>
-                </a>
-                <a href="#" class="next-project">
-                    <div class="project-nav-icon next-icon"></div>
-                    Следующий проект
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-1">
-        <div class="col col-1">
-            <div class="entry-text">
-                <p>Живописные виды княжества Монако являются лучшей «заставкой» за окном: роскошные пляжи, яркое солнце и белоснежные яхты, покачивающиеся на волнах, сами по себе могут стать декорацией для художественного фильма. Вот почему организовать место для отдыха, предназначенное также для того, чтобы любоваться красотами Лазурного побережья, совместив при этом несколько удовольствий сразу (если говорить об активном отдыхе и релаксации), не так уж просто.</p>
-                <p>Однако представленный проект террасы для частного интерьера в Монако включает в себя все перечисленные условия. Открытая терраса, на которую выходит квартира на последнем этаже, является отличным местом для проведения досуга, будь то дружеский пикник или веселая мартини-вечеринка, но не стоит забывать и об оздоровительных процедурах, польза от которых повышается вдвойне, если они проводятся на свежем воздухе. </p>
-            </div>
-        </div>
-        <div class="col col-2">
-            <figure class="entry-image">
-                <img src="<?php echo $templateurl; ?>/assets/images/page-img-1.jpg" alt=""/>
-            </figure>
-        </div>
-    </div>
-
-    <div class="row row-2">
-        <div class="col col-1">
-            <figure class="entry-image">
-                <img src="<?php echo $templateurl; ?>/assets/images/page-img-2.jpg" alt=""/>
-            </figure>
-        </div>
-        <div class="col col-2">
-            <div class="entry-text">
-                <p>Вот почему на заданной для проектирования площади мы организовали целых четыре зоны: 1) зону приема пищи; 2) зону релакса и хромотерапии (сауна и джакузи); 3) зону озеленения, которая не просто радует глаз, но и прекрасно вписывается в общий экстерьер; 4) лаундж-зону.</p>
-            </div>
-            <figure class="entry-image">
-                <img src="<?php echo $templateurl; ?>/assets/images/page-img-3.jpg" alt=""/>
-            </figure>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="page-wrapper clearfix">
-            <a href="#" class="prev-project">
-                Предыдущий проект
-                <div class="project-nav-icon prev-icon"></div>
-            </a>
-            <a href="#" class="next-project">
-                <div class="project-nav-icon next-icon"></div>
-                Следующий проект
-            </a>
-            <div class="soc-icons">
-                <ul>
-                    <li><a href="#" class="icon-facebook"></a></li>
-                    <li><a href="#" class="icon-linkedin"></a></li>
-                    <li><a href="#" class="icon-instagram"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+<div class="overlay overlay-contentpush">
+    <div id="query-content"></div>
 </div>
 
 <div id="flying-panel" class="flying-panel white">

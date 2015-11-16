@@ -27,6 +27,44 @@ jQuery( document ).ready(function( $ ) {
     $('#fp-nav').prepend(asidePosition);
 
 
+    $(document).on('click', '.js-single-ajax, .js-nav', dynamicContent);
+
+    function dynamicContent (event){
+        event.preventDefault();
+        var postId = $(this).data('project'),
+            container = $('.container'),
+            queryContent = $('#query-content');
+
+
+//        console.log(container.get(0));
+//        console.log(container.hasClass('overlay-open'));
+
+        if(container.get(0) && !container.hasClass('overlay-open')){
+            queryContent.fadeOut(0);
+        }else{
+            queryContent.fadeOut(250);
+        }
+
+
+        $.ajax({
+            url : ARCHproject.ajax_url,
+            type : 'post',
+            data : {
+                post_id : postId,
+                arch_nonce : ARCHproject.arch_nonce,
+                action : 'get_arch_project'
+            },
+            success : function( response ) {
+//                console.log(response);
+                queryContent.html(response).fadeIn(250);
+            },
+            error: function(){
+                console.log('error');
+            }
+        });
+
+    }
+
 
 
     (function(){
@@ -74,37 +112,37 @@ jQuery( document ).ready(function( $ ) {
 
 
     //stretch contacts box to the window bottom
-    (function(){
-        var cell = $('.box-6 .js-cell'),
-            mapHeight = 350,
-            tableHeight = $(window).innerHeight() - mapHeight;
+    if($(window).width() > 768){
+        (function(){
+            var cell = $('.box-6 .js-cell'),
+                mapHeight = 350,
+                tableHeight = $(window).innerHeight() - mapHeight;
 
-        cell.each(function(){
-            $(this).wrap('<div class="js-table" style="height:'+tableHeight+'px"></div>');
-        });
+            cell.each(function(){
+                $(this).wrap('<div class="js-table" style="height:'+tableHeight+'px"></div>');
+            });
 
-    })();
+        })();
+    }
 
 
 
     //push-page from http://tympanus.net/Development/FullscreenOverlayStyles/
     (function() {
         var container = document.querySelector( 'div.container' ),
-            triggerBttn = document.getElementsByClassName( 'trigger-overlay' ),
-            overlay = document.querySelector( 'div.overlay' ),
-            closeBttn = overlay.querySelector( 'p.overlay-close' );
-
-
-
-        transEndEventNames = {
-            'WebkitTransition': 'webkitTransitionEnd',
-            'MozTransition': 'transitionend',
-            'OTransition': 'oTransitionEnd',
-            'msTransition': 'MSTransitionEnd',
-            'transition': 'transitionend'
-        },
+            overlay = document.querySelector( 'div.overlay'),
+            transEndEventNames = {
+                'WebkitTransition': 'webkitTransitionEnd',
+                'MozTransition': 'transitionend',
+                'OTransition': 'oTransitionEnd',
+                'msTransition': 'MSTransitionEnd',
+                'transition': 'transitionend'
+            },
             transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
             support = { transitions : Modernizr.csstransitions };
+
+        $(document).on('click', 'p.overlay-close', toggleOverlay);
+        $(document).on('click', '.trigger-overlay', toggleOverlay);
 
         function toggleOverlay(e) {
             //close overlay
@@ -147,10 +185,7 @@ jQuery( document ).ready(function( $ ) {
                 $.fn.fullpage.setAllowScrolling(false);
             }
         }
-
-        for(var i = 0, l = triggerBttn.length; i < l; i++){
-            triggerBttn[i].addEventListener( 'click', toggleOverlay );
-        }
-        closeBttn.addEventListener( 'click', toggleOverlay );
     })();
+
+
 });

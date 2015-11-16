@@ -89,7 +89,7 @@ html.fp-enabled,
 //  transform: translate3d(0,0,0);
 
   &.fp-prev {
-    left: 20%;
+    left: 15%;
     &:after{
       border-bottom: 2px solid;
       border-left: 2px solid;
@@ -100,7 +100,7 @@ html.fp-enabled,
   }
 
   &.fp-next {
-    right: 22%;
+    right: 15%;
     &:after{
       border-top: 2px solid;
       border-right: 2px solid;

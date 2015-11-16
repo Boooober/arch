@@ -88,6 +88,38 @@ function archdesign_scripts() {
 
 
     wp_enqueue_script ('main', ARC_THEME_URL . '/assets/js/main.js', array('jquery'), '1.0', true);
+    wp_localize_script( 'main', 'ARCHproject', array(
+        'arch_nonce' => wp_create_nonce('arch_nonce'),
+        'ajax_url' => admin_url( 'admin-ajax.php' )
+    ));
 
 }
 add_action( 'wp_enqueue_scripts', 'archdesign_scripts' );
+
+
+
+add_action( 'wp_ajax_nopriv_get_arch_project', 'get_arch_project' );
+add_action( 'wp_ajax_get_arch_project', 'get_arch_project' );
+
+function get_arch_project (){
+
+    // Verify nonce
+    if( !isset( $_POST['arch_nonce'] ) || !wp_verify_nonce( $_POST['arch_nonce'], 'arch_nonce' ) )
+        die('Permission denied');
+
+    $post_id   = $_POST['post_id'];
+    $args = array(
+        'p' => $post_id
+    );
+
+
+    query_posts($args);
+    while (have_posts()): the_post();
+
+        include(locate_template('parts/project-page.php'));
+
+    endwhile;
+
+    wp_reset_query();
+    die();
+}

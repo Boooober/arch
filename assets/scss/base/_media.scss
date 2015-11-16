@@ -1,0 +1,296 @@
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 1024px){
+  .single{
+    .row-1 .col-1 {
+      width: 35%;
+      margin: 0 10% 0 5%;
+    }
+    .row-2 .col-2 {
+      width: 30%;
+      margin: 0 5% 0 5%;
+    }
+
+  }
+}
+
+@media (max-width: 768px){
+
+
+  .content {
+    padding: 60px;
+  }
+
+  .single{
+    .page-header{
+      .title {
+        margin: 40px 0 20px;
+        font-size: 50px;
+      }
+    }
+    .row{
+      padding: 0 60px;
+    }
+    .row-1{
+      .col-1{
+        width:100%;
+        margin: 0;
+      }
+      .col-2{
+        width:100%;
+      }
+    }
+    .row-2{
+      .col-1{
+        width:100%;
+      }
+      .col-2{
+        width:100%;
+        margin: 0;
+        .entry-text{
+          width:100%;
+        }
+        .entry-image{
+          img{
+            margin: 0 auto 30px;
+          }
+        }
+      }
+    }
+    .footer{
+      .soc-icons{
+        margin: 15px 150px 0;
+      }
+    }
+  }
+
+  .box-2{
+    .left, .right{
+      width: 100%;
+    }
+    .mob-title{
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: 30px;
+    }
+
+    .content-right{
+      h1 {
+        display: none;
+      }
+    }
+  }
+
+  .fp-controlArrow{
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+
+    &:after{
+      height:20px;
+      width:20px;
+    }
+
+    &.fp-next{
+      left:15%;
+      top: 33.33%;
+      &:after{
+        border-width: 3px;
+      }
+    }
+
+    &.fp-prev{
+      left: 15%;
+      top: 66.66%;
+      &:after{
+        border-width: 3px;
+      }
+    }
+  }
+
+  .box-4{
+    .left{
+      width:100%;
+    }
+    .right {
+      display:none;
+    }
+  }
+
+  .box-5{
+    .row{
+      .col{
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+  .box-6{
+    .row{
+      .col{
+        &.left, &.right{
+          padding: 60px 120px;
+          width:100%;
+          float: none;
+        }
+        &.right{
+          padding-bottom: 120px;
+        }
+      }
+    }
+  }
+
+  html.js{
+    .box-6{
+      .row{
+        .col{
+          &.left, &.right{
+            padding: 60px;
+          }
+          &.right{
+            padding-bottom: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 720px){
+  .box-1{
+    .title-wrapper{
+      width:100%;
+    }
+  }
+
+  .box-2{
+    .left{
+      .col{
+        width:50%;
+      }
+    }
+  }
+
+  .box-4{
+    .left{
+      .col{
+        width: 50%;
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+        &:nth-child(4) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .single{
+
+  }
+
+}
+
+@media (max-width: 540px){
+  .single{
+    .prev-project, .next-project{
+      span{
+        display:none;
+      }
+    }
+    .project-nav-icon{
+      width:45px;
+      height:45px;
+      border-width: 3px;
+      margin-top: 0;
+      &.prev-icon, &.next-icon{
+        &:after{
+          height: 15px;
+          width: 15px;
+          border-width: 3px;
+        }
+      }
+    }
+    .footer{
+      .soc-icons {
+        margin: 0 50px 0;
+      }
+    }
+  }
+
+  .box-1{
+    .title-wrapper{
+      border-width: 4px;
+      .title{
+        h1{
+          font-size: 30px;
+          line-height: 40px;
+        }
+        &:after{
+          border-width: 4px;
+        }
+      }
+    }
+  }
+  .box-6{
+    form{
+      .row{
+        .col{
+          width:100%;
+          float: none;
+        }
+      }
+      input[type="submit"]{
+        margin-top: 25px;
+        padding: 15px 10px;
+      }
+    }
+    .right{
+      .title{
+        font-size:32px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width:480px){
+
+  .box-2{
+    .left{
+      .col{
+        width: 100%;
+        float: none;
+      }
+    }
+    .content-tile{
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+
+  .box-4{
+    .left{
+      .col{
+        width:100%;
+        float: none;
+      }
+    }
+    .content-tile{
+      p{
+        font-size: 18px;
+      }
+      span{
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
