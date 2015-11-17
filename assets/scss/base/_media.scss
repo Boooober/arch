@@ -18,20 +18,39 @@
 
 @media (max-width: 768px){
 
-
   .content {
-    padding: 60px;
+    padding: 80px 60px 60px;
   }
+
+  .topline-nav{
+    padding: 20px 60px 0 20px;
+  }
+
+  .single{
+    .page-wrapper{
+      padding: 20px;
+    }
+    .footer{
+      padding: 30px 0;
+    }
+  }
+
 
   .single{
     .page-header{
       .title {
         margin: 40px 0 20px;
         font-size: 50px;
+        line-height: 50px;
+      }
+    }
+    .topline{
+      .menu-wrap{
+        margin-right: 40px;
       }
     }
     .row{
-      padding: 0 60px;
+      padding: 0 30px;
     }
     .row-1{
       .col-1{
@@ -59,9 +78,28 @@
         }
       }
     }
+    .prev-project, .next-project{
+      span{
+        display:none;
+      }
+    }
+    .project-nav-icon{
+      width:45px;
+      height:45px;
+      border-width: 3px;
+      margin-top: 0;
+      margin-bottom: -35px;
+      &.prev-icon, &.next-icon{
+        &:after{
+          height: 15px;
+          width: 15px;
+          border-width: 3px;
+        }
+      }
+    }
     .footer{
-      .soc-icons{
-        margin: 15px 150px 0;
+      .soc-icons {
+        margin: 0 70px;
       }
     }
   }
@@ -77,12 +115,14 @@
       font-weight: 400;
       font-size: 30px;
     }
-
-    .content-right{
-      h1 {
-        display: none;
-      }
+    .right{
+      display:none;
     }
+//    .content-right{
+//      h1 {
+//        display: none;
+//      }
+//    }
   }
 
   .fp-controlArrow{
@@ -133,6 +173,7 @@
 
   .box-6{
     .row{
+      margin: 0;
       .col{
         &.left, &.right{
           padding: 60px 120px;
@@ -190,37 +231,11 @@
       }
     }
   }
-  .single{
-
-  }
-
 }
 
 @media (max-width: 540px){
-  .single{
-    .prev-project, .next-project{
-      span{
-        display:none;
-      }
-    }
-    .project-nav-icon{
-      width:45px;
-      height:45px;
-      border-width: 3px;
-      margin-top: 0;
-      &.prev-icon, &.next-icon{
-        &:after{
-          height: 15px;
-          width: 15px;
-          border-width: 3px;
-        }
-      }
-    }
-    .footer{
-      .soc-icons {
-        margin: 0 50px 0;
-      }
-    }
+  .content {
+    padding: 100px 60px 20px 20px;
   }
 
   .box-1{
@@ -237,6 +252,27 @@
       }
     }
   }
+
+  .box-3{
+    .slide-content{
+      h2{
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .fp-controlArrow{
+    &.fp-prev {top:75%;}
+    &.fp-next {top:25%;}
+  }
+
+  #fp-nav{
+    top: auto;
+    bottom: 5%;
+  }
+
   .box-6{
     form{
       .row{
@@ -292,5 +328,126 @@
         margin-bottom: 20px;
       }
     }
+  }
+}
+
+@media (max-width:420px){
+  .topline-nav{
+    padding: 20px;
+  }
+  .logo{
+    width:40px;
+    height:40px;
+    svg{
+      width:100%;
+      height: 100%;
+    }
+  }
+  .menu-button {
+    font-size: 14px;
+    padding: 5px 0 5px 10px;
+  }
+  .menu{
+    margin-right: 0;
+    li{
+      font-size:12px;
+    }
+  }
+  .menu-wrap {
+    margin: 4px 0;
+  }
+  .box-1{
+    .title-wrapper{
+      border:none;
+      padding: 0;
+      .title{
+        &:after {
+//          right: 40px;
+//          width: 75%;
+        }
+      }
+    }
+  }
+  .fp-controlArrow{
+    &.fp-prev{
+      display:none;
+    }
+    &.fp-next{
+      display:none;
+    }
+  }
+
+  .single{
+    .page-header{
+      .title {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      .menu-wrap{
+        .overlay-close{
+          margin-right: 5px;
+        }
+      }
+    }
+    .topline{
+      .menu-wrap {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-device-width: 420px) and (orientation:landscape){
+  .topline-nav {
+    padding: 10px;
+  }
+  .logo{
+    width:30px;
+    height:30px;
+    svg{
+      width:100%;
+      height: 100%;
+    }
+  }
+  .menu-button {
+    font-size: 12px;
+    padding: 2px 0 2px 5px;
+  }
+  .menu{
+    margin-right: 0;
+    li{
+      font-size:10px;
+    }
+  }
+
+  #fp-nav{
+    ul{
+      li {
+        height: 11px;
+        a {
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+  .aside-position{
+    line-height: 18px;
+  }
+
+//  .menu-wrap {
+//    margin: 4px 0;
+//  }
+}
+
+@media (max-width: 320px){
+  .single .footer .soc-icons ul li {
+    margin: 0 3px;
+  }
+}
+//Temp
+
+@media (max-width:768px){
+  #menu-header_menu_ru{
+    display: none;
   }
 }

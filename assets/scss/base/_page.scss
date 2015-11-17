@@ -44,53 +44,94 @@
       color: #5c5c5c;
     }
     .project-nav {
-      margin-bottom: 40px;
-    }
-  }
-
-  .row{
-    margin-bottom: 30px;
-    .col{
-      float:left;
-    }
-  }
-
-
-  .entry-text{
-    p{
       margin-bottom: 20px;
     }
   }
-  .row-1{
-    .col-1{
-      width: 25%;
-      margin:0 10% 0 15%;
 
-    }
-    .col-2{
-      width: 50%;
-      figure{
-        img{
-          width: 100%;
-        }
+  .entry-content{
+    .row{
+      margin-bottom: 40px;
+      .col{
+        float:left;
       }
     }
-  }
 
-  .row-2{
-    .col-1{
-      width: 60%;
-      float:right;
-    }
-    .col-2{
-      float:right;
-      width: 25%;
-      margin: 0 10% 0 5%;
-      .entry-text{
-        width:80%;
+    .left-image{
+      .text{
+        width: 25%;
+        margin:0 15% 0 10%;
+      }
+      .image{
+        width: 50%;
       }
     }
+    .right-image{
+      .text{
+        width: 25%;
+        margin:0 10% 0 15%;
+      }
+      .image{
+        width: 50%;
+      }
+    }
+    .left-image-out{
+      .text{
+        width: 25%;
+        margin:0 15% 0 10%;
+      }
+      .image{
+        width: 50%;
+      }
+    }
+    .right-image-out{
+      .text{
+        width: 25%;
+        margin:0 10% 0 15%;
+      }
+      .image{
+        width: 50%;
+      }
+    }
+
   }
+
+
+
+//  .entry-text{
+//    p{
+//      margin-bottom: 20px;
+//    }
+//  }
+//  .row-1{
+//    .col-1{
+//      width: 25%;
+//      margin:0 10% 0 15%;
+//
+//    }
+//    .col-2{
+//      width: 50%;
+//      figure{
+//        img{
+//          width: 100%;
+//        }
+//      }
+//    }
+//  }
+//
+//  .row-2{
+//    .col-1{
+//      width: 60%;
+//      float:right;
+//    }
+//    .col-2{
+//      float:right;
+//      width: 25%;
+//      margin: 0 10% 0 5%;
+//      .entry-text{
+//        width:80%;
+//      }
+//    }
+//  }
 
   .footer{
     background-color: #f9f8f8;
@@ -155,6 +196,20 @@
     }
   }
 }
+//
+//.alignright{
+//  float: right;
+//  margin-left: 5%;
+//}
+//
+//.alignleft{
+//  float: left;
+//  margin-right: 5%;
+//}
+//
+//.aligncenter{
+//  margin:0 auto;
+//}
 
 .static{
   .overlay-close{

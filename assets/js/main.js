@@ -2,8 +2,6 @@ jQuery( document ).ready(function( $ ) {
 
     var anchors = ['home', 'service', 'projects', 'workflow', 'offers', 'contacts'];
 
-
-
     $('#fullpage').fullpage({
         anchors:anchors,
         scrollOverflow: true,
@@ -12,11 +10,6 @@ jQuery( document ).ready(function( $ ) {
         navigation: true
     });
 
-
-
-    $('#next').click(function(){
-        $.fn.fullpage.moveSectionDown();
-    });
     // go up
     $('#logo').click(function(){
         $.fn.fullpage.moveTo(1);
@@ -34,11 +27,6 @@ jQuery( document ).ready(function( $ ) {
         var postId = $(this).data('project'),
             container = $('.container'),
             queryContent = $('#query-content');
-
-
-//        console.log(container.get(0));
-//        console.log(container.hasClass('overlay-open'));
-
         if(container.get(0) && !container.hasClass('overlay-open')){
             queryContent.fadeOut(0);
         }else{
@@ -55,7 +43,6 @@ jQuery( document ).ready(function( $ ) {
                 action : 'get_arch_project'
             },
             success : function( response ) {
-//                console.log(response);
                 queryContent.html(response).fadeIn(250);
             },
             error: function(){
@@ -65,26 +52,6 @@ jQuery( document ).ready(function( $ ) {
 
     }
 
-
-
-    (function(){
-        $('.switch-trigger').mouseenter(function(){
-            var target = $(this),
-                switchTarget = target.data('switch');
-            $(this).closest('.switcher').find('.content-switch .entry-content').each(function(){
-                if($(this).data('target') === switchTarget){
-                    $(this).fadeIn(350);
-                }else{
-                    $(this).fadeOut(350);
-                }
-            });
-        });
-
-        $(window).on('hashchange', function(){
-            addAndRemoveBlack();
-            slideName();
-        });
-    })();
 
     function addAndRemoveBlack (){
         if(window.location.hash == '#home' || window.location.hash == '#workflow' || window.location.hash == ''){
@@ -107,12 +74,18 @@ jQuery( document ).ready(function( $ ) {
         }
     }
 
+    $(window).on('hashchange', function(){
+        addAndRemoveBlack();
+        slideName();
+    });
     addAndRemoveBlack ();
     slideName();
 
 
-    //stretch contacts box to the window bottom
+
     if($(window).width() > 768){
+
+        //Stretch contacts box to the window bottom
         (function(){
             var cell = $('.box-6 .js-cell'),
                 mapHeight = 350,
@@ -123,9 +96,28 @@ jQuery( document ).ready(function( $ ) {
             });
 
         })();
+
+
+        //Switching content on mouseenter
+        (function(){
+            $('.switch-trigger').mouseenter(function(){
+                var target = $(this),
+                    switchTarget = target.data('switch');
+                $(this).closest('.switcher').find('.content-switch .entry-content').each(function(){
+                    if($(this).data('target') === switchTarget){
+                        $(this).fadeIn(350);
+                    }else{
+                        $(this).fadeOut(350);
+                    }
+                });
+            });
+        })();
+
+
+
+
+
     }
-
-
 
     //push-page from http://tympanus.net/Development/FullscreenOverlayStyles/
     (function() {
@@ -174,9 +166,6 @@ jQuery( document ).ready(function( $ ) {
                 else {
                     onEndTransitionFn();
                 }
-
-
-
             }
             else if( !classie.has( overlay, 'close' ) ) {
                 classie.add( overlay, 'open' );

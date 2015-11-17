@@ -39,38 +39,135 @@
             </div>
         </div>
     </div>
+    <div class="entry-content">
+        <?php
 
-    <div class="row row-1">
-        <div class="col col-1">
-            <div class="entry-text">
-                <p><?php echo get_field('row1_text'); ?></p>
-            </div>
-        </div>
-        <div class="col col-2">
-            <figure class="entry-image">
-                <img src="<?php echo esc_url( get_field('row1_image') ); ?>" alt=""/>
-            </figure>
-        </div>
+        // check if the flexible content field has rows of data
+        if( have_rows('project_content') ):
+
+            // loop through the rows of data
+            while ( have_rows('project_content') ) : the_row();
+                if( get_row_layout() == 'left_image' ):
+                    ?>
+                    <div class="page-wrapper">
+                        <div class="row left-image ">
+
+                            <?php if($img_l = get_sub_field('left_image_image')) {
+                                $img_l_src = $img_l['url'];
+                                $img_l_alt = $img_l['alt'];
+
+                                echo '<div class="col image">';
+                                echo '<figure><img src="'.$img_l_src.'" alt="'.$img_l_alt.'"/></figure>';
+                                echo '</div>';
+                            } ?>
+
+                            <div class="col text">
+                                <?php the_sub_field('left_image_text'); ?>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php elseif( get_row_layout() == 'right_image' ): ?>
+                    <div class="page-wrapper">
+                        <div class="row right-image">
+                            <div class="col text">
+                                <?php the_sub_field('right_image_text'); ?>
+                            </div>
+
+                            <?php if($img_r = get_sub_field('right_image_image')) {
+                                $img_r_src = $img_r['url'];
+                                $img_r_alt = $img_r['alt'];
+
+                                echo '<div class="col image">';
+                                echo '<figure><img src="'.$img_r_src.'" alt="'.$img_r_alt.'"/></figure>';
+                                echo '</div>';
+                            } ?>
+
+                        </div>
+                    </div>
+
+                <?php elseif( get_row_layout() == 'left_image_out' ): ?>
+
+                    <div class="row left-image-out">
+                        <?php if($img_lo = get_sub_field('left_image_out_image')) {
+                            $img_lo_src = $img_lo['url'];
+                            $img_lo_alt = $img_lo['alt'];
+
+                            echo '<div class="col image">';
+                            echo '<figure><img src="'.$img_lo_src.'" alt="'.$img_lo_alt.'"/></figure>';
+                            echo '</div>';
+                        } ?>
+
+                        <div class="col text">
+                            <?php the_sub_field('left_image_out_text'); ?>
+                        </div>
+
+                    </div>
+
+                <?php elseif( get_row_layout() == 'right_image_out' ): ?>
+
+                    <div class="row right-image-out">
+
+                        <div class="col text">
+                            <?php the_sub_field('right_image_out_text'); ?>
+                        </div>
+
+                        <?php if($img_ro = get_sub_field('right_image_out_image')){
+                            $img_ro_src = $img_ro['url'];
+                            $img_ro_alt = $img_ro['alt'];
+
+                            echo '<div class="col image">';
+                            echo '<figure><img src="'.$img_ro_src.'" alt="'.$img_ro_alt.'"/></figure>';
+                            echo '</div>';
+                        } ?>
+
+                    </div>
+
+                <?php
+                endif;
+
+            endwhile;
+
+        else :
+
+            // no layouts found
+
+        endif;
+
+        ?>
     </div>
 
-    <div class="row row-2">
-
-        <div class="col col-2">
-            <div class="entry-text">
-                <p><?php echo get_field('row2_text'); ?></p>
-            </div>
-            <figure class="entry-image">
-                <img src="<?php echo esc_url( get_field('row2_text-image') ); ?>" alt=""/>
-            </figure>
-        </div>
-
-        <div class="col col-1">
-            <figure class="entry-image">
-                <img src="<?php echo esc_url( get_field('row2_image') ); ?>" alt=""/>
-            </figure>
-        </div>
-
-    </div>
+<!--    <div class="row row-1">-->
+<!--        <div class="col col-1">-->
+<!--            <div class="entry-text">-->
+<!--                <p>--><?php //echo get_field('row1_text'); ?><!--</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col col-2">-->
+<!--            <figure class="entry-image">-->
+<!--                <img src="--><?php //echo esc_url( get_field('row1_image') ); ?><!--" alt=""/>-->
+<!--            </figure>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="row row-2">-->
+<!---->
+<!--        <div class="col col-2">-->
+<!--            <div class="entry-text">-->
+<!--                <p>--><?php //echo get_field('row2_text'); ?><!--</p>-->
+<!--            </div>-->
+<!--            <figure class="entry-image">-->
+<!--                <img src="--><?php //echo esc_url( get_field('row2_text-image') ); ?><!--" alt=""/>-->
+<!--            </figure>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="col col-1">-->
+<!--            <figure class="entry-image">-->
+<!--                <img src="--><?php //echo esc_url( get_field('row2_image') ); ?><!--" alt=""/>-->
+<!--            </figure>-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
 
     <footer class="footer">
         <div class="page-wrapper clearfix">
