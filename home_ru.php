@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col">
                         <div data-switch="design" class="content-tile switch-trigger">
-                            <span>img</span>
+                            <span>img<?php /*get_template_part('assets/svg/l1.svg'); */?></span>
                             <p>Дизайн проект-интерьеров</p>
                         </div>
                     </div>
@@ -158,10 +158,10 @@
                 $post_id = get_the_ID();
                 ?>
 
-                    <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php echo get_field('slide_image'); ?>')">
+                    <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php the_field('slide_image'); ?>')">
                         <div class="slide-content">
-                            <h2><?php the_title(); ?></h2>
-                            <a href="<?php echo get_permalink(); ?>" class="trigger-overlay js-single-ajax" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
+                            <h2 style="color:<?php the_field('slide_text_color'); ?>"><?php the_title(); ?></h2>
+                            <a href="<?php echo get_permalink(); ?>" class="trigger-overlay js-single-ajax" style="color:<?php the_field('slide_text_color'); ?>" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
                         </div>
                     </div>
 

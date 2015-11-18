@@ -151,16 +151,16 @@
       border-color: transparent;
       background: bisque;
     }
-    &:after{
-      content: '+';
-      color: #ef7f1a;
-      font-size: 40px;
-      height: 15px;
-      display: inline-block;
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
+//    &:after{
+//      content: '+';
+//      color: #ef7f1a;
+//      font-size: 40px;
+//      height: 15px;
+//      display: inline-block;
+//      position: absolute;
+//      bottom: 10px;
+//      right: 10px;
+//    }
     span{
       display:block;
       color: #ef7f1a;
@@ -216,7 +216,7 @@
       transition: .2s;
       &:hover{
         background: #ef7f1a;
-        color:white;
+        color:white!important;
       }
     }
   }
@@ -329,7 +329,7 @@
   }
 
   .row{
-    margin: 0 -15px;
+    margin: -15px;
     .col{
       width: 33%;
       float:left;

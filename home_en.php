@@ -4,7 +4,7 @@
 * Template Name: Home Page RU
 */
 get_header();
-$templateurl = get_bloginfo('template_url');
+//$templateurl = get_bloginfo('template_url');
 
 ?>
 
@@ -64,31 +64,31 @@ $templateurl = get_bloginfo('template_url');
                     <div class="col">
                         <div data-switch="2" class="content-tile switch-trigger">
                             <span>img</span>
-                            <p>Согласования перепланировок</p>
+                            <p>Согласование перепланировок</p>
                         </div>
                     </div>
                     <div class="col">
                         <div data-switch="3" class="content-tile switch-trigger">
                             <span>img</span>
-                            <p>Дизайн проект-интерьеров</p>
+                            <p>Авторский надзор</p>
                         </div>
                     </div>
                     <div class="col">
                         <div data-switch="4" class="content-tile switch-trigger">
                             <span>img</span>
-                            <p>Планировочные решения</p>
+                            <p>Квалифицированная помощь в подборе подрядчика</p>
                         </div>
                     </div>
                     <div class="col">
                         <div data-switch="5" class="content-tile switch-trigger">
                             <span>img</span>
-                            <p>Дизайн проект-интерьеров</p>
+                            <p>Сопровождение строительных и отделочных работ</p>
                         </div>
                     </div>
                     <div class="col">
                         <div data-switch="6" class="content-tile switch-trigger">
                             <span>img</span>
-                            <p>Авторский надзор</p>
+                            <p>Разработка рабочего проекта и технической документации</p>
                         </div>
                     </div>
                 </div>
@@ -99,39 +99,39 @@ $templateurl = get_bloginfo('template_url');
                     <div class="content-switch">
                         <div data-target="design" class="entry-content">
                             <h2>Дизайн проект-интерьеров</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis euismod maximus. Donec lacinia fringilla libero eget interdum. Duis vitae dolor lacinia, hendrerit nulla id, faucibus lacus. Vestibulum scelerisque erat a lorem rutrum, a congue ligula cursus</p>
+                            <p>Профессиональное, творческое действие по созданию функционального и дизайнерского решения по оформлению дома, офиса, виллы или производственного помещения.</p>
                         </div>
                         <div data-target="3d" class="entry-content">
                             <h2>Эскизы 3D</h2>
-                            <p>Nam vestibulum auctor diam, eleifend ornare tellus vulputate sed. Etiam congue ullamcorper est, malesuada pretium lectus scelerisque sed. Curabitur feugiat nunc id erat vulputate, ac vehicula risus ullamcorper. Aenean sed arcu odio. Nullam faucibus.</p>
+                            <p>Помогает Вам правильно увидеть мысль автора проекта. Благодаря 3D визуализации красивая картинка воплотится для Вас в жизнь.</p>
                         </div>
                         <div data-target="engineering" class="entry-content" style="display:block">
-                            <h2>Проектирование</h2>
-                            <p>Далее начинается работа над планировочными решениями и визуализацией вашего будущего интерьера. Обычно делается по 3 варианта дизайна на каждое помещение. После утверждения итогового варианта составляется компьютерная 3D визуализация всех необходимых</p>
+                            <h2>Проектирование вилл</h2>
+                            <p>Наша команда создаст проект оптимально комфортного, надежного и красивого дома, что поможет не только сэкономить Ваше время, нервы и средства, но и ускорить процесс строительства Вашего дома.</p>
                         </div>
                         <div data-target="1" class="entry-content">
-                            <h2>Дизайн проект-интерьеров</h2>
-                            <p>In viverra fermentum velit eu elementum. In venenatis elementum quam, sit amet blandit turpis. Curabitur in porttitor arcu, ullamcorper eleifend leo. Maecenas congue quam non scelerisque ultrices.</p>
+                            <h2>Планировочные решения</h2>
+                            <p>Интерьер должен быть не только внушительным в своей красоте, но и считаться с принципами удобства. Именно поэтому планировочные решения неотъемлемая часть дизайн-проекта.</p>
                         </div>
                         <div data-target="2" class="entry-content">
-                            <h2>Проектирование</h2>
-                            <p>Suspendisse potenti. Nullam metus orci, varius non nisi id, blandit suscipit nisi. Mauris vehicula sem vel hendrerit cursus. Cras iaculis lectus in convallis fermentum. Nullam mattis accumsan mauris, at congue odio dignissim quis. Vivamus imperdiet congue metus vitae commodo.</p>
+                            <h2>Согласование перепланировок</h2>
+                            <p>Процесс оформления документов для приведения в соответствие планировки квартиры и документов о собственности.</p>
                         </div>
                         <div data-target="3" class="entry-content">
-                            <h2>Планировочные решения</h2>
-                            <p>Praesent convallis at turpis quis porttitor. Proin sed ornare ante. Pellentesque tempus vel sapien id lobortis. Vivamus at metus tristique, convallis tellus eu, pulvinar orci. Duis non gravida nisl, vitae ornare justo. Etiam in nunc at ligula maximus posuere.</p>
+                            <h2>Авторский надзор</h2>
+                            <p>Участие автора проекта гарантирует своевременное устранение возможных ошибок; во-вторых, при проведении авторского надзора часто приходят новые идеи, о возможном дополнении или усовершенствовании проектных решений.</p>
                         </div>
                         <div data-target="4" class="entry-content">
-                            <h2>Дизайн проект-интерьеров</h2>
-                            <p>Pellentesque nisl tortor, tincidunt non sem vitae, rutrum mollis lectus. Quisque non ligula sem. Maecenas ac ante maximus, semper ipsum quis, pretium leo. Phasellus pharetra ullamcorper elit ut euismod. Cras gravida velit sem, condimentum elementum quam facilisis sollicitudin.</p>
+                            <h2>Квалифицированная помощь в подборе подрядчика</h2>
+                            <p>Если Вы нуждаетесь в квалифицированной помощи экспертов, разбирающихся в строительстве и ремонте, наша компания поможет сделать действительно правильный выбор, основываясь на собственном опыте работы.</p>
                         </div>
                         <div data-target="5" class="entry-content">
-                            <h2>Проектирование</h2>
-                            <p>Aliquam condimentum dolor ac ante tincidunt rutrum. Vivamus cursus molestie metus, ac mattis eros. Nam vel euismod ante. Suspendisse potenti. Vivamus id bibendum odio. Donec laoreet hendrerit enim, sed vehicula augue condimentum eu. Pellentesque quis enim egestas nulla sollicitudin aliquet at quis eros.</p>
+                            <h2>Сопровождение строительных и отделочных работ</h2>
+                            <p>Это подразумевает выполнение локальных эскизов и чертежей по мере необходимости, при возникновении затруднений во время реализации проекта.</p>
                         </div>
                         <div data-target="6" class="entry-content">
-                            <h2>Авторский надзор</h2>
-                            <p>Vivamus iaculis ante id tristique imperdiet. Nullam nisi ipsum, rhoncus id elit vel, posuere vestibulum mi. Vestibulum accumsan aliquam euismod. Nunc molestie nec mauris eget efficitur. Pellentesque varius posuere risus, eget fermentum purus ultrices eu. Curabitur sagittis venenatis justo convallis consectetur.</p>
+                            <h2>Разработка рабочего проекта и технической документации</h2>
+                            <p>Часть работы над проектом, необходимая для его реализации. Рабочий проект требуется для проведения строительных работ при возведении дома, а также для проведения строительных и ремонтных работ в квартире.</p>
                         </div>
 
                     </div>
@@ -158,10 +158,10 @@ $templateurl = get_bloginfo('template_url');
             $post_id = get_the_ID();
             ?>
 
-            <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php echo get_field('slide_image'); ?>')">
+            <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php the_field('slide_image'); ?>')">
                 <div class="slide-content">
-                    <h2><?php the_title(); ?></h2>
-                    <a href="<?php echo get_permalink(); ?>" class="trigger-overlay js-single-ajax" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
+                    <h2 style="color:<?php the_field('slide_text_color'); ?>"><?php the_title(); ?></h2>
+                    <a href="<?php echo get_permalink(); ?>" class="trigger-overlay js-single-ajax" style="color:<?php the_field('slide_text_color'); ?>" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
                 </div>
             </div>
 
@@ -210,7 +210,7 @@ $templateurl = get_bloginfo('template_url');
                     <div class="col">
                         <div data-switch="decorating" class="content-tile switch-trigger">
                             <span>6</span>
-                            <p>Часть декорирования</p>
+                            <p>Декорирование</p>
                         </div>
                     </div>
                 </div>
@@ -220,27 +220,27 @@ $templateurl = get_bloginfo('template_url');
                     <div class="content-switch">
                         <div data-target="preproject" class="entry-content"  style="display:block">
                             <h2>Предпроектная часть</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis euismod maximus. Donec lacinia fringilla libero eget interdum. Duis vitae dolor lacinia, hendrerit nulla id, faucibus lacus. Vestibulum scelerisque erat a lorem rutrum, a congue ligula cursus</p>
+                            <p>Мы договариваемся с вами о встрече на объекте, наши специалисты производят обмер помещений, обсуждаем ваши пожелания и составляем техническое задание будущего проекта. После чего начинается активный творческий процесс создания первых эскизов. Заказчику предоставляем нескольких вариантов планировки, после чего переходим к созданию основной концепции дизайна.</p>
                         </div>
                         <div data-target="sketch" class="entry-content">
                             <h2>Эскизная часть</h2>
-                            <p>Nam vestibulum auctor diam, eleifend ornare tellus vulputate sed. Etiam congue ullamcorper est, malesuada pretium lectus scelerisque sed. Curabitur feugiat nunc id erat vulputate, ac vehicula risus ullamcorper. Aenean sed arcu odio. Nullam faucibus.</p>
+                            <p>Далее начинается работа над планировочными решениями и визуализацией вашего будущего интерьера. Обычно делается по 3 варианта дизайна на каждое помещение. После утверждения итогового варианта составляется компьютерная 3D визуализация всех необходимых интерьерных зон в разных ракурсах. Виртуальное моделирование интерьера помещения позволяет увидеть дизайн проект, так, как он будет выглядеть в жизни после его реализации.</p>
                         </div>
                         <div data-target="production" class="entry-content">
                             <h2>Рабочая часть</h2>
-                            <p>Далее начинается работа над планировочными решениями и визуализацией вашего будущего интерьера. Обычно делается по 3 варианта дизайна на каждое помещение. После утверждения итогового варианта составляется компьютерная 3D визуализация всех необходимых</p>
+                            <p>По утвержденным эскизам составляется комплект чертежей, необходимый для проведения ремонтно-строительных работ. На этом же этапе происходит подбор и согласование финишных отделочных материалов, составляется ведомость отделки.</p>
                         </div>
                         <div data-target="delivery" class="entry-content">
                             <h2>Сдача дизайн-проекта</h2>
-                            <p>In viverra fermentum velit eu elementum. In venenatis elementum quam, sit amet blandit turpis. Curabitur in porttitor arcu, ullamcorper eleifend leo. Maecenas congue quam non scelerisque ultrices.</p>
+                            <p>После согласования всех чертежей и отделочных материалов в проект вносятся все необходимые изменения. Имея на руках «рабочий» проект со всеми чертежами, Вы можете провести маркетинг строительного рынка, предложив нескольким строительным фирмам дизайн — проект на просчет сметы — и, соответственно, выбрать наиболее подходящую фирму, или бригаду мастеров — по качеству и бюджету.</p>
                         </div>
                         <div data-target="supervision" class="entry-content">
                             <h2>Авторский надзор</h2>
-                            <p>Suspendisse potenti. Nullam metus orci, varius non nisi id, blandit suscipit nisi. Mauris vehicula sem vel hendrerit cursus. Cras iaculis lectus in convallis fermentum. Nullam mattis accumsan mauris, at congue odio dignissim quis. Vivamus imperdiet congue metus vitae commodo.</p>
+                            <p>Если Вам необходим авторский контроль за ходом выполнения проекта, то с началом проведения ремонтно-строительных работ заключается договор на авторский надзор по выполненному дизайн-проекту. По условиям договора дизайнер будет регулярно посещать объект, следить за ходом работ, производить необходимые замеры, проверять соответствие выполняемых работ и вносить необходимые коррективы.</p>
                         </div>
                         <div data-target="decorating" class="entry-content">
-                            <h2>Часть декорирования</h2>
-                            <p>Praesent convallis at turpis quis porttitor. Proin sed ornare ante. Pellentesque tempus vel sapien id lobortis. Vivamus at metus tristique, convallis tellus eu, pulvinar orci. Duis non gravida nisl, vitae ornare justo. Etiam in nunc at ligula maximus posuere.</p>
+                            <h2>Декорирование</h2>
+                            <p>В случае, если Вам понадобится помощь в подборе оборудования, мебели, светильников, сантехники, текстильного декора и иных аксессуаров — заключается договор на декорирование, где прописываются все необходимые элементы подбора. Будут осуществятся выезды с целью выбора необходимого оборудования, проводится консультации, а также будет осуществлен подбор наиболее выгодных для заказчика мест покупки требуемых элементов декорирования. Эта услуга может осуществляться одновременно с авторским надзором.</p>
                         </div>
                     </div>
                 </div>
@@ -264,16 +264,16 @@ $templateurl = get_bloginfo('template_url');
             <div class="col">
                 <a href="#">
                     <div class="entry-content">
-                        <h2>Архитектурное проектирование</h2>
-                        <p>Архитектурная форма, демонстрирующая характер владельца с первого взгляда. Проект жилого дома, ресторана, коттеджа, коммерческого здания.</p>
+                        <h2>Дизайн интерьера</h2>
+                        <p>Оптимизация пространства, проект интерьера комнаты, квартиры, дома, офиса, кафе, клуба, ресторана, шоу-рум, магазина.</p>
                     </div>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
                     <div class="entry-content">
-                        <h2>Архитектурное проектирование</h2>
-                        <p>Архитектурная форма, демонстрирующая характер владельца с первого взгляда. Проект жилого дома, ресторана, коттеджа, коммерческого здания.</p>
+                        <h2>Предметный дизайн</h2>
+                        <p>Уют даже в миниатюрных деталях. Дизайн мебели, деталей интерьера, освещения, посуды.</p>
                     </div>
                 </a>
             </div>
@@ -294,7 +294,7 @@ $templateurl = get_bloginfo('template_url');
                         <div class="info">
                             <p>1058, Rue des Plans 06510 CARROS</p>
                             <p><span>Fax:</span> 09 50 10 82 11</p>
-                            <p class="tel clearfix"><span class="lable">Telephone:</span><span class="numb">+33 078 564 60 90<br />+33 078 564 60 90</span></p>
+                            <p class="tel clearfix"><span class="lable">Telephone:</span><span class="numb">+33 078 564 60 90<br />+33 07 85 64 60 90</span></p>
                         </div>
                     </div>
                 </div>
