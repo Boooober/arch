@@ -1,0 +1,13 @@
+.box-4{
+  .mobile{
+    .content-tile{
+      margin-bottom:30px;
+      &.active{
+        border-color: #ef7f1a;
+      }
+    }
+    .entry-content{
+      padding: 20px;
+    }
+  }
+}

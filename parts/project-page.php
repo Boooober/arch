@@ -13,6 +13,14 @@
                      <?php get_template_part('assets/svg/logo.svg') ?>
                  </a>
                  <div class="menu-wrap">
+                     <?php
+                     wp_nav_menu( array(
+                         'container'      => '',
+                         'menu_class'     => 'menu langs-menu',
+                         'menu_id'        => '',
+                         'theme_location' => 'langs',
+                     ) );
+                     ?>
                      <p class="overlay-close icon-cancel"></p>
                      <div class="menu-button">MENU</div>
                  </div>

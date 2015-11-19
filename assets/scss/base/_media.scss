@@ -194,12 +194,15 @@
     .right {
       display:none;
     }
+
+
   }
 
   .box-5{
     .row{
       .col{
         width: 100%;
+        pointer-events: none;
         float: none;
       }
     }
@@ -354,7 +357,7 @@
       }
     }
     .content-tile{
-      p{
+      &>p{
         font-size: 18px;
       }
       span{

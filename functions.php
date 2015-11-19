@@ -53,6 +53,17 @@ function archdesign_javascript_detection() {
 add_action( 'wp_head', 'archdesign_javascript_detection', 0 );
 
 
+function wp_mobile_detect () {
+    include_once ( ARC_THEME_DIR . 'Mobile_Detect.php');
+    $detect = new Mobile_Detect;
+    if( $detect->isMobile() || $detect->isTablet() ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 
 
 function archdesign_scripts() {

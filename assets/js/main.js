@@ -103,7 +103,7 @@ jQuery( document ).ready(function( $ ) {
             $('.switch-trigger').mouseenter(function(){
                 var target = $(this),
                     switchTarget = target.data('switch');
-                $(this).closest('.switcher').find('.content-switch .entry-content').each(function(){
+                target.closest('.switcher').find('.content-switch .entry-content').each(function(){
                     if($(this).data('target') === switchTarget){
                         $(this).fadeIn(350);
                     }else{
@@ -112,11 +112,15 @@ jQuery( document ).ready(function( $ ) {
                 });
             });
         })();
+    }
 
 
-
-
-
+    if($(window).width() <= 768){
+        (function(){
+            $('.toggle-trigger').click(function(){
+                $(this).find('.entry-content').slideToggle();
+            });
+        })();
     }
 
     //push-page from http://tympanus.net/Development/FullscreenOverlayStyles/
