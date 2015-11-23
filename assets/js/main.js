@@ -126,7 +126,9 @@ jQuery( document ).ready(function( $ ) {
     //push-page from http://tympanus.net/Development/FullscreenOverlayStyles/
     (function() {
         var container = document.querySelector( 'div.container' ),
-            overlay = document.querySelector( 'div.overlay'),
+            push = document.querySelector( 'div.overlay.overlay-contentpush'),
+            pull = document.querySelector( 'div.overlay.overlay-contentpull'),
+
             transEndEventNames = {
                 'WebkitTransition': 'webkitTransitionEnd',
                 'MozTransition': 'transitionend',
@@ -137,10 +139,26 @@ jQuery( document ).ready(function( $ ) {
             transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
             support = { transitions : Modernizr.csstransitions };
 
-        $(document).on('click', 'p.overlay-close', toggleOverlay);
-        $(document).on('click', '.trigger-overlay', toggleOverlay);
+        function togglePushContent(e){
+            toggleOverlay(e, push);
+        }
+        $(document).on('click', 'p.push-content-close', togglePushContent);
+        $(document).on('click', '.trigger-push-content', togglePushContent);
 
-        function toggleOverlay(e) {
+
+        function togglePullMenu(e){
+            toggleOverlay(e, pull);
+        }
+
+        $(document).on('click', 'p.pull-menu-close', togglePullMenu);
+        $(document).on('click', '.trigger-pull-menu', togglePullMenu);
+
+
+
+
+
+
+        function toggleOverlay(e, overlay) {
             //close overlay
 
             if (e.preventDefault) {
@@ -149,12 +167,31 @@ jQuery( document ).ready(function( $ ) {
                 e.returnValue = false;
             }
 
+            var opened;
+
+
+            if( classie.has( overlay, 'overlay-contentpush' ) ){
+                opened = 'contentpush';
+            } else if( classie.has( overlay, 'overlay-contentpull' ) ){
+                opened = 'contentpull';
+            }
+
+
+            console.log(overlay);
+
             if( classie.has( overlay, 'open' ) ) {
                 classie.remove( overlay, 'open' );
-                classie.remove( container, 'overlay-open' );
+
+                if( (!classie.has( container, 'contentpush' ) &&  classie.has( container, 'contentpull' )) || (!classie.has( container, 'contentpull' ) && classie.has( container, 'contentpush' )) ){
+                    classie.remove( container, 'overlay-open' );
+                    $.fn.fullpage.setAllowScrolling(true);
+                }
+                classie.remove( container, opened );
+
+
                 classie.add( overlay, 'close' );
 
-                $.fn.fullpage.setAllowScrolling(true);
+
 
                 var onEndTransitionFn = function( ev ) {
                     if( support.transitions ) {
@@ -174,10 +211,12 @@ jQuery( document ).ready(function( $ ) {
             else if( !classie.has( overlay, 'close' ) ) {
                 classie.add( overlay, 'open' );
                 classie.add( container, 'overlay-open' );
+                classie.add( container, opened );
 
                 $.fn.fullpage.setAllowScrolling(false);
             }
         }
+
     })();
 
 

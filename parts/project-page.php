@@ -21,8 +21,8 @@
                          'theme_location' => 'langs',
                      ) );
                      ?>
-                     <p class="overlay-close icon-cancel"></p>
-                     <div class="menu-button">MENU</div>
+                     <p class="push-content-close close-btn icon-cancel"></p>
+                     <div class="menu-button trigger-pull-menu">MENU</div>
                  </div>
              </div>
 
@@ -145,38 +145,6 @@
 
         ?>
     </div>
-
-<!--    <div class="row row-1">-->
-<!--        <div class="col col-1">-->
-<!--            <div class="entry-text">-->
-<!--                <p>--><?php //echo get_field('row1_text'); ?><!--</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col col-2">-->
-<!--            <figure class="entry-image">-->
-<!--                <img src="--><?php //echo esc_url( get_field('row1_image') ); ?><!--" alt=""/>-->
-<!--            </figure>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="row row-2">-->
-<!---->
-<!--        <div class="col col-2">-->
-<!--            <div class="entry-text">-->
-<!--                <p>--><?php //echo get_field('row2_text'); ?><!--</p>-->
-<!--            </div>-->
-<!--            <figure class="entry-image">-->
-<!--                <img src="--><?php //echo esc_url( get_field('row2_text-image') ); ?><!--" alt=""/>-->
-<!--            </figure>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="col col-1">-->
-<!--            <figure class="entry-image">-->
-<!--                <img src="--><?php //echo esc_url( get_field('row2_image') ); ?><!--" alt=""/>-->
-<!--            </figure>-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
 
     <footer class="footer">
         <div class="page-wrapper clearfix">
