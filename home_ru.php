@@ -44,59 +44,53 @@
                                 <h2 class="mob-title">Наши услуги</h2>
                                 <div class="row">
                                     <div class="col">
-                                        <div data-switch="design" class="content-tile switch-trigger">
-                                            <span>img<?php /*get_template_part('assets/svg/l1.svg'); */?></span>
-                                            <p>Дизайн проект-интерьеров</p>
-                                        </div>
-                                    </div>
-                                    <div class="col">
                                         <div data-switch="3d" class="content-tile switch-trigger">
-                                            <span>img</span>
-                                            <p>Эскизы 3D</p>
+                                            <span>img<?php /*get_template_part('assets/svg/l1.svg'); */?></span>
+                                            <p>Архитектура</p>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div data-switch="engineering" class="content-tile switch-trigger">
                                             <span>img</span>
-                                            <p>Проектирование вилл</p>
+                                            <p>Дизайн</p>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div data-switch="1" class="content-tile switch-trigger">
                                             <span>img</span>
-                                            <p>Планировочные решения</p>
+                                            <p>Комплектация, авторский надзор, различные демарши</p>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div data-switch="2" class="content-tile switch-trigger">
-                                            <span>img</span>
-                                            <p>Согласование перепланировок</p>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div data-switch="3" class="content-tile switch-trigger">
-                                            <span>img</span>
-                                            <p>Авторский надзор</p>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div data-switch="4" class="content-tile switch-trigger">
-                                            <span>img</span>
-                                            <p>Квалифицированная помощь в подборе подрядчика</p>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div data-switch="5" class="content-tile switch-trigger">
-                                            <span>img</span>
-                                            <p>Сопровождение строительных и отделочных работ</p>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div data-switch="6" class="content-tile switch-trigger">
-                                            <span>img</span>
-                                            <p>Разработка рабочего проекта и технической документации</p>
-                                        </div>
-                                    </div>
+<!--                                    <div class="col">-->
+<!--                                        <div data-switch="2" class="content-tile switch-trigger">-->
+<!--                                            <span>img</span>-->
+<!--                                            <p>Согласование перепланировок</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <div data-switch="3" class="content-tile switch-trigger">-->
+<!--                                            <span>img</span>-->
+<!--                                            <p>Авторский надзор</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <div data-switch="4" class="content-tile switch-trigger">-->
+<!--                                            <span>img</span>-->
+<!--                                            <p>Квалифицированная помощь в подборе подрядчика</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <div data-switch="5" class="content-tile switch-trigger">-->
+<!--                                            <span>img</span>-->
+<!--                                            <p>Сопровождение строительных и отделочных работ</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <div data-switch="6" class="content-tile switch-trigger">-->
+<!--                                            <span>img</span>-->
+<!--                                            <p>Разработка рабочего проекта и технической документации</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                             <div class="col right">
@@ -360,12 +354,12 @@
         </div>
         <nav class="menu-wrap">
         <?php
-            wp_nav_menu( array(
-                'container'      => '',
-                'menu_class'     => 'menu main-header_menu',
-                'menu_id'        => '',
-                'theme_location' => 'header',
-            ) );
+//            wp_nav_menu( array(
+//               'container'      => '',
+//                'menu_class'     => 'menu main-header_menu',
+//                'menu_id'        => '',
+//                'theme_location' => 'header',
+//            ) );
 
             wp_nav_menu( array(
                 'container'      => '',

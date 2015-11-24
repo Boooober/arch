@@ -19,30 +19,29 @@
   width:100%;
   padding: 40px 40px 0;
   text-align: right;
+}
 
-  .menu-wrap{
-    margin: 10px 0;
-    display:inline-block;
-    vertical-align: middle;
-  }
+.menu-wrap{
+  margin: 10px 0;
+  display:inline-block;
+  vertical-align: middle;
+}
 
-  .menu{
-    font-size:0;
-    display:inline-block;
-    vertical-align: middle;
-    margin-right: 15px;
-    li{
-      font-size: 14px;
-      line-height: 30px;
-      display: inline-block;
-      margin: 0 7px;
-      transition: color .2s;
-      &:hover{
-        color: #ef7f1a;
-      }
+.menu{
+  font-size:0;
+  display:inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  li{
+    font-size: 14px;
+    line-height: 30px;
+    display: inline-block;
+    margin: 0 7px;
+    transition: color .2s;
+    &:hover{
+      color: #ef7f1a;
     }
   }
-
 }
 
 

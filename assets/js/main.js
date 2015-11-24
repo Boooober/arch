@@ -112,6 +112,8 @@ jQuery( document ).ready(function( $ ) {
                 });
             });
         })();
+
+
     }
 
 
@@ -119,6 +121,13 @@ jQuery( document ).ready(function( $ ) {
         (function(){
             $('.toggle-trigger').click(function(){
                 $(this).find('.entry-content').slideToggle();
+            });
+        })();
+
+        (function(){
+            $('.slide-trigger').click(function(){
+                var trigger = $(this);
+                trigger.find('.description').slideToggle();
             });
         })();
     }

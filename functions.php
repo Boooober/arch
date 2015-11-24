@@ -89,7 +89,6 @@ function archdesign_scripts() {
     wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), false, true );
 
 
-
     wp_enqueue_script ('slimscroll', ARC_THEME_URL . 'assets/js/fullPage/vendors/jquery.slimscroll.min.js', array('jquery'), false, true);
     wp_enqueue_script ('fullPage', ARC_THEME_URL . 'assets/js/fullPage/jquery.fullPage.js', array('jquery', 'slimscroll'), false, true);
 
