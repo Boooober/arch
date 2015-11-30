@@ -64,6 +64,7 @@ html.fp-enabled,
 .fp-controlArrow {
 
   position: absolute;
+  color: white;
   z-index: 4;
   top: 50%;
   width: 35px;
@@ -71,7 +72,7 @@ html.fp-enabled,
   padding: 10px;
   cursor: pointer;
   margin-top: -50px;
-  border: 2px solid rgba(0,0,0,.3);
+  border: 2px solid rgba(255,255,255,.3);
   transform: rotate(45deg) translateY(-50%);
   &:after{
     display:block;
@@ -89,7 +90,7 @@ html.fp-enabled,
 //  transform: translate3d(0,0,0);
 
   &.fp-prev {
-    left: 10%;
+    left: 20%;
     &:after{
       border-bottom: 2px solid;
       border-left: 2px solid;
@@ -100,7 +101,7 @@ html.fp-enabled,
   }
 
   &.fp-next {
-    right: 15%;
+    right: 22%;
     &:after{
       border-top: 2px solid;
       border-right: 2px solid;
@@ -257,9 +258,9 @@ html.fp-enabled,
       transition: all 0.3s ease-in-out;
 
       &.active{
-        border-color: rgba(0,0,0, 0.15);
+        border-color: rgba(255,255,255, 0.15);
         span {
-          border-color: #292929;
+          border-color: white;
         }
       }
 
@@ -267,7 +268,7 @@ html.fp-enabled,
         display:block;
         width: 12px;
         height: 12px;
-        border: 2px solid rgba(0,0,0,.4);
+        border: 2px solid rgba(255,255,255,.4);
         transition: all 0.3s ease-in-out;
       }
     }
@@ -275,7 +276,7 @@ html.fp-enabled,
     &:hover {
       a {
         span {
-          border-color: #292929;
+          border-color: white;
         }
       }
     }

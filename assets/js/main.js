@@ -54,7 +54,7 @@ jQuery( document ).ready(function( $ ) {
 
 
     function addAndRemoveBlack (){
-        if(window.location.hash == '#home' || window.location.hash == '#workflow' || window.location.hash == ''){
+        if(window.location.hash == '#home' || window.location.hash == '#workflow' || /#projects(\/\d)?/.test(window.location.hash) || window.location.hash == ''){
             $('#flying-panel').addClass('white');
             $('.aside-position').addClass('white');
         } else{
@@ -149,32 +149,36 @@ jQuery( document ).ready(function( $ ) {
             support = { transitions : Modernizr.csstransitions };
 
         function togglePushContent(e){
-            toggleOverlay(e, push);
-        }
-        $(document).on('click', 'p.push-content-close', togglePushContent);
-        $(document).on('click', '.trigger-push-content', togglePushContent);
-
-
-        function togglePullMenu(e){
-            toggleOverlay(e, pull);
-        }
-
-        $(document).on('click', 'p.pull-menu-close', togglePullMenu);
-        $(document).on('click', '.trigger-pull-menu', togglePullMenu);
-
-
-
-
-
-
-        function toggleOverlay(e, overlay) {
-            //close overlay
 
             if (e.preventDefault) {
                 e.preventDefault();
             } else {
                 e.returnValue = false;
             }
+
+            toggleOverlay(push);
+        }
+        $(document).on('click', 'p.push-content-close', togglePushContent);
+        $(document).on('click', '.trigger-push-content', togglePushContent);
+
+
+        function togglePullMenu(e){
+
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            }
+
+            toggleOverlay(pull);
+        }
+
+        $(document).on('click', 'p.pull-menu-close', togglePullMenu);
+        $(document).on('click', '.trigger-pull-menu', togglePullMenu);
+
+
+        function toggleOverlay(overlay) {
+            //close overlay
 
             var opened;
 
@@ -184,9 +188,6 @@ jQuery( document ).ready(function( $ ) {
             } else if( classie.has( overlay, 'overlay-contentpull' ) ){
                 opened = 'contentpull';
             }
-
-
-            console.log(overlay);
 
             if( classie.has( overlay, 'open' ) ) {
                 classie.remove( overlay, 'open' );
@@ -226,7 +227,46 @@ jQuery( document ).ready(function( $ ) {
             }
         }
 
+
+        $('.pull_menu a').click(function(){
+
+            event.preventDefault();
+            var link = event.target,
+                href = link.href.substring(link.href.indexOf('#')+1);
+
+            toggleOverlay(pull);
+
+            setTimeout(function(){
+                $.fn.fullpage.moveTo(href);
+                $.fn.fullpage.setAllowScrolling(true);
+            }, 150);
+        });
     })();
 
+
+//    //scroll to events
+//    (function(){
+//
+//        function goToByScroll(id){
+//            $('html,body').animate({
+//                    scrollTop: $(id).offset().top},
+//                3000);
+//        }
+//
+//        $('.nav-menu').find('a').each(function(){
+//            var link = $(this).attr('href'),
+//                hash = link.substring(0,1);
+//
+//            if (hash === '#'){
+//                $(this).click(function(){
+//                    event.preventDefault();
+//                    goToByScroll(link);
+//                });
+//            }
+//        });
+//
+//    })();
+//
+//
 
 });

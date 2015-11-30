@@ -9,7 +9,7 @@
          <div class="feature-image" style="background-image: url('<?php the_field('topline_image') ? the_field('topline_image') : the_field('slide_image'); ?>')"></div>
          <div class="page-wrapper header-wrapper">
              <div class="topline clearfix">
-                 <a href="<?php echo esc_url( get_option('home') ); ?>" class="logo">
+                 <a href="<?php echo esc_url(home_url('/')); ?>">
                      <?php get_template_part('assets/svg/logo.svg') ?>
                  </a>
                  <div class="menu-wrap">
@@ -33,7 +33,7 @@
 
                  <?php if($prev_link) { ?>
                      <a href="<?php echo esc_url($prev_link); ?>" class="prev-project js-nav" data-project="<?php echo $prev_id; ?>">
-                         <span>Предыдущий проект</span>
+                         <span><?php pll_e('Previous project', TEXTDOMAIN); ?></span>
                          <div class="project-nav-icon prev-icon"></div>
                      </a>
                  <?php } ?>
@@ -41,7 +41,7 @@
                  <?php if($next_link) { ?>
                      <a href="<?php echo esc_url($next_link); ?>" class="next-project js-nav" data-project="<?php echo $next_id; ?>">
                          <div class="project-nav-icon next-icon"></div>
-                         <span>Следующий проект</span>
+                         <span><?php pll_e('Next project', TEXTDOMAIN); ?></span>
                      </a>
                  <?php } ?>
 
@@ -129,20 +129,13 @@
                             endif;
                             ?>
                         </div>
-
                     </div>
-
                 <?php
                 endif;
-
             endwhile;
-
         else :
-
             // no layouts found
-
         endif;
-
         ?>
     </div>
 
@@ -150,7 +143,7 @@
         <div class="page-wrapper clearfix">
             <?php if($prev_link) { ?>
                 <a href="<?php echo esc_url($prev_link); ?>" class="prev-project js-nav" data-project="<?php echo $prev_id; ?>">
-                    <span>Предыдущий проект</span>
+                    <span><?php pll_e('Previous project', TEXTDOMAIN); ?></span>
                     <div class="project-nav-icon prev-icon"></div>
                 </a>
             <?php } ?>
@@ -158,14 +151,13 @@
             <?php if($next_link) { ?>
                 <a href="<?php echo esc_url($next_link); ?>" class="next-project js-nav" data-project="<?php echo $next_id; ?>">
                     <div class="project-nav-icon next-icon"></div>
-                    <span>Следующий проект</span>
+                    <span><?php pll_e('Next project', TEXTDOMAIN); ?></span>
                 </a>
             <?php } ?>
             <div class="soc-icons">
                 <ul>
-                    <li><a href="#" class="icon-facebook"></a></li>
-                    <li><a href="#" class="icon-linkedin"></a></li>
-                    <li><a href="#" class="icon-instagram"></a></li>
+                    <li><a href="https://www.facebook.com/BuroArchDesign" class="icon-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/buroarchdesign/" class="icon-instagram"></a></li>
                 </ul>
             </div>
         </div>

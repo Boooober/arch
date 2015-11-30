@@ -8,6 +8,11 @@
 .logo{
   float: left;
   cursor: pointer;
+  opacity: 0.5;
+  transition: .3s;
+  &:hover{
+    opacity: 1;
+  }
   svg{
     display:block;
   }

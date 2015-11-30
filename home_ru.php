@@ -11,21 +11,30 @@
 <body>
 <div class="container">
     <div id="fullpage">
-        <div class="section box-1" data-section-name="Главная">
+
+        <div class="section box-1 switcher" data-section-name="Главная">
             <div class="box-bg animate"></div>
             <section class="content">
                 <div class="title-wrapper">
-                    <div class="title">
-                        <h1>Мы студия архитектуры и дизайна интерьеров <b>arch.design</b></h1>
+                    <div class="title-container content-switch">
+                        <div data-target="1" class="title entry-content" style="display:block">
+                            <p>Мы студия архитектуры и дизайна интерьеров <b>arch.design</b></p>
+                        </div>
+                        <div data-target="2" class="title entry-content small-title">
+                            <p>Создаем проекты для счастливой жизни, комфортного отдыха и эстетического удовольствия наших клиентов!</p>
+                        </div>
+                        <div data-target="3" class="title entry-content">
+                            <p>We are a studio of architecture & interior design <b>arch.design</b></p>
+                        </div>
                     </div>
                 </div>
                 <ul>
                     <li>
-                        <a href="#"><span>1</span><p>Назание слайда</p></a>
+                        <div data-switch="1" class="switch-trigger trigger"><span>1</span><p>Назание слайда</p></div>
                     </li><li>
-                        <a href="#"><span>2</span><p>Кто<br />мы</p></a>
+                        <div data-switch="2" class="switch-trigger trigger"><span>2</span><p>Кто<br />мы</p></div>
                     </li><li>
-                        <a href="#"><span>3</span><p>Наш подход</p></a>
+                        <div data-switch="3" class="switch-trigger trigger"><span>3</span><p>Наш подход</p></div>
                     </li>
                 </ul>
             </section>
@@ -161,11 +170,10 @@
                         $query->the_post();
                         $post_id = get_the_ID();
                         ?>
-
                             <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php the_field('slide_image'); ?>')">
                                 <div class="slide-content">
-                                    <h2 style="color:<?php the_field('slide_text_color'); ?>"><?php the_title(); ?></h2>
-                                    <a href="<?php echo get_permalink(); ?>" class="trigger-push-content js-single-ajax" style="color:<?php the_field('slide_text_color'); ?>" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
+                                    <h2><?php the_title(); ?></h2>
+                                    <a href="<?php echo get_permalink(); ?>" class="trigger-push-content js-single-ajax" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
                                 </div>
                             </div>
 
@@ -336,6 +344,18 @@
                 </div>
 
             </div>
+<!--            <footer class="section" id="section-footer">-->
+<!--                <div id="footer-text">-->
+<!--                    <div id="copy-witty">-->
+<!--                        <div class="logo">-->
+<!--                            <span>Made in</span>-->
+<!--                            <a href="http://witty-digital.com" target="_blank"><img src="--><?php //echo $templateurl; ?><!--/assets/images/witty-logo.png" alt="copyright witty-digital agency"/></a>-->
+<!--                            <b>Witty Digital</b>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </footer>-->
+
         </section>
     </div>
 </div>
@@ -352,6 +372,18 @@
         <div id="logo" class="logo">
             <?php get_template_part('assets/svg/logo.svg') ?>
         </div>
+        
+        <nav class="menu nav-menu">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#service">Наши услуги</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#workflow">Этапы работы</a></li>
+                <li><a href="#offers">Что мы предлагаем</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        
         <nav class="menu-wrap">
         <?php
 //            wp_nav_menu( array(
