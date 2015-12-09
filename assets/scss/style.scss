@@ -9,6 +9,7 @@
 @import 'base/flexgrid';
 @import 'base/flying-panel';
 @import 'base/boxes';
+@import 'base/gallery';
 @import 'base/page';
 @import 'base/push-page';
 @import 'base/pull-page';
@@ -18,3 +19,6 @@
 @import 'base/media';
 @import 'base/mobile';
 @import 'base/copy-witty';
+
+
+@import '../js/owl.carousel/assets/owl.carousel';

@@ -1,0 +1,49 @@
+.pull-form-content{
+  .form{
+    width: 50%;
+    margin: 100px auto 70px;
+  }
+  .row{
+    margin: -30px;
+  }
+  .col{
+    width: 50%;
+    padding: 30px
+  }
+
+  .desc{
+    margin-bottom: 60px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .lable{
+    display: none;
+  }
+  input{
+    width:100%;
+    border: none;
+    font-size: 18px;
+    padding: 10px 0;
+    background: transparent;
+    transition: .4s;
+
+    &:active, &:focus{
+      outline: none;
+    }
+
+    &[type="text"]{
+      border-bottom: 2px solid rgba(255,255,255,.15);
+      &:focus{
+        border-bottom-color: #ef7f1a;
+      }
+    }
+    &[type="submit"]{
+      border: 2px solid rgba(255,255,255,.15);
+      &:hover{
+        border-color: #ef7f1a;
+      }
+    }
+
+  }
+}

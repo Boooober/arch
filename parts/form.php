@@ -1,4 +1,4 @@
-<div class="overlay overlay-contentpull pull-menu-content menu-bg">
+<div class="overlay overlay-contentpull pull-form-content menu-bg">
     <div class="pull-page">
         <div class="pull-wrapper">
 
@@ -9,19 +9,32 @@
                     </a>
                 </div>
                 <div class="menu-wrap">
-                    <p class="menu-close pull-close icon-cancel"></p>
+                    <p class="form-close pull-close icon-cancel"></p>
                 </div>
             </div>
 
-            <div class="menu">
-                <?php
-                    wp_nav_menu( array(
-                        'container'      => '',
-                        'menu_class'     => 'pull_menu',
-                        'menu_id'        => '',
-                        'theme_location' => 'header',
-                    ) );
-                ?>
+
+            <div class="form">
+                <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lacus at neque blandit.</p>
+                <form action="">
+                    <div class="row">
+                        <div class="col">
+                            <lable for="fname" class="lable"></lable>
+                            <input name="fname" type="text" placeholder="Your Name"/>
+                        </div>
+                        <div class="col">
+                            <lable for="name" class="lable"></lable>
+                            <input name="femail" type="text" placeholder="Your Email"/>
+                        </div>
+                        <div class="col">
+                            <lable for="name" class="lable"></lable>
+                            <input name="fphone" type="text" placeholder="Your Phone"/>
+                        </div>
+                        <div class="col">
+                            <input type="submit" value="SEND"/>
+                        </div>
+                    </div>
+                </form>
             </div>
 
 

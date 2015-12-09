@@ -1,6 +1,6 @@
 jQuery( document ).ready(function( $ ) {
 
-    var anchors = ['home', 'service', 'projects', 'workflow', 'offers', 'contacts'];
+    var anchors = ['home', 'service', 'projects', 'offers', 'workflow', 'whatyouget', 'portfolio',  'contacts'];
 
     $('#fullpage').fullpage({
         anchors:anchors,
@@ -88,7 +88,7 @@ jQuery( document ).ready(function( $ ) {
         //Stretch contacts box to the window bottom
         (function(){
             var cell = $('.box-6 .js-cell'),
-                mapHeight = 350,
+                mapHeight = 350+47,
                 tableHeight = $(window).innerHeight() - mapHeight;
 
             cell.each(function(){
@@ -101,20 +101,51 @@ jQuery( document ).ready(function( $ ) {
         //Switching content on mouseenter
         (function(){
             $('.switch-trigger').mouseenter(function(){
-                var target = $(this),
-                    switchTarget = target.data('switch');
-                target.closest('.switcher').find('.content-switch .entry-content').each(function(){
-                    if($(this).data('target') === switchTarget){
-                        $(this).fadeIn(350);
-                    }else{
-                        $(this).fadeOut(350);
-                    }
-                });
+                switcher($(this));
             });
         })();
-
-
     }
+
+    function switcher (target) {
+
+        console.log(target);
+        var switchTarget = target.data('switch');
+
+        target.closest('.switcher').find('.content-switch .entry-content').each(function(){
+            if($(this).data('target') === switchTarget){
+                $(this).fadeIn(350);
+            }else{
+                $(this).fadeOut(350);
+            }
+        });
+    }
+
+    (function(){
+        var homeSwitcher = $('#home-switcher'),
+            children = homeSwitcher.children(),
+            childrenLeng = children.length,
+            current = 1;
+
+        setInterval(function(){
+
+            children.each(function(){
+
+                var child = $(this);
+                child.removeClass('active');
+                if ( child.get(0) == children.get(current) ){
+                    child.addClass('active');
+                    switcher (child.find('.switch-trigger'));
+                }
+            });
+
+            current++;
+            if (current === childrenLeng ) current = 0;
+
+        }, 3500);
+
+
+
+    })();
 
 
     if($(window).width() <= 768){
@@ -136,7 +167,8 @@ jQuery( document ).ready(function( $ ) {
     (function() {
         var container = document.querySelector( 'div.container' ),
             push = document.querySelector( 'div.overlay.overlay-contentpush'),
-            pull = document.querySelector( 'div.overlay.overlay-contentpull'),
+            pullMenu = document.querySelector( '.pull-menu-content'),
+            pullForm = document.querySelector( '.pull-form-content'),
 
             transEndEventNames = {
                 'WebkitTransition': 'webkitTransitionEnd',
@@ -148,6 +180,9 @@ jQuery( document ).ready(function( $ ) {
             transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
             support = { transitions : Modernizr.csstransitions };
 
+
+
+
         function togglePushContent(e){
 
             if (e.preventDefault) {
@@ -158,8 +193,10 @@ jQuery( document ).ready(function( $ ) {
 
             toggleOverlay(push);
         }
-        $(document).on('click', 'p.push-content-close', togglePushContent);
+        $(document).on('click', '.push-content-close', togglePushContent);
         $(document).on('click', '.trigger-push-content', togglePushContent);
+
+
 
 
         function togglePullMenu(e){
@@ -170,11 +207,35 @@ jQuery( document ).ready(function( $ ) {
                 e.returnValue = false;
             }
 
-            toggleOverlay(pull);
+            toggleOverlay(pullMenu);
         }
 
-        $(document).on('click', 'p.pull-menu-close', togglePullMenu);
+        $(document).on('click', '.menu-close', togglePullMenu);
         $(document).on('click', '.trigger-pull-menu', togglePullMenu);
+
+        function togglePullForm(e){
+
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            }
+
+            target = $(e.target);
+
+            if(target.hasClass('trigger-form-btn')) localizeForm($(e.target));
+            toggleOverlay(pullForm);
+        }
+
+        $(document).on('click', '.form-close', togglePullForm);
+        $(document).on('click', '.trigger-form-btn', togglePullForm);
+
+
+
+        function localizeForm (target){
+            console.log(target.data('ftitle'));
+        }
+
 
 
         function toggleOverlay(overlay) {
@@ -242,6 +303,27 @@ jQuery( document ).ready(function( $ ) {
             }, 150);
         });
     })();
+
+
+    var gallery = $('.owl-gallery');
+
+    gallery.owlCarousel({
+        margin: 40,
+        nav: true,
+        navText: [],
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            1024:{
+                items:3
+            }
+        }
+    });
+
 
 
 //    //scroll to events

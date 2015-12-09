@@ -1,0 +1,29 @@
+.pull_menu{
+  li {
+    display:block;
+  }
+}
+
+.pull-menu-content{
+
+  .menu{
+    margin-top: 50px;
+    a{
+      display: inline-block;
+      font-size: 40px;
+      line-height: 56px;
+      transition: transform .3s, color.3s;
+      &:hover{
+        transform: translateX(30px);
+        color: #ef7f1a;
+      }
+    }
+  }
+}
+
+@media (min-height: 660px){
+  .menu-page .menu {
+    margin-top: 80px;
+  }
+}
+

@@ -38,11 +38,13 @@
   vertical-align: middle;
   margin-right: 15px;
   li{
-    font-size: 14px;
-    line-height: 30px;
     display: inline-block;
     margin: 0 7px;
     transition: color .2s;
+    a{
+      font-size: 14px;
+      line-height: 30px;
+    }
     &:hover{
       color: #ef7f1a;
     }
@@ -53,7 +55,7 @@
 .menu-button{
   display:inline-block;
   vertical-align: middle;
-  border-left: 2px solid;
+  border-left: 2px solid #292929;
   font-size:18px;
   font-weight: 700;
   padding: 10px 0 10px 20px;
@@ -63,11 +65,17 @@
     color: #ef7f1a;
     border-left-color: #292929;
   }
-  .white &:hover{
+  .white &{
     border-left-color: white;
+    &:hover{
+      border-left-color: white;
+    }
   }
 }
 
+.current-lang {
+  font-weight: 700;
+}
 
 .next{
   position:absolute;

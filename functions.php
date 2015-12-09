@@ -33,6 +33,7 @@ if ( ! function_exists( 'archdesign_setup' ) ) :
         add_theme_support( 'post-thumbnails' );
 
         set_post_thumbnail_size( 200, 200, true );
+        add_image_size( 'medium-image', 600, 400, true );
 
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus( array(
@@ -91,17 +92,28 @@ function archdesign_scripts() {
 
     wp_enqueue_script ('slimscroll', ARC_THEME_URL . 'assets/js/fullPage/vendors/jquery.slimscroll.min.js', array('jquery'), false, true);
     wp_enqueue_script ('fullPage', ARC_THEME_URL . 'assets/js/fullPage/jquery.fullPage.js', array('jquery', 'slimscroll'), false, true);
-
+    wp_enqueue_script ('owl-carousel', ARC_THEME_URL . 'assets/js/owl.carousel/owl.carousel.min.js', array('jquery'), false, true);
 
     wp_enqueue_script ('modernizr', ARC_THEME_URL . 'assets/js/FullscreenOverlay/js/modernizr.custom.js', array(), false, true);
     wp_enqueue_script ('classie', ARC_THEME_URL . 'assets/js/FullscreenOverlay/js/classie.js', array(), false, true);
 
 
-    wp_enqueue_script ('main', ARC_THEME_URL . '/assets/js/main.js', array('jquery'), '1.0', true);
-    wp_localize_script( 'main', 'ARCHproject', array(
-        'arch_nonce' => wp_create_nonce('arch_nonce'),
-        'ajax_url' => admin_url( 'admin-ajax.php' )
-    ));
+    wp_register_script ('main', ARC_THEME_URL . '/assets/js/main.js', array('jquery'), '1.0', true);
+    wp_register_script ('single', ARC_THEME_URL . '/assets/js/single.js', array('jquery'), '1.0', true);
+
+    if (is_home() || is_front_page()){
+
+        wp_enqueue_script ('main');
+        wp_localize_script( 'main', 'ARCHproject', array(
+            'arch_nonce' => wp_create_nonce('arch_nonce'),
+            'ajax_url' => admin_url( 'admin-ajax.php' )
+        ));
+    }
+
+    if(is_single()){
+        wp_enqueue_script('single');
+    }
+
 
 }
 add_action( 'wp_enqueue_scripts', 'archdesign_scripts' );
@@ -122,6 +134,7 @@ function get_arch_project (){
         'p' => $post_id
     );
 
+    $is_ajax = true;
 
     query_posts($args);
     while (have_posts()): the_post();
@@ -132,4 +145,10 @@ function get_arch_project (){
 
     wp_reset_query();
     die();
+}
+
+
+if (function_exists('pll_register_string')) {
+    pll_register_string('Next project', 'Next project');
+    pll_register_string('Previous project', 'Previous project');
 }

@@ -188,9 +188,9 @@ $templateurl = get_bloginfo('template_url');
         get_template_part( 'parts/mobile/box-4' );
     } else { ?>
         <section class="content">
-            <h1>Этапы работы</h1>
             <div class="row">
                 <div class="col left">
+                    <h1>Этапы работы</h1>
                     <div class="row">
                         <div class="col">
                             <div data-switch="preproject" class="content-tile switch-trigger">
@@ -311,6 +311,12 @@ $templateurl = get_bloginfo('template_url');
                             <p>1058, Rue des Plans 06510 CARROS</p>
                             <p><span>Fax:</span> 09 50 10 82 11</p>
                             <p class="tel clearfix"><span class="lable">Telephone:</span><span class="numb">+33 078 564 60 90<br />+33 07 85 64 60 90</span></p>
+                            <div class="soc-icons">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/BuroArchDesign" class="icon-facebook"></a></li>
+                                    <li><a href="https://www.instagram.com/buroarchdesign/" class="icon-instagram"></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -362,7 +368,6 @@ $templateurl = get_bloginfo('template_url');
 
         <nav class="menu nav-menu">
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#service">Service</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#workflow">Workflow</a></li>

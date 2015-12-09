@@ -1,5 +1,5 @@
 <section class="content mobile">
-    <h1>Этапы работы</h1>
+    <h1>Как мы работаем</h1>
 
     <div class="content-tile toggle-trigger">
         <span>1</span>

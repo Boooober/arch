@@ -9,9 +9,16 @@
          <div class="feature-image" style="background-image: url('<?php the_field('topline_image') ? the_field('topline_image') : the_field('slide_image'); ?>')"></div>
          <div class="page-wrapper header-wrapper">
              <div class="topline clearfix">
-                 <a href="<?php echo esc_url(home_url('/')); ?>">
+                 <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
                      <?php get_template_part('assets/svg/logo.svg') ?>
                  </a>
+                 <?php if($is_ajax){ ?>
+                     <div class="close-btn">
+                         <div class="push-content-close close-elements trigger">
+
+                         </div>
+                     </div>
+                 <?php } ?>
                  <div class="menu-wrap">
                      <?php
                      wp_nav_menu( array(
@@ -21,7 +28,6 @@
                          'theme_location' => 'langs',
                      ) );
                      ?>
-                     <p class="push-content-close close-btn icon-cancel"></p>
                      <div class="menu-button trigger-pull-menu">MENU</div>
                  </div>
              </div>
@@ -143,7 +149,7 @@
         <div class="page-wrapper clearfix">
             <?php if($prev_link) { ?>
                 <a href="<?php echo esc_url($prev_link); ?>" class="prev-project js-nav" data-project="<?php echo $prev_id; ?>">
-                    <span><?php pll_e('Previous project', TEXTDOMAIN); ?></span>
+                    <span><?php pll_e('Previous project'); ?></span>
                     <div class="project-nav-icon prev-icon"></div>
                 </a>
             <?php } ?>
@@ -151,7 +157,7 @@
             <?php if($next_link) { ?>
                 <a href="<?php echo esc_url($next_link); ?>" class="next-project js-nav" data-project="<?php echo $next_id; ?>">
                     <div class="project-nav-icon next-icon"></div>
-                    <span><?php pll_e('Next project', TEXTDOMAIN); ?></span>
+                    <span><?php pll_e('Next project'); ?></span>
                 </a>
             <?php } ?>
             <div class="soc-icons">

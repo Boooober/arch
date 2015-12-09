@@ -1,36 +1,42 @@
 #copy-witty{
-  //  position:absolute;
-  width:100%;
-  bottom:0;
-  //  margin: 100px -40px 0;
   background-color: #1d1d1d;
-  padding: 10px 40px;
+  padding: 5px 40px;
   color: #696969;
   font-family: 'Helvetica', sans-serif;
 }
 #copy-witty:before, #copy-witty:after {
   content:'';
-  display:block;
+  display:table;
 }
 #copy-witty:after {
   clear: both;
 }
 
-#copy-witty .logo {
+#copy-witty > div {
   float:right;
 }
 
-#copy-witty span, #copy-witty img, #copy-witty b {
+#copy-witty span, #copy-witty figure, #copy-witty b {
   display: inline-block;
   vertical-align: middle;
 }
+
 #copy-witty span{
   font-size: 12px;
 }
-#copy-witty img{
+
+#copy-witty figure{
   margin: 0 4px;
+  width: 30px;
 }
+
 #copy-witty b{
   font-weight: 700;
   font-size: 12px;
 }
+
+#copy-witty svg{
+  width: 100%;
+  height: auto;
+}
+
