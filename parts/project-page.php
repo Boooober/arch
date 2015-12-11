@@ -28,7 +28,12 @@
                          'theme_location' => 'langs',
                      ) );
                      ?>
-                     <div class="menu-button trigger-pull-menu">MENU</div>
+                     <?php if(is_single()){ ?>
+                         <a href="<?php echo esc_url(home_url('/'));  ?>" class="menu-button">HOME</div>
+                     <?php } else{ ?>
+                         <div class="menu-button trigger-pull-menu">MENU</div>
+                     <?php } ?>
+
                  </div>
              </div>
 

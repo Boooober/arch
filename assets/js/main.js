@@ -108,7 +108,6 @@ jQuery( document ).ready(function( $ ) {
 
     function switcher (target) {
 
-        console.log(target);
         var switchTarget = target.data('switch');
 
         target.closest('.switcher').find('.content-switch .entry-content').each(function(){
@@ -295,7 +294,7 @@ jQuery( document ).ready(function( $ ) {
             var link = event.target,
                 href = link.href.substring(link.href.indexOf('#')+1);
 
-            toggleOverlay(pull);
+            toggleOverlay(pullMenu);
 
             setTimeout(function(){
                 $.fn.fullpage.moveTo(href);

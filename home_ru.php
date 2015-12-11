@@ -160,6 +160,110 @@
                 }
             ?>
         </section>
+
+        <div class="section gallery" data-section-name="Наши проекты">
+            <div class="box-bg"></div>
+            <section class="content">
+                <h1 class="box-title">Наши проекты</h1>
+
+                <div class="undertitle">
+                    <h2>Коммерческие интерьеры</h2>
+                </div>
+
+
+                <div class="owl-gallery">
+
+
+                    <?php
+                    $args = array(
+                        'cat'       => 8,
+                        'post_status' => 'publish',
+                        'posts_per_page' => 6,
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if($query->have_posts()){
+                        while($query->have_posts()){
+                            $query->the_post();
+                            $post_id = get_the_ID();
+
+                            $img_id = get_post_thumbnail_id( $post_id );
+                            $img_attr = wp_get_attachment_image_src( $img_id, 'medium-image');
+                            $img_url = $img_attr[0];
+                            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+
+                            $cat = get_the_category( $post_id );
+
+                            ?>
+
+                            <a class="item" href="<?php echo get_permalink(); ?>">
+                                <figure class="item-img">
+                                    <img src="<?php echo $img_url; ?>" alt="<?php echo $img_alt ?>"/>
+                                </figure>
+
+                                <div class="item-content">
+                                    <h3 class="item-title"><?php the_title(); ?></h3>
+                                    <span class="item-cat"><?php echo $cat[0]->cat_name; ?></span>
+                                </div>
+                            </a>
+                        <?php
+                        }
+                    }
+                    ?>
+
+
+                </div>
+                <div class="undertitle">
+                    <h2>Частные интерьеры</h2>
+                </div>
+                <div class="owl-gallery">
+
+
+                    <?php
+                    $args = array(
+                        'cat'       => 20,
+                        'post_status' => 'publish',
+                        'posts_per_page' => 6,
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if($query->have_posts()){
+                        while($query->have_posts()){
+                            $query->the_post();
+                            $post_id = get_the_ID();
+
+                            $img_id = get_post_thumbnail_id( $post_id );
+                            $img_attr = wp_get_attachment_image_src( $img_id, 'medium-image');
+                            $img_url = $img_attr[0];
+                            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+
+                            $cat = get_the_category( $post_id );
+
+                            ?>
+
+                            <a class="item" href="<?php echo get_permalink(); ?>">
+                                <figure class="item-img">
+                                    <img src="<?php echo $img_url; ?>" alt="<?php echo $img_alt ?>"/>
+                                </figure>
+
+                                <div class="item-content">
+                                    <h3 class="item-title"><?php the_title(); ?></h3>
+                                    <span class="item-cat"><?php echo $cat[0]->cat_name; ?></span>
+                                </div>
+                            </a>
+                        <?php
+                        }
+                    }
+                    ?>
+
+
+                </div>
+            </section>
+        </div>
+
+
         <div class="section box-5" data-section-name="Мы предлагаем">
             <div class="box-bg"></div>
             <section class="content">
@@ -365,109 +469,6 @@
             </section>
         </div>
 
-
-
-        <div class="section gallery" data-section-name="Наши проекты">
-            <div class="box-bg"></div>
-            <section class="content">
-                <h1 class="box-title">Наши проекты</h1>
-
-                <div class="undertitle">
-                    <h2>Коммерческие интерьеры</h2>
-                </div>
-
-
-                <div class="owl-gallery">
-
-
-                    <?php
-                    $args = array(
-                        'cat'       => 8,
-                        'post_status' => 'publish',
-                        'posts_per_page' => 6,
-                    );
-
-                    $query = new WP_Query($args);
-
-                    if($query->have_posts()){
-                        while($query->have_posts()){
-                            $query->the_post();
-                            $post_id = get_the_ID();
-
-                            $img_id = get_post_thumbnail_id( $post_id );
-                            $img_attr = wp_get_attachment_image_src( $img_id, 'medium-image');
-                            $img_url = $img_attr[0];
-                            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
-
-                            $cat = get_the_category( $post_id );
-
-                            ?>
-
-                            <a class="item" href="<?php echo get_permalink(); ?>">
-                                <figure class="item-img">
-                                    <img src="<?php echo $img_url; ?>" alt="<?php echo $img_alt ?>"/>
-                                </figure>
-
-                                <div class="item-content">
-                                    <h3 class="item-title"><?php the_title(); ?></h3>
-                                    <span class="item-cat"><?php echo $cat[0]->cat_name; ?></span>
-                                </div>
-                            </a>
-                        <?php
-                        }
-                    }
-                    ?>
-
-
-                </div>
-                <div class="undertitle">
-                    <h2>Частные интерьеры</h2>
-                </div>
-                <div class="owl-gallery">
-
-
-                    <?php
-                    $args = array(
-                        'cat'       => 20,
-                        'post_status' => 'publish',
-                        'posts_per_page' => 6,
-                    );
-
-                    $query = new WP_Query($args);
-
-                    if($query->have_posts()){
-                        while($query->have_posts()){
-                            $query->the_post();
-                            $post_id = get_the_ID();
-
-                            $img_id = get_post_thumbnail_id( $post_id );
-                            $img_attr = wp_get_attachment_image_src( $img_id, 'medium-image');
-                            $img_url = $img_attr[0];
-                            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
-
-                            $cat = get_the_category( $post_id );
-
-                            ?>
-
-                            <a class="item" href="<?php echo get_permalink(); ?>">
-                                <figure class="item-img">
-                                    <img src="<?php echo $img_url; ?>" alt="<?php echo $img_alt ?>"/>
-                                </figure>
-
-                                <div class="item-content">
-                                    <h3 class="item-title"><?php the_title(); ?></h3>
-                                    <span class="item-cat"><?php echo $cat[0]->cat_name; ?></span>
-                                </div>
-                            </a>
-                        <?php
-                        }
-                    }
-                    ?>
-
-
-                </div>
-            </section>
-        </div>
 
         <section class="section box-6" data-section-name="Контакты">
             <div>

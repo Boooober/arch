@@ -884,10 +884,12 @@ a {
   .box-2 .content-tile .col-title {
     line-height: 16px; }
   .box-2 .content-tile:hover .wrap {
-    -webkit-transform: translateY(-200%);
-        -ms-transform: translateY(-200%);
-            transform: translateY(-200%); }
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0; }
   .box-2 .content-tile:hover .form-btn {
+    opacity: 1;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
@@ -900,9 +902,10 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 550%);
-      -ms-transform: translate(-50%, 550%);
-          transform: translate(-50%, 550%); }
+  -webkit-transform: translate(-50%, 200%);
+      -ms-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
+  opacity: 0; }
 
 .box-2 .content-right .content-switch {
   position: relative; }
@@ -917,13 +920,16 @@ a {
 .box-3 h1 {
   position: absolute;
   top: 120px;
-  left: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-transform: uppercase;
   z-index: 9999;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 50px;
-  color: white; }
+  color: #fff; }
 
 .box-3 .slide {
   position: relative;
@@ -1066,10 +1072,12 @@ a {
     -webkit-transition: .3s;
             transition: .3s; }
   .box-5 .entry-content:hover .wrap {
-    -webkit-transform: translateY(-200%);
-        -ms-transform: translateY(-200%);
-            transform: translateY(-200%); }
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0; }
   .box-5 .entry-content:hover .form-btn {
+    opacity: 1;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
@@ -1078,9 +1086,10 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 550%);
-      -ms-transform: translate(-50%, 550%);
-          transform: translate(-50%, 550%); }
+  -webkit-transform: translate(-50%, 200%);
+      -ms-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
+  opacity: 0; }
 
 .box-6 {
   font-weight: 100; }

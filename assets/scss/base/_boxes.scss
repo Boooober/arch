@@ -198,11 +198,14 @@
 
     &:hover{
       .wrap{
-        transform: translateY(-200%);
+        transform: translateY(-30px);
+        opacity: 0;
       }
       .form-btn {
+        opacity: 1;
         transform: translate(-50%, -50%);
       }
+
     }
   }
 
@@ -214,7 +217,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 550%);
+    transform: translate(-50%, 200%);
+    opacity: 0;
   }
 
   .content-right{
@@ -240,13 +244,14 @@
   h1{
     position: absolute;
     top: 120px;
-    left: 100px;
+    left: 50%;
+    transform: translateX(-50%);
     text-transform: uppercase;
     z-index: 9999;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 50px;
-    color: white;
+    color: #fff;
   }
 
   .slide{
@@ -447,15 +452,18 @@
       text-transform: uppercase;
       margin-bottom: 20px;
     }
+
     .wrap{
       transition: .3s;
     }
 
     &:hover{
       .wrap{
-        transform: translateY(-200%);
+        transform: translateY(-30px);
+        opacity: 0;
       }
       .form-btn {
+        opacity: 1;
         transform: translate(-50%, -50%);
       }
 
@@ -465,7 +473,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 550%);
+    transform: translate(-50%, 200%);
+    opacity: 0;
   }
 }
 
