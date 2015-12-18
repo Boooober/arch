@@ -6,8 +6,11 @@
 
 .pull-menu-content{
 
-  .menu{
+  .middle-container{
     margin-top: 50px;
+  }
+  .menu{
+    float: left;
     a{
       display: inline-block;
       font-size: 40px;
@@ -17,6 +20,25 @@
         transform: translateX(30px);
         color: #ef7f1a;
       }
+    }
+  }
+
+  .form-menu{
+    float: right;
+    width: 400px;
+    .form {
+      .desc {
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    .row{
+      margin: -20px;
+    }
+    .col{
+      width: 100%;
+      padding: 10px 20px;
     }
   }
 }

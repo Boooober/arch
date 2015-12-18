@@ -16,22 +16,22 @@
 
             <div class="form">
                 <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lacus at neque blandit.</p>
-                <form action="">
+                <form class="contact-form" action="">
                     <div class="row">
                         <div class="col">
-                            <lable for="fname" class="lable"></lable>
-                            <input name="fname" type="text" placeholder="Your Name"/>
+                            <lable for="fname" class="lable"><?php pll_e('Your Name'); ?></lable>
+                            <input class="form-input" name="fname" type="text" placeholder="<?php pll_e('Your Name'); ?>"/>
                         </div>
                         <div class="col">
-                            <lable for="name" class="lable"></lable>
-                            <input name="femail" type="text" placeholder="Your Email"/>
+                            <lable for="name" class="lable"><?php pll_e('Your Email'); ?></lable>
+                            <input class="form-input" name="femail" type="text" placeholder="<?php pll_e('Your Email'); ?>"/>
                         </div>
                         <div class="col">
-                            <lable for="name" class="lable"></lable>
-                            <input name="fphone" type="text" placeholder="Your Phone"/>
+                            <lable for="name" class="lable"><?php pll_e('Your Phone'); ?></lable>
+                            <input class="form-input" name="fphone" type="text" placeholder="<?php pll_e('Your Phone'); ?>"/>
                         </div>
                         <div class="col">
-                            <input type="submit" value="SEND"/>
+                            <input type="submit" value="<?php pll_e('SEND'); ?>"/>
                         </div>
                     </div>
                 </form>
@@ -40,14 +40,15 @@
 
             <div class="row pull-footer">
                 <div class="col contacts">
-                    <p class="headline">Adress</p>
-                    <p>1058, Rue des Plans 06510 CARROS
-                        <span>Fax:</span> 09 50 10 82 11<br />
-                        <span>Telephone:</span> +33 078 564 60 90  +33 07 85 64 60 90
+                    <p class="headline"><?php pll_e('Adress'); ?></p>
+                    <p><?php pll_e('1058, Rue des Plans 06510 CARROS'); ?>
+                        <span><?php pll_e('Fax'); ?>:</span> 09 50 10 82 11<br />
+                        <span><?php pll_e('Telephone'); ?>:</span> +33 078 564 60 90  +33 07 85 64 60 90<br />
+	                    <span>Email:</span> contact@buroarchdesign.com
                     </p>
                 </div>
                 <div class="col soc-icons">
-                    <p class="headline">Share</p>
+                    <p class="headline"><?php pll_e('Share'); ?></p>
                     <ul>
                         <li><a href="https://www.facebook.com/BuroArchDesign" class="icon-facebook"></a></li>
                         <li><a href="https://www.instagram.com/buroarchdesign/" class="icon-instagram"></a></li>

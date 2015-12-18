@@ -152,3 +152,17 @@ if (function_exists('pll_register_string')) {
     pll_register_string('Next project', 'Next project');
     pll_register_string('Previous project', 'Previous project');
 }
+
+include 'includes/level_gallery.php';
+include 'includes/send_email.php';
+
+
+pll_register_string('form', 'Your Name');
+pll_register_string('form', 'Your Email');
+pll_register_string('form', 'Your Phone');
+pll_register_string('form', 'SEND');
+pll_register_string('contacts', 'Adress');
+pll_register_string('contacts', '1058, Rue des Plans 06510 CARROS');
+pll_register_string('contacts', 'Fax');
+pll_register_string('contacts', 'Telephone');
+pll_register_string('social', 'Share');

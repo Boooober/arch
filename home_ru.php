@@ -45,7 +45,7 @@
 
             <?php
                 if( wp_mobile_detect() ) {
-                    get_template_part( 'parts/mobile/box-2' );
+                    get_template_part( 'parts/mobile/box-2_ru' );
                 } else { ?>
                     <section class="content">
                         <div class="row">
@@ -54,50 +54,50 @@
                                 <div class="row">
                                     <div class="col">
                                         <div data-switch="architecture" class="content-tile switch-trigger">
-                                            <div class="wrap">
-                                                <figure>
-                                                    <?php get_template_part('assets/svg/2slide/l1.svg');?>
-                                                </figure>
-                                                <p>Архитектура</p>
-                                            </div>
+
+                                            <figure>
+                                                <?php get_template_part('assets/svg/2slide/l1.svg');?>
+                                            </figure>
+                                            <p>Архитектура</p>
+
                                             <a class="form-btn trigger-form-btn" href="#" data-ftitle="Архитектура">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                     <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
                                                 </svg>
-                                                Онлайн консультация
+                                                Подробнее
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div data-switch="design" class="content-tile switch-trigger">
-                                            <div class="wrap">
-                                                <figure>
-                                                    <?php get_template_part('assets/svg/2slide/l2.svg');?>
-                                                </figure>
-                                                <p>Дизайн</p>
-                                            </div>
+
+                                            <figure>
+                                                <?php get_template_part('assets/svg/2slide/l2.svg');?>
+                                            </figure>
+                                            <p>Дизайн</p>
+
                                             <a class="form-btn trigger-form-btn" href="#" data-ftitle="Дизайн">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                     <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
                                                 </svg>
-                                                Онлайн консультация
+	                                            Подробнее
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div data-switch="acquisition" class="content-tile switch-trigger">
-                                            <div class="wrap">
-                                                <figure>
-                                                    <?php get_template_part('assets/svg/2slide/l3.svg');?>
-                                                </figure>
-                                                <p>Комплектация, авторский надзор, различные демарши</p>
-                                            </div>
+
+                                            <figure>
+                                                <?php get_template_part('assets/svg/2slide/l3.svg');?>
+                                            </figure>
+                                            <p>Комплектация, авторский надзор, различные демарши</p>
+
 
                                             <a class="form-btn trigger-form-btn" href="#" data-ftitle="Комплектация, авторский надзор, различные демарши">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                     <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
                                                 </svg>
-                                                Онлайн консультация
+	                                            Подробнее
                                             </a>
                                         </div>
                                     </div>
@@ -161,108 +161,40 @@
             ?>
         </section>
 
-        <div class="section gallery" data-section-name="Наши проекты">
+        <div class="section gallery" data-section-name="Наши проекты" >
             <div class="box-bg"></div>
             <section class="content">
                 <h1 class="box-title">Наши проекты</h1>
 
-                <div class="undertitle">
-                    <h2>Коммерческие интерьеры</h2>
-                </div>
+	            <div id="tab-block" class="tab-block">
+		            <div class="outer-tab-caption"></div>
 
 
-                <div class="owl-gallery">
+		            <?php
+
+		            $args = array(
+			            'parent'  => '0',
+                        'orderby' => 'slug'
+		            );
+
+		            foreach ( get_terms('category', $args) as $category){ ?>
+			            <div class="outer-tab-content">
+				            <div class="undertitle"><?php echo $category->name; ?></div>
+				            <?php echo post_projects($category); ?>
+			            </div>
+		            <?php } ?>
+	            </div>
 
 
-                    <?php
-                    $args = array(
-                        'cat'       => 8,
-                        'post_status' => 'publish',
-                        'posts_per_page' => 6,
-                    );
-
-                    $query = new WP_Query($args);
-
-                    if($query->have_posts()){
-                        while($query->have_posts()){
-                            $query->the_post();
-                            $post_id = get_the_ID();
-
-                            $img_id = get_post_thumbnail_id( $post_id );
-                            $img_attr = wp_get_attachment_image_src( $img_id, 'medium-image');
-                            $img_url = $img_attr[0];
-                            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
-
-                            $cat = get_the_category( $post_id );
-
-                            ?>
-
-                            <a class="item" href="<?php echo get_permalink(); ?>">
-                                <figure class="item-img">
-                                    <img src="<?php echo $img_url; ?>" alt="<?php echo $img_alt ?>"/>
-                                </figure>
-
-                                <div class="item-content">
-                                    <h3 class="item-title"><?php the_title(); ?></h3>
-                                    <span class="item-cat"><?php echo $cat[0]->cat_name; ?></span>
-                                </div>
-                            </a>
-                        <?php
-                        }
-                    }
-                    ?>
 
 
-                </div>
-                <div class="undertitle">
-                    <h2>Частные интерьеры</h2>
-                </div>
-                <div class="owl-gallery">
 
 
-                    <?php
-                    $args = array(
-                        'cat'       => 20,
-                        'post_status' => 'publish',
-                        'posts_per_page' => 6,
-                    );
-
-                    $query = new WP_Query($args);
-
-                    if($query->have_posts()){
-                        while($query->have_posts()){
-                            $query->the_post();
-                            $post_id = get_the_ID();
-
-                            $img_id = get_post_thumbnail_id( $post_id );
-                            $img_attr = wp_get_attachment_image_src( $img_id, 'medium-image');
-                            $img_url = $img_attr[0];
-                            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
-
-                            $cat = get_the_category( $post_id );
-
-                            ?>
-
-                            <a class="item" href="<?php echo get_permalink(); ?>">
-                                <figure class="item-img">
-                                    <img src="<?php echo $img_url; ?>" alt="<?php echo $img_alt ?>"/>
-                                </figure>
-
-                                <div class="item-content">
-                                    <h3 class="item-title"><?php the_title(); ?></h3>
-                                    <span class="item-cat"><?php echo $cat[0]->cat_name; ?></span>
-                                </div>
-                            </a>
-                        <?php
-                        }
-                    }
-                    ?>
 
 
-                </div>
+
             </section>
         </div>
-
 
         <div class="section box-5" data-section-name="Мы предлагаем">
             <div class="box-bg"></div>
@@ -271,54 +203,54 @@
                 <div class="row">
                     <div class="col">
                         <div class="entry-content">
-                            <div class="wrap">
-                                <figure>
-                                    <?php get_template_part('assets/svg/5slide/n1.svg');?>
-                                </figure>
-                                <h2>Архитектурное проектирование</h2>
-                                <p>Архитектурная форма, демонстрирующая характер владельца с первого взгляда. Проект жилого дома, ресторана, коттеджа, коммерческого здания.</p>
-                            </div>
+
+                            <figure>
+                                <?php get_template_part('assets/svg/5slide/n1.svg');?>
+                            </figure>
+                            <h2>Архитектурное проектирование</h2>
+                            <p>Архитектурная форма, демонстрирующая характер владельца с первого взгляда. Проект жилого дома, ресторана, коттеджа, коммерческого здания.</p>
+
                             <a class="form-btn trigger-form-btn" href="#" data-ftitle="Архитектурное проектирование">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                     <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
                                 </svg>
-                                Онлайн консультация
+	                            Подробнее
                             </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="entry-content">
-                            <div class="wrap">
-                                <figure>
-                                    <?php get_template_part('assets/svg/5slide/n2.svg');?>
-                                </figure>
-                                <h2>Дизайн интерьера</h2>
-                                <p>Оптимизация пространства, проект интерьера комнаты, квартиры, дома, офиса, кафе, клуба, ресторана, шоу-рум, магазина.</p>
-                            </div>
+
+                            <figure>
+                                <?php get_template_part('assets/svg/5slide/n2.svg');?>
+                            </figure>
+                            <h2>Дизайн интерьера</h2>
+                            <p>Оптимизация пространства, проект интерьера комнаты, квартиры, дома, офиса, кафе, клуба, ресторана, шоу-рум, магазина.</p>
+
 
                             <a class="form-btn trigger-form-btn" href="#" data-ftitle="Дизайн интерьера">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                     <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
                                 </svg>
-                                Онлайн консультация
+	                            Подробнее
                             </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="entry-content">
-                            <div class="wrap">
-                                <figure>
-                                    <?php get_template_part('assets/svg/5slide/n3.svg');?>
-                                </figure>
-                                <h2>Предметный дизайн</h2>
-                                <p>Уют даже в миниатюрных деталях. Дизайн мебели, деталей интерьера, освещения, посуды.</p>
-                            </div>
+
+                            <figure>
+                                <?php get_template_part('assets/svg/5slide/n3.svg');?>
+                            </figure>
+                            <h2>Предметный дизайн</h2>
+                            <p>Уют даже в миниатюрных деталях. Дизайн мебели, деталей интерьера, освещения, посуды.</p>
+
 
                             <a class="form-btn trigger-form-btn" href="#" data-ftitle="Предметный дизайн">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                     <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
                                 </svg>
-                                Онлайн консультация
+	                            Подробнее
                             </a>
                         </div>
                     </div>
@@ -330,7 +262,7 @@
             <div class="box-bg animate"></div>
                 <?php
                 if( wp_mobile_detect() ) {
-                    get_template_part( 'parts/mobile/box-4' );
+                    get_template_part( 'parts/mobile/box-4_ru' );
                 } else { ?>
                     <section class="content">
                         <div class="row">
@@ -472,8 +404,8 @@
 
         <section class="section box-6" data-section-name="Контакты">
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81295.50604234143!2d30.567537809521486!3d50.450700782061084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1447250718941" width="100%" height="350" frameborder="0" style="border:0; display: block;" allowfullscreen></iframe>
-        <!--        --><?php //get_template_part('parts/gmap'); ?>
+<!--                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81295.50604234143!2d30.567537809521486!3d50.450700782061084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1447250718941" width="100%" height="350" frameborder="0" style="border:0; display: block;" allowfullscreen></iframe>-->
+                <?php get_template_part('parts/gmap'); ?>
             </div>
             <div class="row">
                 <div>
@@ -481,41 +413,42 @@
                         <div class="js-cell">
                             <div class="entry-content">
                                 <p class="text-logo"><span>ARCH</span> design</p>
-                                <div class="info">
-                                    <p>1058, Rue des Plans 06510 CARROS</p>
-                                    <p><span>Fax:</span> 09 50 10 82 11</p>
-                                    <p class="tel clearfix"><span class="lable">Telephone:</span><span class="numb">+33 078 564 60 90<br />+33 07 85 64 60 90</span></p>
-                                    <div class="soc-icons">
-                                        <ul>
-                                            <li><a href="https://www.facebook.com/BuroArchDesign" class="icon-facebook"></a></li>
-                                            <li><a href="https://www.instagram.com/buroarchdesign/" class="icon-instagram"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+	                            <div class="info">
+		                            <p><?php pll_e('1058, Rue des Plans 06510 CARROS'); ?></p>
+		                            <p><span><?php pll_e('Fax'); ?>:</span> 09 50 10 82 11</p>
+		                            <p class="tel clearfix"><span class="lable"><?php pll_e('Telephone'); ?>:</span><span class="numb">+33 078 564 60 90<br />+33 07 85 64 60 90</span></p>
+		                            <p><span>Email:</span> contact@buroarchdesign.com</p>
+		                            <div class="soc-icons">
+			                            <ul>
+				                            <li><a href="https://www.facebook.com/BuroArchDesign" class="icon-facebook"></a></li>
+				                            <li><a href="https://www.instagram.com/buroarchdesign/" class="icon-instagram"></a></li>
+			                            </ul>
+		                            </div>
+	                            </div>
                             </div>
                         </div>
                     </div>
                     <div class="col right js-col">
                         <div class="js-cell">
                             <p class="title">Оставьте заявку на встречу с дизайнером и проведение необходимых замеров</p>
-                            <form action="">
-                                <div class="row">
-                                    <div class="col">
-                                        <lable class="flable" for="name">Ваше имя</lable>
-                                        <input type="text" placeholder="Ваше имя"/>
-                                    </div>
-                                    <div class="col">
-                                        <lable class="flable" for="email">Ваш email</lable>
-                                        <input type="text" placeholder="Ваш email"/>
-                                    </div>
-                                    <div class="col">
-                                        <lable class="flable" for="phone">Ваш телефон</lable>
-                                        <input type="text" placeholder="Ваш телефон"/>
-                                    </div>
-                                    <div class="col">
-                                        <input type="submit" value="ОТПРАВИТЬ"/>
-                                    </div>
-                                </div>
+                            <form class="contact-form" action="">
+	                            <div class="row">
+		                            <div class="col">
+			                            <lable class="flable" for="name"><?php pll_e('Your Name'); ?></lable>
+			                            <input class="form-input" type="text" name="fname" placeholder="<?php pll_e('Your Name'); ?>"/>
+		                            </div>
+		                            <div class="col">
+			                            <lable class="flable" for="email"><?php pll_e('Your Email'); ?></lable>
+			                            <input class="form-input" type="text" name="femail" placeholder="<?php pll_e('Your Email'); ?>"/>
+		                            </div>
+		                            <div class="col">
+			                            <lable class="flable" for="phone"><?php pll_e('Your Phone'); ?></lable>
+			                            <input class="form-input" type="text" name="fphone" placeholder="<?php pll_e('Your Phone'); ?>"/>
+		                            </div>
+		                            <div class="col">
+			                            <input type="submit" value="<?php pll_e('SEND'); ?>"/>
+		                            </div>
+	                            </div>
                             </form>
 
                         </div>
@@ -556,25 +489,19 @@
         <div id="logo" class="logo">
             <?php get_template_part('assets/svg/logo.svg') ?>
         </div>
-        
-        <nav class="menu nav-menu">
-            <ul>
-                <li><a href="#service">Наши услуги</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#workflow">Этапы работы</a></li>
-                <li><a href="#offers">Что мы предлагаем</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-        
-        <nav class="menu-wrap">
+
+
+	    <?php
+	    wp_nav_menu( array(
+		    'container'      => '',
+		    'menu_class'     => 'menu nav-menu',
+		    'menu_id'        => '',
+		    'theme_location' => 'header',
+	    ) );
+	    ?>
+
+	    <nav class="menu-wrap">
         <?php
-//            wp_nav_menu( array(
-//               'container'      => '',
-//                'menu_class'     => 'menu main-header_menu',
-//                'menu_id'        => '',
-//                'theme_location' => 'header',
-//            ) );
 
             wp_nav_menu( array(
                 'container'      => '',
