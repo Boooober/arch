@@ -9,7 +9,7 @@ $templateurl = get_bloginfo('template_url');
 ?>
 
 <body>
-<div class="container">
+<div id="container" class="container">
 <div id="fullpage">
 
 <div class="section box-1 switcher" data-section-name="Home">
@@ -60,7 +60,7 @@ $templateurl = get_bloginfo('template_url');
 								</figure>
 								<p>Architecture</p>
 
-								<a class="form-btn trigger-form-btn" href="#" data-ftitle="Архитектура">
+								<a class="form-btn js-overly-trigger" href="#" data-overlay="#pull-form" data-ftitle="Архитектура">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 										<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
 									</svg>
@@ -76,7 +76,7 @@ $templateurl = get_bloginfo('template_url');
 								</figure>
 								<p>Design</p>
 
-								<a class="form-btn trigger-form-btn" href="#" data-ftitle="Дизайн">
+								<a class="form-btn js-overly-trigger" href="#" data-overlay="#pull-form" data-ftitle="Дизайн">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 										<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
 									</svg>
@@ -93,7 +93,7 @@ $templateurl = get_bloginfo('template_url');
 								<p>Acquisition, supervision, various demarches</p>
 
 
-								<a class="form-btn trigger-form-btn" href="#" data-ftitle="Комплектация, авторский надзор, различные демарши">
+								<a class="form-btn js-overly-trigger" href="#" data-overlay="#pull-form" data-ftitle="Комплектация, авторский надзор, различные демарши">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 										<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
 									</svg>
@@ -209,7 +209,7 @@ $templateurl = get_bloginfo('template_url');
 					<h2>Architectural design</h2>
 					<p>The architectural form showing the character of the owner at a glance. The project of a residential building, restaurant, cottage or a commercial building.</p>
 
-					<a class="form-btn trigger-form-btn" href="#" data-ftitle="Architectural design">
+					<a class="form-btn js-overly-trigger" href="#" data-overlay="#pull-form" data-ftitle="Architectural design">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
 						</svg>
@@ -227,7 +227,7 @@ $templateurl = get_bloginfo('template_url');
 					<p>The optimization of space, interior design of rooms, apartments, houses, offices, cafes, clubs, restaurants, showroom, shop.</p>
 
 
-					<a class="form-btn trigger-form-btn" href="#" data-ftitle="Interior design">
+					<a class="form-btn js-overly-trigger" href="#" data-overlay="#pull-form" data-ftitle="Interior design">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
 						</svg>
@@ -245,7 +245,7 @@ $templateurl = get_bloginfo('template_url');
 					<p>Coziness is even in tiny details. Design of furniture, interior parts, lighting, tableware.</p>
 
 
-					<a class="form-btn trigger-form-btn" href="#" data-ftitle="Object design">
+					<a class="form-btn js-overly-trigger" href="#" data-overlay="#pull-form" data-ftitle="Object design">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
 						</svg>
@@ -428,27 +428,7 @@ $templateurl = get_bloginfo('template_url');
 			</div>
 			<div class="col right js-col">
 				<div class="js-cell">
-					<p class="title">Leave a request for a meeting with the design and making the necessary measurements</p>
-					<form class="contact-form" action="">
-						<div class="row">
-							<div class="col">
-								<lable class="flable" for="name"><?php pll_e('Your Name'); ?></lable>
-								<input class="form-input" type="text" name="fname" placeholder="<?php pll_e('Your Name'); ?>"/>
-							</div>
-							<div class="col">
-								<lable class="flable" for="email"><?php pll_e('Your Email'); ?></lable>
-								<input class="form-input" type="text" name="femail" placeholder="<?php pll_e('Your Email'); ?>"/>
-							</div>
-							<div class="col">
-								<lable class="flable" for="phone"><?php pll_e('Your Phone'); ?></lable>
-								<input class="form-input" type="text" name="fphone" placeholder="<?php pll_e('Your Phone'); ?>"/>
-							</div>
-							<div class="col">
-								<input type="submit" value="<?php pll_e('SEND'); ?>"/>
-							</div>
-						</div>
-					</form>
-
+					<?php get_template_part('parts/contact-form'); ?>
 				</div>
 			</div>
 		</div>
@@ -461,8 +441,8 @@ $templateurl = get_bloginfo('template_url');
 				<span>Made in</span>
 				<figure>
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
-                                <path fill="#F77165" d="M29.757,25.07l6.526,13.491l-4.093,7.521L21.461,25.07h-7.076l17.914,35.942l7.743-14.929l7.853,14.929  L65.698,25.07H29.757z M47.619,46.083l-7.577-14.488h15.152L47.619,46.083z"/>
-                            </svg>
+                        <path fill="#F77165" d="M29.757,25.07l6.526,13.491l-4.093,7.521L21.461,25.07h-7.076l17.914,35.942l7.743-14.929l7.853,14.929  L65.698,25.07H29.757z M47.619,46.083l-7.577-14.488h15.152L47.619,46.083z"/>
+                    </svg>
 				</figure>
 				<b>Witty Digital</b>
 			</a>
@@ -479,42 +459,7 @@ $templateurl = get_bloginfo('template_url');
 </div>
 
 <?php get_template_part( 'parts/menu' ); ?>
-
 <?php get_template_part( 'parts/form' ); ?>
-
-<div id="flying-panel" class="flying-panel white">
-	<div class="topline-nav clearfix">
-		<div id="logo" class="logo">
-			<?php get_template_part('assets/svg/logo.svg') ?>
-		</div>
-
-
-		<?php
-		wp_nav_menu( array(
-			'container'      => '',
-			'menu_class'     => 'menu nav-menu',
-			'menu_id'        => '',
-			'theme_location' => 'header',
-		) );
-		?>
-
-		<nav class="menu-wrap">
-			<?php
-			wp_nav_menu( array(
-				'container'      => '',
-				'menu_class'     => 'menu langs-menu',
-				'menu_id'        => '',
-				'theme_location' => 'langs',
-			) );
-			?>
-
-			<div class="menu-button trigger-pull-menu">MENU</div>
-		</nav>
-
-	</div>
-	<!--    <div id="next" class="next">-->
-	<!--        go next-->
-	<!--    </div>-->
-</div>
+<?php get_template_part( 'parts/flying-panel' ); ?>
 
 <?php get_footer(); ?>

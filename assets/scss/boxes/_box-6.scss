@@ -1,0 +1,268 @@
+.box-6{
+  .fp-tableCell{
+    display:block;
+  }
+
+  .row{
+    .col{
+      width:50%;
+      float:left;
+    }
+  }
+
+  .left{
+    padding: 80px 20px;
+    text-align: center;
+    .left-container{
+      display:inline-block;
+      text-align: left;
+    }
+    .text-logo{
+      font-size: 35px;
+      color: #d3d3d3;
+      margin-bottom: 40px;
+      span{
+        font-weight: 700;
+        font-size: 40px;
+        color: #292929;
+      }
+    }
+    .contacts{
+      width: 280px;
+      span{
+        color: #9d9d9d;
+      }
+    }
+//    .contacts{
+
+//      p{
+
+//        span{
+//          color: #9d9d9d;
+//        }
+//        &.tel{
+//          .lable {
+//            float: left;
+//            display:block;
+//          }
+//          .numb{
+//            margin-left: 90px;
+//            display:block;
+//            color: #292929;
+//          }
+//        }
+//      }
+
+
+//    }
+    .soc-icons {
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+  .right{
+    padding: 80px;
+    background-color: #f5f5f5;
+    .desc{
+      display:block;
+      font-weight: normal;
+      color: #292929;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+  }
+
+
+
+
+
+  form{
+    .flable{
+      display:none;
+    }
+    input{
+      font-size: 16px;
+      outline: none;
+      background: none;
+      width:100%;
+    }
+    input[type="text"]{
+      padding: 11px 0;
+      border:none;
+      border-bottom:2px solid #c1c1c1;
+      transition: border-color .3s;
+      &:focus{
+        border-bottom-color: #ef7f1a;
+      }
+      &.error{
+        border-bottom-color: rgba(255, 0, 0, 0.3);
+      }
+    }
+    input[type="submit"]{
+      padding: 10px;
+      font-weight: normal;
+      border:2px solid #c1c1c1;
+      transition: background-color .3s;
+      &:hover{
+        background-color: rgba(193, 193, 193, 0.15);
+      }
+      &.error{
+        border-color: rgba(255, 0, 0, 0.3);
+      }
+    }
+    .row{
+      margin: 0 -30px -40px;
+      .col{
+        padding: 0 30px 40px;
+      }
+    }
+  }
+
+  html.js &{
+
+    .row{
+      .col.right, .col.left {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .js-table{
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      .js-cell{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        width:100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#map {
+  width:100%;
+  height: 400px;
+}
+
+.map-container{
+  padding-right: 40px;
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 992px) {
+
+  .box-6 {
+    form {
+      input {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .box-6 {
+    .row {
+      margin: 0;
+      .col{
+        width: 100%;
+        float: none;
+      }
+    }
+    .left, .right {
+       padding: 60px 120px;
+     }
+    .right {
+      padding-bottom: 60px;
+      .form{
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  html.js{
+    .box-6{
+      .row{
+        .col{
+          &.left, &.right{
+            padding: 60px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 540px) {
+  .box-6 {
+    form {
+      .row {
+        .col {
+          width: 100%;
+          float: none;
+          padding-bottom: 15px
+        }
+      }
+      input[type="submit"] {
+        margin-top: 25px;
+        padding: 15px 10px;
+      }
+    }
+
+    .right{
+      .desc {
+        margin-bottom: 20px;
+      }
+      .form{
+        width: 100%
+      }
+    }
+    .left{
+      .contacts {
+        width: 100%;
+      }
+    }
+  }
+
+  #map{
+    height: 300px;
+  }
+}
+
+@media (max-width: 420px){
+  .box-6 .right .desc {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  html.js{
+    .box-6{
+      .row{
+        .col{
+          &.left, &.right{
+            padding-left: 20px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .box-6 {
+    .left, .right {
+      padding-left: 20px;
+    }
+  }
+  #map{
+    height: 200px;
+  }
+}

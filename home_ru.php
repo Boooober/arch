@@ -9,10 +9,10 @@
 ?>
 
 <body>
-<div class="container">
+<div id="container" class="container">
     <div id="fullpage">
 
-        <div class="section box-1 switcher" data-section-name="Главная">
+        <section id="box-1" class="section box-1 switcher" data-section-name="Главная">
             <div class="box-bg animate"></div>
             <section class="content">
                 <div class="title-wrapper">
@@ -38,21 +38,21 @@
                     </li>
                 </ul>
             </section>
-        </div>
-        <div class="section box-2 switcher" data-section-name="Наши услуги">
+        </section>
+        <section id="box-2" class="section box-2 switcher" data-section-name="Наши услуги">
             <div class="box-bg"></div>
 
 
             <?php
                 if( wp_mobile_detect() ) {
-                    get_template_part( 'parts/mobile/box-2_ru' );
+                    get_template_part( 'mobile-templates/box-2_ru' );
                 } else { ?>
                     <section class="content">
                         <div class="row">
                             <div class="col left">
                                 <h1>Наши услуги</h1>
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Архитектура">
                                         <div data-switch="architecture" class="content-tile switch-trigger">
 
                                             <figure>
@@ -60,15 +60,10 @@
                                             </figure>
                                             <p>Архитектура</p>
 
-                                            <a class="form-btn trigger-form-btn" href="#" data-ftitle="Архитектура">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
-                                                </svg>
-                                                Подробнее
-                                            </a>
+                                            <span class="form-btn">Подробнее</span>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Дизайн">
                                         <div data-switch="design" class="content-tile switch-trigger">
 
                                             <figure>
@@ -76,15 +71,10 @@
                                             </figure>
                                             <p>Дизайн</p>
 
-                                            <a class="form-btn trigger-form-btn" href="#" data-ftitle="Дизайн">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
-                                                </svg>
-	                                            Подробнее
-                                            </a>
+                                            <span class="form-btn">Подробнее</span>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Комплектация, авторский надзор, различные демарши">
                                         <div data-switch="acquisition" class="content-tile switch-trigger">
 
                                             <figure>
@@ -92,13 +82,7 @@
                                             </figure>
                                             <p>Комплектация, авторский надзор, различные демарши</p>
 
-
-                                            <a class="form-btn trigger-form-btn" href="#" data-ftitle="Комплектация, авторский надзор, различные демарши">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
-                                                </svg>
-	                                            Подробнее
-                                            </a>
+                                            <span class="form-btn">Подробнее</span>
                                         </div>
                                     </div>
                                 </div>
@@ -127,9 +111,8 @@
 
 
 
-        </div>
-        <section class="section box-3" data-section-name="Наши последние проекты">
-                <h1>Наши последние работы</h1>
+        </section>
+        <section id="box-3" class="section box-3" data-section-name="Наши последние проекты">
 
             <?php
                 $args = array(
@@ -150,8 +133,9 @@
                         ?>
                             <div id="slide<?php echo $post_id; ?>" class="slide" style="background-image: url('<?php the_field('slide_image'); ?>')">
                                 <div class="slide-content">
+                                    <span class="section-title">Наши последние работы</span>
                                     <h2><?php the_title(); ?></h2>
-                                    <a href="<?php echo get_permalink(); ?>" class="trigger-push-content js-single-ajax" data-project="<?php echo $post_id; ?>">посмотреть проект</a>
+                                    <a href="<?php echo get_permalink(); ?>" class="js-overly-trigger js-single-ajax" data-project="<?php echo $post_id; ?>" data-overlay="#push-page">посмотреть проект</a>
                                 </div>
                             </div>
 
@@ -161,7 +145,7 @@
             ?>
         </section>
 
-        <div class="section gallery" data-section-name="Наши проекты" >
+        <div id="gallery" class="section gallery" data-section-name="Наши проекты" >
             <div class="box-bg"></div>
             <section class="content">
                 <h1 class="box-title">Наши проекты</h1>
@@ -180,28 +164,20 @@
 		            foreach ( get_terms('category', $args) as $category){ ?>
 			            <div class="outer-tab-content">
 				            <div class="undertitle"><?php echo $category->name; ?></div>
-				            <?php echo post_projects($category); ?>
+				            <?php echo projects_tree($category); ?>
 			            </div>
 		            <?php } ?>
 	            </div>
 
-
-
-
-
-
-
-
-
             </section>
         </div>
 
-        <div class="section box-5" data-section-name="Мы предлагаем">
+        <section id="box-5" class="section box-5" data-section-name="Мы предлагаем">
             <div class="box-bg"></div>
             <section class="content">
                 <h1>Мы предлагаем</h1>
                 <div class="row">
-                    <div class="col">
+                    <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Архитектурное проектирование">
                         <div class="entry-content">
 
                             <figure>
@@ -210,15 +186,10 @@
                             <h2>Архитектурное проектирование</h2>
                             <p>Архитектурная форма, демонстрирующая характер владельца с первого взгляда. Проект жилого дома, ресторана, коттеджа, коммерческого здания.</p>
 
-                            <a class="form-btn trigger-form-btn" href="#" data-ftitle="Архитектурное проектирование">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                    <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
-                                </svg>
-	                            Подробнее
-                            </a>
+                            <span class="form-btn">Подробнее</span>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Дизайн интерьера">
                         <div class="entry-content">
 
                             <figure>
@@ -227,16 +198,10 @@
                             <h2>Дизайн интерьера</h2>
                             <p>Оптимизация пространства, проект интерьера комнаты, квартиры, дома, офиса, кафе, клуба, ресторана, шоу-рум, магазина.</p>
 
-
-                            <a class="form-btn trigger-form-btn" href="#" data-ftitle="Дизайн интерьера">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                    <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
-                                </svg>
-	                            Подробнее
-                            </a>
+                            <span class="form-btn">Подробнее</span>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col js-overly-trigger data-overlay="#pull-form" data-ftitle="Предметный дизайн"">
                         <div class="entry-content">
 
                             <figure>
@@ -245,24 +210,18 @@
                             <h2>Предметный дизайн</h2>
                             <p>Уют даже в миниатюрных деталях. Дизайн мебели, деталей интерьера, освещения, посуды.</p>
 
-
-                            <a class="form-btn trigger-form-btn" href="#" data-ftitle="Предметный дизайн">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                    <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 2 5 L 2 6 L 2 20 L 2 21 L 3 21 L 6 21 L 6 24 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 21 21 L 22 21 L 22 20 L 22 6 L 22 5 L 21 5 L 3 5 L 2 5 z M 4 7 L 20 7 L 20 19 L 12 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 20 L 8 19 L 7 19 L 4 19 L 4 7 z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 L 24 9 z" overflow="visible" font-family="Bitstream Vera Sans"></path>
-                                </svg>
-	                            Подробнее
-                            </a>
+                            <span class="form-btn">Подробнее</span>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </section>
 
-        <div class="section box-4 switcher" data-section-name="Как мы работаем">
+        <section id="box-4" class="section box-4 switcher" data-section-name="Как мы работаем">
             <div class="box-bg animate"></div>
                 <?php
                 if( wp_mobile_detect() ) {
-                    get_template_part( 'parts/mobile/box-4_ru' );
+                    get_template_part( 'mobile-templates/box-4_ru' );
                 } else { ?>
                     <section class="content">
                         <div class="row">
@@ -340,10 +299,10 @@
                         </div>
                     </section>
             <?php } ?>
-        </div>
+        </section>
 
 
-        <div class="section box-7 switcher" data-section-name="Наши услуги">
+        <section id="box-7" class="section box-7 switcher" data-section-name="Наши услуги">
             <div class="box-bg"></div>
 
             <section class="content">
@@ -352,7 +311,7 @@
                     <div class="col">
                         <div class="content-tile">
                             <figure>
-                                <?php get_template_part('assets/svg/2slide/l1.svg');?>
+                                <?php get_template_part('assets/svg/7slide/l2.svg');?>
                             </figure>
                             <p>Качественный дизайн-проект, отражающий ваш характер</p>
                         </div>
@@ -360,7 +319,7 @@
                     <div class="col">
                         <div class="content-tile">
                             <figure>
-                                <?php get_template_part('assets/svg/2slide/l2.svg');?>
+                                <?php get_template_part('assets/svg/7slide/y2.svg');?>
                             </figure>
                             <p>Схемы расстановки мебели и организации пространства</p>
                         </div>
@@ -368,7 +327,7 @@
                     <div class="col">
                         <div class="content-tile">
                             <figure>
-                                <?php get_template_part('assets/svg/2slide/l3.svg');?>
+                                <?php get_template_part('assets/svg/7slide/l3.svg');?>
                             </figure>
                             <p>Продуманные цветовые решения и идеально подобранные материалы</p>
                         </div>
@@ -376,7 +335,7 @@
                     <div class="col">
                         <div class="content-tile">
                             <figure>
-                                <?php get_template_part('assets/svg/2slide/l1.svg');?>
+                                <?php get_template_part('assets/svg/7slide/y1.svg');?>
                             </figure>
                             <p>Дизайн деталей и предметов интерьера, подчеркивающих общую концепцию</p>
                         </div>
@@ -384,7 +343,7 @@
                     <div class="col">
                         <div class="content-tile">
                             <figure>
-                                <?php get_template_part('assets/svg/2slide/l2.svg');?>
+                                <?php get_template_part('assets/svg/7slide/y3.svg');?>
                             </figure>
                             <p>Дизайн деталей и предметов интерьера, подчеркивающих общую концепцию</p>
                         </div>
@@ -392,64 +351,37 @@
                     <div class="col">
                         <div class="content-tile">
                             <figure>
-                                <?php get_template_part('assets/svg/2slide/l3.svg');?>
+                                <?php get_template_part('assets/svg/7slide/y4.svg');?>
                             </figure>
                             <p>Нестандартные худо- жественные решения — вплоть до создания предметов искусства</p>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </section>
 
 
-        <section class="section box-6" data-section-name="Контакты">
-            <div>
-<!--                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81295.50604234143!2d30.567537809521486!3d50.450700782061084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1447250718941" width="100%" height="350" frameborder="0" style="border:0; display: block;" allowfullscreen></iframe>-->
+        <section id="box-6" class="section box-6" data-section-name="Контакты">
+            <div class="map-container">
                 <?php get_template_part('parts/gmap'); ?>
             </div>
             <div class="row">
                 <div>
                     <div class="col left js-col">
                         <div class="js-cell">
-                            <div class="entry-content">
+                            <div class="left-container">
+
                                 <p class="text-logo"><span>ARCH</span> design</p>
-	                            <div class="info">
-		                            <p><?php pll_e('1058, Rue des Plans 06510 CARROS'); ?></p>
-		                            <p><span><?php pll_e('Fax'); ?>:</span> 09 50 10 82 11</p>
-		                            <p class="tel clearfix"><span class="lable"><?php pll_e('Telephone'); ?>:</span><span class="numb">+33 078 564 60 90<br />+33 07 85 64 60 90</span></p>
-		                            <p><span>Email:</span> contact@buroarchdesign.com</p>
-		                            <div class="soc-icons">
-			                            <ul>
-				                            <li><a href="https://www.facebook.com/BuroArchDesign" class="icon-facebook"></a></li>
-				                            <li><a href="https://www.instagram.com/buroarchdesign/" class="icon-instagram"></a></li>
-			                            </ul>
-		                            </div>
-	                            </div>
+
+	                            <?php get_template_part('parts/contacts') ?>
+	                            <?php get_template_part('parts/soc-icons') ?>
                             </div>
                         </div>
                     </div>
                     <div class="col right js-col">
                         <div class="js-cell">
-                            <p class="title">Оставьте заявку на встречу с дизайнером и проведение необходимых замеров</p>
-                            <form class="contact-form" action="">
-	                            <div class="row">
-		                            <div class="col">
-			                            <lable class="flable" for="name"><?php pll_e('Your Name'); ?></lable>
-			                            <input class="form-input" type="text" name="fname" placeholder="<?php pll_e('Your Name'); ?>"/>
-		                            </div>
-		                            <div class="col">
-			                            <lable class="flable" for="email"><?php pll_e('Your Email'); ?></lable>
-			                            <input class="form-input" type="text" name="femail" placeholder="<?php pll_e('Your Email'); ?>"/>
-		                            </div>
-		                            <div class="col">
-			                            <lable class="flable" for="phone"><?php pll_e('Your Phone'); ?></lable>
-			                            <input class="form-input" type="text" name="fphone" placeholder="<?php pll_e('Your Phone'); ?>"/>
-		                            </div>
-		                            <div class="col">
-			                            <input type="submit" value="<?php pll_e('SEND'); ?>"/>
-		                            </div>
-	                            </div>
-                            </form>
+
+	                        <?php get_template_part('parts/contact-form'); ?>
 
                         </div>
                     </div>
@@ -457,67 +389,20 @@
 
             </div>
 
-            <div id="copy-witty">
-                <div>
-                    <a href="http://witty-digital.com" target="_blank">
-                        <span>Made in</span>
-                        <figure>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
-                                <path fill="#F77165" d="M29.757,25.07l6.526,13.491l-4.093,7.521L21.461,25.07h-7.076l17.914,35.942l7.743-14.929l7.853,14.929  L65.698,25.07H29.757z M47.619,46.083l-7.577-14.488h15.152L47.619,46.083z"/>
-                            </svg>
-                        </figure>
-                        <b>Witty Digital</b>
-                    </a>
-                </div>
-            </div>
+            <?php get_template_part('parts/copy-witty'); ?>
 
         </section>
     </div>
 </div>
 
 
-<div class="overlay overlay-contentpush">
-    <div id="query-content"></div>
-</div>
-
-<?php get_template_part( 'parts/menu' ); ?>
-
-<?php get_template_part( 'parts/form' ); ?>
-
-<div id="flying-panel" class="flying-panel white">
-    <div class="topline-nav clearfix">
-        <div id="logo" class="logo">
-            <?php get_template_part('assets/svg/logo.svg') ?>
-        </div>
 
 
-	    <?php
-	    wp_nav_menu( array(
-		    'container'      => '',
-		    'menu_class'     => 'menu nav-menu',
-		    'menu_id'        => '',
-		    'theme_location' => 'header',
-	    ) );
-	    ?>
+<?php get_template_part( 'templates/push_page' ); ?>
+<?php get_template_part( 'templates/pull_menu' ); ?>
+<?php get_template_part( 'templates/pull_form' ); ?>
+<?php get_template_part( 'parts/flying-panel' ); ?>
 
-	    <nav class="menu-wrap">
-        <?php
 
-            wp_nav_menu( array(
-                'container'      => '',
-                'menu_class'     => 'menu langs-menu',
-                'menu_id'        => '',
-                'theme_location' => 'langs',
-            ) );
-        ?>
-
-            <div class="menu-button trigger-pull-menu">MENU</div>
-        </nav>
-
-    </div>
-<!--    <div id="next" class="next">-->
-<!--        go next-->
-<!--    </div>-->
-</div>
 
 <?php get_footer(); ?>

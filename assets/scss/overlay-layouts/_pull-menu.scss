@@ -1,0 +1,80 @@
+.overlay-menu{
+  float: left;
+  li {
+    display:block;
+  }
+  a{
+    display: inline-block;
+    font-size: 40px;
+    line-height: 56px;
+    transition: transform .3s, color.3s;
+    &:hover{
+      transform: translateX(30px);
+      color: #ef7f1a;
+    }
+  }
+}
+
+.pull-menu{
+  color: white;
+
+  &.menu-bg {
+    background-color: rgba(42,61,62,.9);
+  }
+
+  .menu-form{
+    float: right;
+    width: 400px;
+    .form {
+      .desc {
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    .row{
+      margin: -10px -20px;
+    }
+    .col{
+      width: 100%;
+      padding: 10px 20px;
+    }
+  }
+}
+
+
+@media (max-width: 992px){
+  .overlay-menu a{
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 840px){
+  .pull-menu .menu-form{
+    width: 300px;
+  }
+}
+
+
+@media(max-width: 720px){
+
+  .pull-menu{
+    .menu-form, .overlay-menu{
+      float:none;
+      width: 100%;
+    }
+
+    .menu-form {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media(max-width: 460px){
+
+  .overlay-menu a {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}

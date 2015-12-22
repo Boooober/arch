@@ -1,0 +1,33 @@
+.contacts {
+  p, .tel {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  .tel {
+    display: block;
+    span{
+      display: block;
+      float:left;
+    }
+    ul{
+      margin-left: 85px;
+    }
+    li{
+      display:inline-block;
+    }
+  }
+}
+
+@media (max-width: 540px){
+  .contacts{
+    p, .tel {
+      font-size: 14px;
+    }
+    .tel {
+      ul{
+        margin-left: 80px;
+      }
+    }
+
+  }
+}

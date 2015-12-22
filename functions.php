@@ -98,16 +98,34 @@ function archdesign_scripts() {
     wp_enqueue_script ('classie', ARC_THEME_URL . 'assets/js/FullscreenOverlay/js/classie.js', array(), false, true);
 
 
-    wp_register_script ('main', ARC_THEME_URL . '/assets/js/main.js', array('jquery'), '1.0', true);
+    wp_register_script ('main', ARC_THEME_URL . '/assets/js/main.js', array('jquery', 'owl-carousel'), '1.0', true);
     wp_register_script ('single', ARC_THEME_URL . '/assets/js/single.js', array('jquery'), '1.0', true);
+    wp_register_script ('animation', ARC_THEME_URL . '/assets/js/animation.js', array(), '1.0', true);
+
+
+    wp_register_script ('tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js', array(), false, true);
+    wp_register_script ('scrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', array(), false, true);
+    wp_register_script ('animationGSAP', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array(), false, true);
+
 
     if (is_home() || is_front_page()){
 
         wp_enqueue_script ('main');
+
+
         wp_localize_script( 'main', 'ARCHproject', array(
             'arch_nonce' => wp_create_nonce('arch_nonce'),
             'ajax_url' => admin_url( 'admin-ajax.php' )
         ));
+    }
+
+    if( is_home() || is_front_page() && !wp_mobile_detect() ){
+
+        wp_enqueue_script ('tweenMax');
+        wp_enqueue_script ('scrollMagic');
+        wp_enqueue_script ('animationGSAP');
+
+        wp_enqueue_script ('animation');
     }
 
     if(is_single()){
@@ -139,9 +157,12 @@ function get_arch_project (){
     query_posts($args);
     while (have_posts()): the_post();
 
-        include(locate_template('parts/project-page.php'));
+        var_dump($is_ajax);
+        include(locate_template('templates/project-page.php'));
 
     endwhile;
+
+
 
     wp_reset_query();
     die();
@@ -149,20 +170,20 @@ function get_arch_project (){
 
 
 if (function_exists('pll_register_string')) {
-    pll_register_string('Next project', 'Next project');
-    pll_register_string('Previous project', 'Previous project');
+    pll_register_string('project nav', 'Next project');
+    pll_register_string('project nav', 'Previous project');
+	pll_register_string('form', 'Your Name');
+	pll_register_string('form', 'Your Email');
+	pll_register_string('form', 'Your Phone');
+	pll_register_string('form', 'SEND');
+	pll_register_string('contacts', 'Adress');
+	pll_register_string('contacts', '1058, Rue des Plans 06510 CARROS');
+	pll_register_string('contacts', 'Fax');
+	pll_register_string('contacts', 'Telephone');
+	pll_register_string('social', 'Share');
 }
 
-include 'includes/level_gallery.php';
+include 'includes/gallery_tree.php';
 include 'includes/send_email.php';
 
 
-pll_register_string('form', 'Your Name');
-pll_register_string('form', 'Your Email');
-pll_register_string('form', 'Your Phone');
-pll_register_string('form', 'SEND');
-pll_register_string('contacts', 'Adress');
-pll_register_string('contacts', '1058, Rue des Plans 06510 CARROS');
-pll_register_string('contacts', 'Fax');
-pll_register_string('contacts', 'Telephone');
-pll_register_string('social', 'Share');

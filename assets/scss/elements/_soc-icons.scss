@@ -1,0 +1,31 @@
+.soc-icons{
+  ul{
+    margin: 0 -7px;
+    li{
+      display: inline-block;
+      margin: 0 7px;
+      font-size: 18px;
+      transition: color.3s;
+      a{
+        &:before{
+          margin:0;
+        }
+        &:hover{
+          color: #ef7f1a;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px){
+  .soc-icons ul li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 420px){
+  .soc-icons ul li {
+    margin: 0 3px;
+  }
+}

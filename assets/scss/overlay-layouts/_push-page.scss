@@ -1,0 +1,50 @@
+
+.pull-wrapper{
+  padding: 40px;
+}
+
+.pull-page{
+  width:100%;
+  height: 100%;
+  color: white;
+
+  .topline{
+    text-align: right;
+  }
+
+  .headline{
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 40px 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255,255,255,.15);
+  }
+
+  .pull-footer{
+    margin-top: 50px;
+  }
+
+  .col{
+    float: left;
+  }
+  .pull-close {
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 13px;
+    display: block;
+  }
+
+  .col.contacts{
+    width: 80%;
+    span {
+      color: #6b898b;
+      &:first-child{
+        margin-left: 20px;
+      }
+    }
+  }
+  .col.soc-icons{
+    width: 20%;
+  }
+}
+

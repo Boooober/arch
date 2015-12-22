@@ -3,11 +3,13 @@ jQuery( document ).ready(function( $ ) {
     var anchors = ['home', 'service', 'projects', 'portfolio', 'offers', 'workflow', 'whatyouget', 'contacts'];
 
     $('#fullpage').fullpage({
+        fitToSection: false,
         anchors:anchors,
         scrollOverflow: true,
         fixedElements: '#flying-panel',
         slidesNavigation: true,
-        navigation: true
+        navigation: true,
+
     });
 
     // go up
@@ -20,7 +22,7 @@ jQuery( document ).ready(function( $ ) {
     $('#fp-nav').prepend(asidePosition);
 
 
-    $(document).on('click', '.js-single-ajax, .js-nav', dynamicContent);
+    $(document).on('click', '.js-single-ajax', dynamicContent);
 
     function dynamicContent (event){
         event.preventDefault();
@@ -123,7 +125,7 @@ jQuery( document ).ready(function( $ ) {
 
         function sendAJAX(){
             var data = submitted.serialize(),
-                container = submitted.closest('.pull-page');
+                responseContainer = submitted.next();
 
             $.ajax({
                 url : ARCHproject.ajax_url,
@@ -140,11 +142,14 @@ jQuery( document ).ready(function( $ ) {
 
                     var resp = $(response);
 
-                    container.append( resp );
-                    resp.fadeIn(700);
+                    responseContainer.append( resp );
+                    resp.addClass('open--popup');
 
                     setTimeout(function(){
-                        resp.fadeOut(700);
+                        resp.removeClass('open--popup').addClass('close--popup');
+                        setTimeout(function(){
+                            resp.remove();
+                        },700);
                     }, 2000);
 
 
@@ -157,7 +162,6 @@ jQuery( document ).ready(function( $ ) {
 
 
     })();
-
 
 
     function addAndRemoveBlack (){
@@ -230,24 +234,36 @@ jQuery( document ).ready(function( $ ) {
         var homeSwitcher = $('#home-switcher'),
             children = homeSwitcher.children(),
             childrenLeng = children.length,
-            current = 1;
+            current = 1,
+            interval;
 
-        setInterval(function(){
+        children.hover(pauseSwitching, startSwitching);
+        startSwitching();
 
+        function startSwitching() {
+            interval = setInterval(function(){
+                children.each(function(){
+
+                    var child = $(this);
+                    child.removeClass('active');
+                    if ( child.get(0) == children.get(current) ){
+                        child.addClass('active').closest('.switcher ').find('.entry-content').fadeOut().eq(current).fadeIn();
+                    }
+                });
+
+                current++;
+                if (current === childrenLeng ) current = 0;
+            }, 3500);
+        }
+
+        function pauseSwitching(){
+            clearInterval(interval);
             children.each(function(){
-
-                var child = $(this);
-                child.removeClass('active');
-                if ( child.get(0) == children.get(current) ){
-                    child.addClass('active');
-                    switcher (child.find('.switch-trigger'));
-                }
+                $(this).removeClass('active');
             });
+        }
 
-            current++;
-            if (current === childrenLeng ) current = 0;
 
-        }, 3500);
 
 
 
@@ -271,9 +287,6 @@ jQuery( document ).ready(function( $ ) {
 
     //tabs
     (function(){
-
-
-
         var gallery = $('.owl-gallery');
 
         gallery.owlCarousel({
@@ -292,9 +305,6 @@ jQuery( document ).ready(function( $ ) {
                 }
             }
         });
-
-
-
 
         //DOM modifying
         var tabBlock = $('#tab-block'),
@@ -348,145 +358,68 @@ jQuery( document ).ready(function( $ ) {
 
 
 
-    //push-page from http://tympanus.net/Development/FullscreenOverlayStyles/
+    //push-page refactored from http://tympanus.net/Development/FullscreenOverlayStyles/
     (function() {
-        var container = document.querySelector( 'div.container' ),
-            push = document.querySelector( 'div.overlay.overlay-contentpush'),
-            pullMenu = document.querySelector( '.pull-menu-content'),
-            pullForm = document.querySelector( '.pull-form-content'),
 
-            transEndEventNames = {
-                'WebkitTransition': 'webkitTransitionEnd',
-                'MozTransition': 'transitionend',
-                'OTransition': 'oTransitionEnd',
-                'msTransition': 'MSTransitionEnd',
-                'transition': 'transitionend'
-            },
-            transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-            support = { transitions : Modernizr.csstransitions };
+        var container = $('#container'),
+            defaultContainer;
 
+        $(document).on('click', '.js-overly-trigger', toggleOverlay());
+        $(document).on('click', '.overlay-menu a', toggleOverlay());
 
+        function toggleOverlay() {
 
+            defaultContainer = container.attr('class');
 
-        function togglePushContent(e){
+            return function() {
+                event.preventDefault();
 
-            if (e.preventDefault) {
-                e.preventDefault();
-            } else {
-                e.returnValue = false;
-            }
-
-            toggleOverlay(push);
-        }
-        $(document).on('click', '.push-content-close', togglePushContent);
-        $(document).on('click', '.trigger-push-content', togglePushContent);
+                var opened, overlay,
+                    href;
 
 
+                if( !(opened = $(this).data('overlay') )){
+                    href = $(this).attr('href').slice(1);
+                    opened = '#pull-menu';
 
+                    forceCloseOverlay();
 
-        function togglePullMenu(e){
+                    setTimeout(function(){
+                        $.fn.fullpage.moveTo(href);
+                        $.fn.fullpage.setAllowScrolling(true);
+                    }, 150);
 
-            if (e.preventDefault) {
-                e.preventDefault();
-            } else {
-                e.returnValue = false;
-            }
-
-            toggleOverlay(pullMenu);
-        }
-
-        $(document).on('click', '.menu-close', togglePullMenu);
-        $(document).on('click', '.trigger-pull-menu', togglePullMenu);
-
-        function togglePullForm(e){
-
-            if (e.preventDefault) {
-                e.preventDefault();
-            } else {
-                e.returnValue = false;
-            }
-
-            target = $(e.target);
-
-            if(target.hasClass('trigger-form-btn')) localizeForm($(e.target));
-            toggleOverlay(pullForm);
-        }
-
-        $(document).on('click', '.form-close', togglePullForm);
-        $(document).on('click', '.trigger-form-btn', togglePullForm);
-
-
-
-        function localizeForm (target){
-            console.log(target.data('ftitle'));
-        }
-
-
-
-        function toggleOverlay(overlay) {
-            //close overlay
-
-            var opened;
-
-
-            if( classie.has( overlay, 'overlay-contentpush' ) ){
-                opened = 'contentpush';
-            } else if( classie.has( overlay, 'overlay-contentpull' ) ){
-                opened = 'contentpull';
-            }
-
-            if( classie.has( overlay, 'open' ) ) {
-                classie.remove( overlay, 'open' );
-
-                if( (!classie.has( container, 'contentpush' ) &&  classie.has( container, 'contentpull' )) || (!classie.has( container, 'contentpull' ) && classie.has( container, 'contentpush' )) ){
-                    classie.remove( container, 'overlay-open' );
-                    $.fn.fullpage.setAllowScrolling(true);
+                    return;
                 }
-                classie.remove( container, opened );
 
-
-                classie.add( overlay, 'close' );
-
-
-
-                var onEndTransitionFn = function( ev ) {
-                    if( support.transitions ) {
-                        if( ev.propertyName !== 'visibility' ) return;
-                        this.removeEventListener( transEndEventName, onEndTransitionFn );
-                    }
-                    classie.remove( overlay, 'close' );
-
-                };
-                if( support.transitions ) {
-                    overlay.addEventListener( transEndEventName, onEndTransitionFn );
-                }
-                else {
-                    onEndTransitionFn();
-                }
-            }
-            else if( !classie.has( overlay, 'close' ) ) {
-                classie.add( overlay, 'open' );
-                classie.add( container, 'overlay-open' );
-                classie.add( container, opened );
-
-                $.fn.fullpage.setAllowScrolling(false);
-            }
+                overlay = $(opened);
+                overlay.hasClass('open') ? closeOverlay(overlay) : openOverlay(overlay);
+            };
         }
 
+        function closeOverlay(overlay) {
+            overlay.removeClass('open');
+            container.removeClass('#'+overlay.attr('id'));
+            if ((container.attr('class')) == defaultContainer + ' overlay-open') {
+                container.removeClass('overlay-open');
 
-        $('.pull_menu a').click(function(){
-
-            event.preventDefault();
-            var link = event.target,
-                href = link.href.substring(link.href.indexOf('#')+1);
-
-            toggleOverlay(pullMenu);
-
-            setTimeout(function(){
-                $.fn.fullpage.moveTo(href);
                 $.fn.fullpage.setAllowScrolling(true);
-            }, 150);
-        });
+            }
+        }
+
+        function forceCloseOverlay(){
+            $('.overlay').removeClass('open');
+            container.get(0).className = defaultContainer;
+
+            $.fn.fullpage.setAllowScrolling(true);
+        }
+
+        function openOverlay (overlay){
+            overlay.addClass('open');
+            container.addClass('overlay-open ' + '#' + overlay.attr('id'));
+
+            $.fn.fullpage.setAllowScrolling(false);
+        }
     })();
 
 

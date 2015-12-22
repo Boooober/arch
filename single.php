@@ -4,7 +4,7 @@
     <div id="query-content" class="static">
         <?php if( have_posts() ) :
             while ( have_posts())  : the_post();
-                include(locate_template('parts/project-page.php'));
+                include(locate_template('templates/project-page.php'));
             endwhile;
         endif; ?>
     </div>

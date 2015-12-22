@@ -17,7 +17,7 @@ function send_email(){
     $email = sanitize_email( $data['femail'] ) ;
 
     $to = 'contact@buroarchdesign.com';
-    $subject = 'Заявка с сайта';
+    $subject = 'Заявка с сайта BuroArchDesign';
     $subject = "=?utf-8?b?". base64_encode($subject) ."?=";
     $message = "\r\nЗаявка отправленна с сайта ".$_SERVER['HTTP_REFERER']."\r\nEmail: ".$email."\r\nИмя: ".$name."\r\nТелефон: ".$tel."\r\n";
     $headers = 'Content-type: text/plain; charset="utf-8"';

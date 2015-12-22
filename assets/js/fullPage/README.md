@@ -2,7 +2,8 @@
 
 ![preview](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png)
 ![compatibility](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.gif)
-![fullPage.js version](http://img.shields.io/badge/fullPage.js-v2.7.4-brightgreen.svg)
+
+![fullPage.js version](http://img.shields.io/badge/fullPage.js-v2.7.6-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 7Kb gziped!
 
@@ -130,7 +131,7 @@ A more complex initialization with all options set could look like this:
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		//Navigation
-		menu: false,
+		menu: '#menu',
 		lockAnchors: false,
 		anchors:['firstPage', 'secondPage'],
 		navigation: false,
@@ -345,9 +346,9 @@ In case of setting it to `true`, it requires the vendor plugin [`jquery.slimscro
 
 - `slideSelector`: (default `.slide`)  Defines the jQuery selector used for the plugin slides.  It might need to be changed sometimes to avoid problem with other plugins using the same selectors as fullpage.js.
 
-- `responsiveWidth`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined width in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.
+- `responsiveWidth`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined width in pixels. A class `fp-responsive` is added to the body tag in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.
 
-- `responsiveHeight`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined height in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's height is less than 900 the plugin will scroll like a normal site.
+- `responsiveHeight`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined height in pixels. A class `fp-responsive` is added to the body tag in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's height is less than 900 the plugin will scroll like a normal site.
 
 ## Methods
 You can see them in action [here](http://alvarotrigo.com/fullPage/examples/methods.html)
@@ -714,7 +715,7 @@ gulp css
 // Only compress the JS
 gulp js
 
-// Runs all three tasks
+// Runs the css and js tasks (not the scss)
 gulp
 ```
 
@@ -743,8 +744,9 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
 
 - http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins
 - http://www.sony-asia.com/microsite/mdr-10/
-- http://www.saltaboombox.com.ar
 - http://www.yourprimer.com/
+- http://burntmovie.com/
+- http://essenso.com/
 - http://www.battlefield.com/
 - http://www.kibey.com/
 - http://www.newjumoconcept.com/

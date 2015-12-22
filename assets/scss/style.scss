@@ -5,20 +5,22 @@
 @import 'vendors/reset';
 
 @import 'base/base';
-@import 'base/layouts';
 @import 'base/flexgrid';
-@import 'base/flying-panel';
-@import 'base/boxes';
-@import 'base/gallery';
 @import 'base/page';
-@import 'base/push-page';
-@import 'base/pull-page';
+
+@import 'boxes/boxes';
+
 @import '../js/fullPage/jquery.fullPage';
-//@import 'base/push-menu';
-//@import 'base/footer';
-@import 'base/media';
-@import 'base/mobile';
-@import 'base/copy-witty';
-
-
 @import '../js/owl.carousel/assets/owl.carousel';
+
+@import 'elements/static-elements';
+@import 'elements/navbars';
+@import 'elements/soc-icons';
+@import 'elements/contacts';
+@import 'elements/buttons';
+@import 'elements/copy-witty';
+
+@import 'overlay-layouts/overlay-layouts';
+
+
+
