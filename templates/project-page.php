@@ -156,6 +156,13 @@
 </div>
 
 <footer class="entry-footer">
+
+    <?php if($is_ajax){ ?>
+        <div class="close-btn">
+            <div class="js-overly-trigger close-elements trigger" data-overlay="#push-page"></div>
+        </div>
+    <?php } ?>
+
 	<div class="project-nav clearfix entry-wrapper">
         <?php if($prev_link) { ?>
             <a href="<?php echo esc_url($prev_link); ?>" class="prev-project js-single-ajax" data-project="<?php echo $prev_id; ?>">

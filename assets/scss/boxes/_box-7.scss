@@ -5,6 +5,10 @@
     }
   }
 
+  .mobile &{
+    background-image: url('../images/bg-2.jpg');
+  }
+
   .row{
     margin: -15px;
     .col{

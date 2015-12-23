@@ -7,11 +7,12 @@
 @import 'base/base';
 @import 'base/flexgrid';
 @import 'base/page';
+@import 'base/mobile';
 
 @import 'boxes/boxes';
 
 @import '../js/fullPage/jquery.fullPage';
-@import '../js/owl.carousel/assets/owl.carousel';
+//@import '../js/owl.carousel/assets/owl.carousel';
 
 @import 'elements/static-elements';
 @import 'elements/navbars';

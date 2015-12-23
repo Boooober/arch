@@ -1,10 +1,11 @@
 <?php get_header(); ?>
-<?php $templateurl = get_bloginfo('template_url'); ?>
 <div class="container">
     <div id="query-content" class="static">
         <?php if( have_posts() ) :
             while ( have_posts())  : the_post();
-                include(locate_template('templates/project-page.php'));
+
+//                include(locate_template('templates/project-page.php'));
+                get_template_part('templates/project-page');
             endwhile;
         endif; ?>
     </div>

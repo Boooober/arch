@@ -5,6 +5,10 @@
     }
   }
 
+  .mobile &{
+    background-image: url('../images/bg-2.jpg');
+  }
+
   .row{
     margin: -15px;
     .col{
@@ -92,13 +96,9 @@
   }
 }
 
-.box-2{
-  .mobile{
-    //    .col-title{
-    //      height: auto;
-    //    }
+.mobile{
+  .box-2{
     .description{
-      //      height: auto;
       display:none;
       font-size: 15px;
       line-height: 20px;

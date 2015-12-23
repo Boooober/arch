@@ -4,11 +4,9 @@
 * Template Name: Home Page EN
 */
 get_header();
-$templateurl = get_bloginfo('template_url');
-
 ?>
 
-<body>
+
 <div id="container" class="container">
 <div id="fullpage">
 

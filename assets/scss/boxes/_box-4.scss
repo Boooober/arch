@@ -4,8 +4,11 @@
       background-image: url('../images/bg-4.jpg');
     }
   }
-
   color:white;
+
+  .mobile &{
+    background-image: url('../images/bg-4.jpg');
+  }
 
   h1{
     text-transform: uppercase;
@@ -76,8 +79,8 @@
   }
 }
 
-.box-4{
-  .mobile{
+.mobile{
+  .box-4{
     .content-tile{
       margin-bottom:30px;
       &.active{

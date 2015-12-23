@@ -5,7 +5,7 @@
 
         mainScene = new ScrollMagic.Controller({
             globalSceneOptions: {
-                //reverse: true
+                reverse: false
             }
         });
 

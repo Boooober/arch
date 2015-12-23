@@ -7,13 +7,10 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <?php $templateurl = get_bloginfo('template_url'); ?>
 
-
-
-    <link rel="shortcut icon" href="<?php echo $templateurl; ?>/assets/images/logo.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo $templateurl; ?>/assets/images/logo.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $templateurl; ?>/assets/images/logo.png">
+    <link rel="shortcut icon" href="<?php echo ARC_THEME_URL; ?>/assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo ARC_THEME_URL; ?>/assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo ARC_THEME_URL; ?>/assets/images/logo.png">
 
 
     <?php wp_head(); ?>

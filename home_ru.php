@@ -1,20 +1,25 @@
 <?php
 
-    /*
-    * Template Name: Home Page RU
-    */
-    get_header();
-    $templateurl = get_bloginfo('template_url');
+/*
+* Template Name: Home Page RU
+*/
+get_header();
+
+if( wp_mobile_detect() ){
+        echo '<div class="mobile">';
+        get_template_part('templates/mob/home_mob_ru');
+        echo '</div>';
+    } else {
 
 ?>
 
-<body>
+
 <div id="container" class="container">
     <div id="fullpage">
 
         <section id="box-1" class="section box-1 switcher" data-section-name="Главная">
             <div class="box-bg animate"></div>
-            <section class="content">
+            <div class="content">
                 <div class="title-wrapper">
                     <div class="title-container content-switch">
                         <div data-target="1" class="title entry-content" style="display:block">
@@ -37,7 +42,7 @@
                         <div data-switch="3" class="switch-trigger trigger"><span>3</span><p>Наш подход</p></div>
                     </li>
                 </ul>
-            </section>
+            </div>
         </section>
         <section id="box-2" class="section box-2 switcher" data-section-name="Наши услуги">
             <div class="box-bg"></div>
@@ -145,9 +150,9 @@
             ?>
         </section>
 
-        <div id="gallery" class="section gallery" data-section-name="Наши проекты" >
+        <section id="gallery" class="section gallery" data-section-name="Наши проекты" >
             <div class="box-bg"></div>
-            <section class="content">
+            <div class="content">
                 <h1 class="box-title">Наши проекты</h1>
 
 	            <div id="tab-block" class="tab-block">
@@ -169,12 +174,12 @@
 		            <?php } ?>
 	            </div>
 
-            </section>
-        </div>
+            </div>
+        </section>
 
         <section id="box-5" class="section box-5" data-section-name="Мы предлагаем">
             <div class="box-bg"></div>
-            <section class="content">
+            <div class="content">
                 <h1>Мы предлагаем</h1>
                 <div class="row">
                     <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Архитектурное проектирование">
@@ -201,7 +206,7 @@
                             <span class="form-btn">Подробнее</span>
                         </div>
                     </div>
-                    <div class="col js-overly-trigger data-overlay="#pull-form" data-ftitle="Предметный дизайн"">
+                    <div class="col js-overly-trigger" data-overlay="#pull-form" data-ftitle="Предметный дизайн">
                         <div class="entry-content">
 
                             <figure>
@@ -214,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
 
         <section id="box-4" class="section box-4 switcher" data-section-name="Как мы работаем">
@@ -305,7 +310,7 @@
         <section id="box-7" class="section box-7 switcher" data-section-name="Наши услуги">
             <div class="box-bg"></div>
 
-            <section class="content">
+            <div class="content">
                 <h1>Что вы получите при работе с нами</h1>
                 <div class="row">
                     <div class="col">
@@ -357,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
 
 
@@ -396,6 +401,7 @@
 </div>
 
 
+<?php } ?>
 
 
 <?php get_template_part( 'templates/push_page' ); ?>

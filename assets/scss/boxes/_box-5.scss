@@ -4,6 +4,12 @@
       background-image: url('../images/bg-2.jpg');
     }
   }
+
+  .mobile &{
+    background-image: url('../images/bg-2.jpg');
+  }
+
+
   h1 {
     text-transform: uppercase;
     margin-bottom: 20px;
