@@ -43,10 +43,10 @@
     position: relative;
     border: 5px solid rgba(255,255,255,0.2);
     transition: .4s;
-    &:hover{
-      background-color: rgba(255, 228, 196, 0.4);;
-      border-color: transparent;
-    }
+//    &:hover{
+//      background-color: rgba(255, 228, 196, 0.4);;
+//      border-color: transparent;
+//    }
     span{
       display:block;
       color: #ef7f1a;
@@ -88,7 +88,21 @@
       }
     }
     .entry-content{
-      padding: 20px;
+      padding: 0;
+    }
+    .slide-trigger{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #EF7F1A;
+      text-transform: uppercase;
+      font-size: 12px;
+      &:before{
+        content: '-';
+        display:inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
     }
   }
 }

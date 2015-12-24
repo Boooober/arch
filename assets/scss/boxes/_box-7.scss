@@ -34,10 +34,10 @@
     overflow: hidden;
     border: 5px solid rgba(0,0,0,0.1);
     transition: background .3s, border-color .3s;
-    &:hover{
-      border-color: transparent;
+//    &:hover{
+//      border-color: transparent;
 //      background: bisque;
-    }
+//    }
     figure{
       display:block;
       width: 55px;
@@ -54,6 +54,16 @@
     }
   }
 }
+
+//.mobile{
+//  .box-7{
+//    .content-tile{
+//      &:hover{
+//        border-color: inherit;
+//      }
+//    }
+//  }
+//}
 
 @media (max-width: 1024px) {
 

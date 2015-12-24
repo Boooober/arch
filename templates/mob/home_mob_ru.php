@@ -45,21 +45,24 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div  class="content-tile slide-trigger">
+                            <div  class="content-tile">
                                 <figure>
                                     <?php get_template_part('assets/svg/2slide/l2.svg');?>
                                 </figure>
                                 <p>Дизайн</p>
 
+                                <span class="slide-trigger">Подробнее</span>
                                 <p class="description">Профессиональное, творческое действие по созданию функционального и дизайнерского решения по оформлению дома, офиса, виллы или производственного помещения.</p>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="content-tile slide-trigger">
+                            <div class="content-tile">
                                 <figure>
                                     <?php get_template_part('assets/svg/2slide/l3.svg');?>
                                 </figure>
                                 <p>Комплектация, авторский надзор, различные демарши</p>
+
+                                <span class="slide-trigger">Подробнее</span>
                                 <p class="description">Профессиональное, творческое действие по созданию функционального и дизайнерского решения по оформлению дома, офиса, виллы или производственного помещения.</p>
                             </div>
                         </div>
@@ -69,35 +72,39 @@
         </div>
     </section>
 
-<!--    <section id="box-3" class="section box-3" data-section-name="Наши последние проекты">-->
-<!--        --><?php
-//        $args = array(
-//            'post_status' => 'publish',
-//            'posts_per_page' => 5,
-//            'meta_key'		=> 'show_on_slider',
-//            'meta_value'	=> true
-//        );
-//
-//        $query = new WP_Query($args);
-//
-//        if($query->have_posts()){
-//            while($query->have_posts()){
-//                $query->the_post();
-//                $post_id = get_the_ID();
-//                ?>
-<!--                <div id="slide--><?php //echo $post_id; ?><!--" class="slide" style="background-image: url('--><?php //the_field('slide_image'); ?><!--')">-->
-<!--                    <div class="slide-content">-->
-<!--                        <span class="section-title">Наши последние работы</span>-->
-<!--                        <h2>--><?php //the_title(); ?><!--</h2>-->
-<!--                        <a href="--><?php //echo get_permalink(); ?><!--" class="js-overly-trigger js-single-ajax" data-project="--><?php //echo $post_id; ?><!--" data-overlay="#push-page">посмотреть проект</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-<!--            --><?php
-//            }
-//        }
-//        ?>
-<!--    </section>-->
+    <section id="box-3" class="section box-3" data-section-name="Наши последние проекты">
+
+
+        <div class="owl-carousel">
+            <?php
+            $args = array(
+                'post_status' => 'publish',
+                'posts_per_page' => 5,
+                'meta_key'		=> 'show_on_slider',
+                'meta_value'	=> true
+            );
+
+            $query = new WP_Query($args);
+
+            if($query->have_posts()){
+                while($query->have_posts()){
+                    $query->the_post();
+                    $post_id = get_the_ID();
+                    ?>
+                    <div class="slide" style="background-image: url('<?php the_field('slide_image'); ?>')">
+                        <div class="slide-content">
+                            <span class="section-title">Наши последние работы</span>
+                            <h2><?php the_title(); ?></h2>
+                            <a href="<?php echo get_permalink(); ?>" class="js-overly-trigger js-single-ajax" data-project="<?php echo $post_id; ?>" data-overlay="#push-page">посмотреть проект</a>
+                        </div>
+                    </div>
+
+                <?php
+                }
+            }
+            ?>
+        </div>
+    </section>
 
     <section id="gallery" class="section gallery" data-section-name="Наши проекты" >
     <!--    <div class="box-bg"></div>-->
@@ -140,7 +147,7 @@
                         <h2>Архитектурное проектирование</h2>
                         <p>Архитектурная форма, демонстрирующая характер владельца с первого взгляда. Проект жилого дома, ресторана, коттеджа, коммерческого здания.</p>
 
-                        <span class="form-btn">Подробнее</span>
+<!--                        <span class="form-btn">Подробнее</span>-->
                     </div>
                 </div>
                 <div class="col" data-ftitle="Дизайн интерьера">
@@ -152,7 +159,7 @@
                         <h2>Дизайн интерьера</h2>
                         <p>Оптимизация пространства, проект интерьера комнаты, квартиры, дома, офиса, кафе, клуба, ресторана, шоу-рум, магазина.</p>
 
-                        <span class="form-btn">Подробнее</span>
+<!--                        <span class="form-btn">Подробнее</span>-->
                     </div>
                 </div>
                 <div class="col" data-ftitle="Предметный дизайн">
@@ -164,7 +171,7 @@
                         <h2>Предметный дизайн</h2>
                         <p>Уют даже в миниатюрных деталях. Дизайн мебели, деталей интерьера, освещения, посуды.</p>
 
-                        <span class="form-btn">Подробнее</span>
+<!--                        <span class="form-btn">Подробнее</span>-->
                     </div>
                 </div>
             </div>
@@ -177,51 +184,57 @@
 
             <h1>Как мы работаем</h1>
 
-            <div class="content-tile toggle-trigger">
+            <div class="content-tile">
                 <span>1</span>
                 <p>Предпроектная часть</p>
+                <span class="slide-trigger">Подробнее</span>
                 <div class="entry-content">
                     <p>Мы договариваемся с вами о встрече на объекте, наши специалисты производят обмер помещений, обсуждаем ваши пожелания и составляем техническое задание будущего проекта. После чего начинается активный творческий процесс создания первых эскизов. Заказчику предоставляем нескольких вариантов планировки, после чего переходим к созданию основной концепции дизайна.</p>
                 </div>
             </div>
 
-            <div class="content-tile toggle-trigger">
+            <div class="content-tile">
                 <span>2</span>
                 <p>Эскизная часть</p>
+                <span class="slide-trigger">Подробнее</span>
                 <div class="entry-content">
                     <p>Далее начинается работа над планировочными решениями и визуализацией вашего будущего интерьера. Обычно делается по 3 варианта дизайна на каждое помещение. После утверждения итогового варианта составляется компьютерная 3D визуализация всех необходимых интерьерных зон в разных ракурсах. Виртуальное моделирование интерьера помещения позволяет увидеть дизайн проект, так, как он будет выглядеть в жизни после его реализации.</p>
                 </div>
             </div>
 
 
-            <div class="content-tile toggle-trigger">
+            <div class="content-tile">
                 <span>3</span>
                 <p>Рабочая часть</p>
+                <span class="slide-trigger">Подробнее</span>
                 <div class="entry-content">
                     <p>По утвержденным эскизам составляется комплект чертежей, необходимый для проведения ремонтно-строительных работ. На этом же этапе происходит подбор и согласование финишных отделочных материалов, составляется ведомость отделки.</p>
                 </div>
             </div>
 
-            <div class="content-tile toggle-trigger">
+            <div class="content-tile">
                 <span>4</span>
                 <p>Сдача дизайн-проекта</p>
+                <span class="slide-trigger">Подробнее</span>
                 <div class="entry-content">
                     <p>После согласования всех чертежей и отделочных материалов в проект вносятся все необходимые изменения. Имея на руках «рабочий» проект со всеми чертежами, Вы можете провести маркетинг строительного рынка, предложив нескольким строительным фирмам дизайн — проект на просчет сметы — и, соответственно, выбрать наиболее подходящую фирму, или бригаду мастеров — по качеству и бюджету.</p>
                 </div>
             </div>
 
-            <div class="content-tile toggle-trigger">
+            <div class="content-tile">
                 <span>5</span>
                 <p>Авторский надзор</p>
+                <span class="slide-trigger">Подробнее</span>
                 <div class="entry-content">
                     <p>Если Вам необходим авторский контроль за ходом выполнения проекта, то с началом проведения ремонтно-строительных работ заключается договор на авторский надзор по выполненному дизайн-проекту. По условиям договора дизайнер будет регулярно посещать объект, следить за ходом работ, производить необходимые замеры, проверять соответствие выполняемых работ и вносить необходимые коррективы.</p>
                 </div>
             </div>
 
 
-            <div class="content-tile toggle-trigger">
+            <div class="content-tile">
                 <span>6</span>
                 <p>Декорирование</p>
+                <span class="slide-trigger">Подробнее</span>
                 <div class="entry-content">
                     <p>В случае, если Вам понадобится помощь в подборе оборудования, мебели, светильников, сантехники, текстильного декора и иных аксессуаров — заключается договор на декорирование, где прописываются все необходимые элементы подбора. Будут осуществятся выезды с целью выбора необходимого оборудования, проводится консультации, а также будет осуществлен подбор наиболее выгодных для заказчика мест покупки требуемых элементов декорирования. Эта услуга может осуществляться одновременно с авторским надзором.</p>
                 </div>

@@ -156,8 +156,6 @@ var anchors = ['home', 'service', 'projects', 'portfolio', 'offers', 'workflow',
                     },
                     success : function( response ) {
 
-                        //console.log('success');
-                        console.log(response);
 
                         var resp = $(response);
 
@@ -179,47 +177,7 @@ var anchors = ['home', 'service', 'projects', 'portfolio', 'offers', 'workflow',
                 });
             }
 
-
         })();
-
-
-        // Switching block on home slide
-        (function(){
-            var homeSwitcher = $('#home-switcher'),
-                children = homeSwitcher.children(),
-                childrenLeng = children.length,
-                current = 1,
-                interval;
-
-            children.hover(pauseSwitching, startSwitching);
-            startSwitching();
-
-            function startSwitching() {
-                interval = setInterval(function(){
-                    children.each(function(){
-
-                        var child = $(this);
-                        child.removeClass('active');
-                        if ( child.get(0) == children.get(current) ){
-                            child.addClass('active').closest('.switcher ').find('.entry-content').fadeOut().eq(current).fadeIn();
-                        }
-                    });
-
-                    current++;
-                    if (current === childrenLeng ) current = 0;
-                }, 3500);
-            }
-
-            function pauseSwitching(){
-                clearInterval(interval);
-                children.each(function(){
-                    $(this).removeClass('active');
-                });
-            }
-        })();
-
-
-
 
 
         //tabs in gallery slide

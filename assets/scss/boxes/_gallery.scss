@@ -65,7 +65,7 @@
 
   .owl-gallery{
     position:relative;
-    margin-bottom: 30px;
+//    margin-bottom: 30px;
     .owl-prev, .owl-next{
       position:absolute;
       width: 40px;
@@ -248,6 +248,17 @@
     }
     &.active {
       border-color: #ef7f1a;
+    }
+  }
+}
+
+
+
+.mobile{
+  .gallery{
+    padding-bottom: 0;
+    .undertitle, .subundertitle{
+      font-size: 14px;
     }
   }
 }

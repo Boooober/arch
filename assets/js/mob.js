@@ -1,14 +1,12 @@
 (function($){
     $(document).ready(function(){
 
-        var windowHeight = $(window).height();
-
         $(document).bind('scroll',function(e){
-            $('div.section').each(function(){
+            $('.section').each(function(){
                 if (
-                    $(this).offset().top < window.pageYOffset + 10
+                    $(this).offset().top < window.pageYOffset + 70
                         //begins before top
-                        && $(this).offset().top + $(this).height() > window.pageYOffset + 10
+                        && $(this).offset().top + $(this).height() > window.pageYOffset + 70
                 //but ends in visible area
                     ) {
                     window.location.hash = anchors[$(this).index()];
@@ -16,19 +14,11 @@
             });
         });
 
-//        $('.section').css('min-height', windowHeight);
-
-
-        (function(){
-            $('.toggle-trigger').click(function(){
-                $(this).find('.entry-content').slideToggle();
-            });
-        })();
 
         (function(){
             $('.slide-trigger').click(function(){
                 var trigger = $(this);
-                trigger.find('.description').slideToggle();
+                trigger.next().slideToggle();
             });
         })();
 
@@ -47,5 +37,23 @@
                 }
             }
         });
+
+
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            dots: false,
+        });
+
+
+        // Switching block on home slide
+        (function(){
+            var children = $('#home-switcher').children();
+
+            children.click(function(){
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active').closest('.switcher').find('.entry-content').fadeOut().eq($(this).index()).fadeIn();
+            });
+
+        })();
     });
 })(jQuery);

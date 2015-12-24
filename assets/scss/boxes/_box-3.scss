@@ -9,7 +9,7 @@
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
-    line-height: 40px;
+    line-height: 1em;
     color: #fff;
   }
 
@@ -68,6 +68,24 @@
   //  }
 
 }
+
+.mobile{
+  .box-3{
+    padding-bottom: 0;
+    .slide{
+      padding: 90px 0;
+    }
+
+    .section-title{
+      top: 0;
+      margin-bottom: 20px;
+    }
+    .owl-controls{
+      display: none;
+    }
+  }
+}
+
 
 @media (max-width: 768px) {
 

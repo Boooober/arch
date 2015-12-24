@@ -39,6 +39,7 @@ jQuery( document ).ready(function( $ ) {
     gallery.owlCarousel({
         margin: 40,
         nav: true,
+        dots: false,
         navText: [],
         responsive:{
             0:{
@@ -53,67 +54,75 @@ jQuery( document ).ready(function( $ ) {
         }
     });
 
+    // Switching block on home slide
+    (function(){
+        var homeSwitcher = $('#home-switcher'),
+            children = homeSwitcher.children(),
+            childrenLeng = children.length,
+            current = 1,
+            interval;
 
+        children.hover(pauseSwitching, startSwitching);
 
+        startSwitching();
 
-//    //scroll to events
-//    (function(){
-//
-//        function goToByScroll(id){
-//            $('html,body').animate({
-//                    scrollTop: $(id).offset().top},
-//                3000);
-//        }
-//
-//        $('.nav-menu').find('a').each(function(){
-//            var link = $(this).attr('href'),
-//                hash = link.substring(0,1);
-//
-//            if (hash === '#'){
-//                $(this).click(function(){
-//                    event.preventDefault();
-//                    goToByScroll(link);
-//                });
-//            }
-//        });
-//
-//    })();
-//
-//
+        function startSwitching() {
+            interval = setInterval(function(){
+                children.each(function(){
 
+                    var child = $(this);
+                    child.removeClass('active');
+                    if ( child.get(0) == children.get(current) ){
+                        child.addClass('active').closest('.switcher ').find('.entry-content').fadeOut().eq(current).fadeIn();
+                    }
+                });
 
-        //Stretch contacts box to the window bottom
-        (function(){
-            var cell = $('.box-6 .js-cell'),
-                mapHeight = 350+47,
-                tableHeight = $(window).innerHeight() - mapHeight;
-
-            cell.each(function(){
-                $(this).wrap('<div class="js-table" style="height:'+tableHeight+'px"></div>');
-            });
-
-        })();
-
-
-        //Switching content on mouseenter
-
-        $('.switch-trigger').mouseenter(function(){
-            switcher($(this));
-        });
-
-        function switcher (target) {
-            var switchTarget = target.data('switch');
-
-            target.closest('.switcher').find('.content-switch .entry-content').each(function(){
-                if($(this).data('target') === switchTarget){
-                    $(this).fadeIn(350);
-                }else{
-                    $(this).fadeOut(350);
-                }
-            });
+                current++;
+                if (current === childrenLeng ) current = 0;
+            }, 3500);
         }
 
+        function pauseSwitching(){
+            clearInterval(interval);
+            children.removeClass('active');
+        }
+    })();
 
 
 
+
+
+
+
+
+    //Stretch contacts box to the window bottom
+    (function(){
+        var cell = $('.box-6 .js-cell'),
+            mapHeight = 350+47,
+            tableHeight = $(window).innerHeight() - mapHeight;
+
+        cell.each(function(){
+            $(this).wrap('<div class="js-table" style="height:'+tableHeight+'px"></div>');
+        });
+
+    })();
+
+
+    //Switching content on mouseenter
+
+    $('.switch-trigger').mouseenter(function(){
+        switcher($(this));
+    });
+
+    function switcher (target) {
+        var switchTarget = target.data('switch');
+
+        target.closest('.switcher').find('.content-switch .entry-content').each(function(){
+            if($(this).data('target') === switchTarget){
+                $(this).fadeIn(350);
+            }else{
+                $(this).fadeOut(350);
+            }
+        });
+    }
 });
