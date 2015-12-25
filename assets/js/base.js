@@ -188,8 +188,6 @@ var anchors = ['home', 'service', 'projects', 'portfolio', 'offers', 'workflow',
                 outerCaption = tabBlock.find('.outer-tab-caption'),
                 i = 0, j = 0;
 
-            tabBlock.addClass('loaded');
-
             tabBlock.find('.outer-tab-content').each(function(){
                 var outerContent = $(this),
                     outerTitle;
@@ -220,6 +218,8 @@ var anchors = ['home', 'service', 'projects', 'portfolio', 'offers', 'workflow',
                 j = 0;
                 i++;
             });
+
+            setTimeout(function(){tabBlock.addClass('loaded');}, 350);
 
 
             //EventListeners

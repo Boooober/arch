@@ -1,15 +1,19 @@
 .flying-panel{
-  transition: color .3s;
+  transition: .3s;
   &.white{
     color:white;
   }
-
-
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
 }
+
+.nav-up {
+  transform: translateY(-100%);
+}
+
 
 .logo{
   float: left;

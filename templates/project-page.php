@@ -157,7 +157,7 @@
 
 <footer class="entry-footer">
 
-    <?php if($is_ajax){ ?>
+    <?php if( $is_ajax && wp_mobile_detect() ){ ?>
         <div class="close-btn">
             <div class="js-overly-trigger close-elements trigger" data-overlay="#push-page"></div>
         </div>
