@@ -8,10 +8,16 @@
   top: 0;
   left: 0;
   width: 100%;
+
+  .topline-nav{
+    transition: .3s;
+  }
 }
 
 .nav-up {
-  transform: translateY(-100%);
+  .topline-nav{
+    transform: translateY(-100%);
+  }
 }
 
 

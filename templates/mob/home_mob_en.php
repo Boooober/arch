@@ -111,7 +111,6 @@
     </section>
 
     <section id="gallery" class="section gallery" data-section-name="Наши проекты" >
-    <!--    <div class="box-bg"></div>-->
         <div class="content">
             <h1 class="box-title">Наши проекты</h1>
 
@@ -138,7 +137,6 @@
     </section>
 
     <section id="box-5" class="section box-5" data-section-name="Мы предлагаем">
-    <!--    <div class="box-bg"></div>-->
         <div class="content">
             <h1>Мы предлагаем</h1>
             <div class="row">

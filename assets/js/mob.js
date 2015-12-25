@@ -1,8 +1,12 @@
 (function($){
     $(document).ready(function(){
 
+        var sections = $('.section'),
+            windW = $(window).width(),
+            windH = $(window).height();
+
         $(document).bind('scroll',function(e){
-            $('.section').each(function(){
+            sections.each(function(){
                 if (
                     $(this).offset().top < window.pageYOffset + 70
                         //begins before top
@@ -13,6 +17,21 @@
                 }
             });
         });
+
+
+        var fullSlides = ['.box-1', '.box-3 .slide'];
+        function fullSize (){
+            var height = windH;
+
+//            (windW < windH) ? (height = windH) : (height = windW);
+            for( var i = 0, c = fullSlides.length; i < c; i++ ){
+                $(fullSlides[i]).css('height', height);
+            }
+        }
+
+
+        $(window).resize(fullSize);
+        fullSize();
 
 
         (function(){
@@ -87,11 +106,11 @@
                 // This is necessary so you never see what is "behind" the navbar.
                 if (st > lastScrollTop && st > navbarHeight){
                     // Scroll Down
-                    $('.fixed-header').removeClass('nav-down').addClass('nav-up');
+                    navbar.removeClass('nav-down').addClass('nav-up');
                 } else {
                     // Scroll Up
                     if(st + $(window).height() < $(document).height()) {
-                        $('.fixed-header').removeClass('nav-up').addClass('nav-down');
+                        navbar.removeClass('nav-up').addClass('nav-down');
                     }
                 }
 
